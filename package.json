@@ -1,0 +1,38 @@
+{
+  "homepage": "http://localhost:8888/build",
+  "name": "djsite",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "core-js": "^3.1.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-fullpage": "^0.1.19",
+    "react-mt-svg-lines": "^0.9.1",
+    "react-notifications-component": "^1.1.1",
+    "react-page-scroller": "^1.5.1",
+    "react-reveal": "^1.2.2",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

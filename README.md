@@ -22,8 +22,7 @@ https://nodejs.org/en/
 git clone https://github.com/evt-project/evt-viewer.git
 cd evt-viewer
 ```
-5. Installare le Dipendenze
-Per scaricare le dipendenze eseguire, [ingnorare i WARN message, sono irrilevanti.]:
+5. Installare le dipendenze, eseguire, [ingnorare i WARN message, sono irrilevanti.]:
 ```bash
 npm install
 ```
@@ -37,8 +36,7 @@ npm start
 
 ## OS X
 
-1. Installare Homebrew 
-Seguire le istruzioni qui: https://brew.sh
+1. Installare Homebrew, seguire le istruzioni qui: https://brew.sh
 2. Installare GIT, se non lo avete gia installato
 ```bash
 brew install git
@@ -55,8 +53,7 @@ https://nodejs.org/en/
 git clone https://github.com/evt-project/evt-viewer.git
 cd evt-viewer
 ```
-5. Installare le Dipendenze
-Per scaricare le dipendenze eseguire, [ingnorare i WARN message, sono irrilevanti.]:
+5. Installare le dipendenze, eseguire, [ingnorare i WARN message, sono irrilevanti.]:
 ```bash
 npm install
 ```
@@ -78,8 +75,7 @@ npm start
 git clone https://github.com/evt-project/evt-viewer.git
 cd evt-viewer
 ```
-4. Installare le Dipendenze
-Per scaricare le dipendenze eseguire [ingnorare i WARN message, sono irrilevanti.]
+4. Installare le Dipendenze, eseguire [ingnorare i WARN message, sono irrilevanti.]:
 ```bash
 npm install
 ```

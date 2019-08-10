@@ -1,6 +1,7 @@
 # BTC_project
 
-#LINUX
+##LINUX
+
 1. Verificare che tutto è aggioranto (importante) 
 ```bash
 sudo apt-get update
@@ -28,12 +29,14 @@ npm install
 ```
 
 ### START PROJECT
+
 Per far partire la visualizzazione del progetto eseguire da terminale, dope essersi posizionati all'interno della cartella:
 ```bash
 npm start
 ```
 
-#OS X
+##OS X
+
 1. Installare Homebrew 
 Seguire le istruzioni qui: https://brew.sh
 2. Installare GIT, se non lo avete gia installato
@@ -58,6 +61,7 @@ Per scaricare le dipendenze eseguire:
 npm install
 ```
 ### START PROJECT
+
 Per far partire la visualizzazione del progetto eseguire da terminale, dope essersi posizionati all'interno della cartella:
 ```bash
 npm start

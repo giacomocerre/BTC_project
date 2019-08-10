@@ -12,7 +12,9 @@ sudo apt-get install git
 ```
 3. Installare Node.js, da terminale eseguire:
 ```bash
-brew install node
+curl -sL https://deb.nodesource.com/setup_5.x
+sudo -E bash
+sudo apt-get install -y nodejs
 ```
 oppure scaricare dal sito:
 https://nodejs.org/en/

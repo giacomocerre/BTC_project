@@ -23,7 +23,7 @@ git clone https://github.com/evt-project/evt-viewer.git
 cd evt-viewer
 ```
 5. Installare le Dipendenze
-Per scaricare le dipendenze eseguire:
+Per scaricare le dipendenze eseguire, [ingnorare i WARN message, sono irrilevanti.]:
 ```bash
 npm install
 ```
@@ -56,7 +56,7 @@ git clone https://github.com/evt-project/evt-viewer.git
 cd evt-viewer
 ```
 5. Installare le Dipendenze
-Per scaricare le dipendenze eseguire:
+Per scaricare le dipendenze eseguire, [ingnorare i WARN message, sono irrilevanti.]:
 ```bash
 npm install
 ```
@@ -79,7 +79,7 @@ git clone https://github.com/evt-project/evt-viewer.git
 cd evt-viewer
 ```
 4. Installare le Dipendenze
-Per scaricare le dipendenze eseguire:
+Per scaricare le dipendenze eseguire [ingnorare i WARN message, sono irrilevanti.]
 ```bash
 npm install
 ```

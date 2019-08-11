@@ -1,17 +1,29 @@
 import React from "react"
-import { motion } from "framer-motion"
+import Animation from "./animation/animation_main"
 
-function Explain() {
-      
-      return (
-        <motion.h1
-            id="motion"
-            style={{ width:"100px", height:"100px", background:"#000"}}
-            drag="x"
-            dragConstraints={{ left: -100, right: 100 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-        >ciao</motion.h1>
-      )
+class Explain extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            clicks:1
+        };
+    }
+    IncrementItem = () => {
+    this.setState({ clicks: this.state.clicks + 1 });
+    }
+    DecreaseItem = () => {
+    this.setState({ clicks: this.state.clicks - 1 });
+    }
+    render() {
+        return (
+            <div id="content_animation">
+            <div id="step back" class="command" onClick={this.DecreaseItem}><img class="arrow" src="img/arrow_b.svg" alt="back"/></div>
+            <div id="animation">
+                <Animation step={this.state.clicks}/>
+            </div>
+            <div id="step forward" class="command" onClick={this.IncrementItem}><img class="arrow" src="img/arrow_f.svg" alt="forward"/></div>
+        </div>
+        )
+    }
 }    
 export default Explain

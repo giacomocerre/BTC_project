@@ -226,3 +226,39 @@ img.connector {
 img.block,img.connector  {
     position: relative;
 }
+/* animation */
+
+div#content_animation {
+    background: #fff;
+    width: 95%;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.command {
+    width: 10%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #f6f6f6;
+}
+div#animation {
+    width: 80%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+img.arrow {
+    width: 30px;
+}

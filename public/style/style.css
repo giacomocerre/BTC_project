@@ -251,14 +251,51 @@ div#content_animation {
     align-items: center;
     display: flex;
     background: #f6f6f6;
+    cursor: pointer;
 }
 div#animation {
     width: 80%;
+    height: 100%;
     float: left;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    z-index: -1;
+    overflow: hidden;
 }
 img.arrow {
     width: 30px;
+}
+table#registry {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+div#motion {
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3#ledger_main {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.6em;
+}
+table#registry {
+    background: #f6f6f6;
+}
+#registry th, #registry td {
+    padding: 10px 40px;
+}
+th.col {
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+td.dark_col {
+    background: #eee;
+}
+td.light_col {
+    background: #fff;
+}
+img#world_map {
+    position: relative;
+    bottom: 100px;
 }

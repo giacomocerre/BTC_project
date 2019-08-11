@@ -1,43 +1,14 @@
 import React from "react"
-import { motion } from "framer-motion"
+import Step1 from "./steps/step1"
+import Step2 from "./steps/step2"
 
 function Animation_Main(props) {
-    console.log(props.step);
+    console.log(props.ledge.zoom)
         return (
-            <motion.div
-                id="motion"
-                style={{width:"500px",height:"auto",background:"#eee"}}
-                animate={{
-                    x: 0,
-                    y: 0,
-                    scale: props.step,
-                    rotate: 0,
-                  }}
-            >
-                <h3 id="ledger_main">Ragistro (Ledger)</h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount (BTC)</th>
-                    </tr>
-                    <tr>
-                        <td>Anna</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Mario</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>Alice</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>Luca</td>
-                        <td>150</td>
-                    </tr>
-                </table>
-            </motion.div>
+            <div>
+                <Step1 scale={props.ledge.zoom} x={props.ledge.x} y={props.ledge.y} rotate={props.ledge.rotate}/> 
+                <Step2 x={0} y={0} scale={props.step-1} rotate={180}/>
+            </div>
         )
 }    
 export default Animation_Main

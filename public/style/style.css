@@ -278,12 +278,13 @@ h3#ledger_main {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 1.6em;
+    text-align: center;
 }
 table#registry {
     background: #f6f6f6;
 }
 #registry th, #registry td {
-    padding: 10px 40px;
+    padding: 10px 20px;
 }
 th.col {
     text-transform: uppercase;
@@ -295,7 +296,7 @@ td.dark_col {
 td.light_col {
     background: #fff;
 }
-img#world_map {
-    position: relative;
-    bottom: 100px;
+td.signature {
+    font-family: "Signature", sans-serif;
+    font-size: 1.3em;
 }

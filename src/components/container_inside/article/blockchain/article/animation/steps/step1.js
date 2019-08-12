@@ -5,13 +5,14 @@ import Ledge from "./animation_component/ledge"
 function Step1(props) {
         return (
             <motion.div
-                id="motion"
+                id="motion_ledge"
+                style={{display:props.display}}
                 animate={{
-                    x: props.x,
-                    y: 0,
                     scale: props.scale,
-                    rotate: 0,
                   }}
+                transition={{
+                duration: 1,
+                }}
             >
                 <Ledge/>
             </motion.div>

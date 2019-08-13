@@ -2,15 +2,14 @@ import React from "react"
 
 function Ledge(){
     return(
-    <div id="ledge_container">
-        <h3 id="ledger_main">Ledger</h3>
         <table id="registry">
+            <h3 id="ledger_main">Ledger</h3>
             <tr>
                 <th class="col">Sender</th>
-                <th class="col">Recipient</th>
+                <th class="col">Receiver</th>
                 <th class="col">Amount</th>
                 <th class="col">Sender Signature</th>
-                <th class="col">Recipient Signature</th>
+                <th class="col">Receiver Signature</th>
             </tr>
             <tr>
                 <td class="light_col">Anna</td>
@@ -42,7 +41,6 @@ function Ledge(){
                 <td class="dark_col signature">Susy</td>
             </tr>
         </table>
-    </div>
     )
 }
 export default Ledge

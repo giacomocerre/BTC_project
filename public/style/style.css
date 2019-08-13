@@ -300,3 +300,25 @@ td.signature {
     font-family: "Signature", sans-serif;
     font-size: 1.3em;
 }
+.motion{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: -webkit-fill-available;
+    position: relative;
+}
+img#world_map {
+    width: 100%;
+}
+img#network_connection {
+    position: absolute;
+    width: 80%;
+    left: 110px;
+    top: 110px;
+}
+img#network_node {
+    position: absolute;
+    width: 81%;
+    top: 100px;
+    left: 100px;
+}

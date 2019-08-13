@@ -6,6 +6,7 @@ function Step1(props) {
         return (
             <motion.div
                 id="motion_ledge"
+                class="motion"
                 style={{display:props.display}}
                 animate={{
                     scale: props.scale,

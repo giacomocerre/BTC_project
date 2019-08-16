@@ -2,7 +2,6 @@ import React from "react"
 import { motion } from "framer-motion"
 
 function Point(props){
-    console.log(props.step);
     if(props.step >= 1){
         return(
             <motion.img
@@ -16,7 +15,6 @@ function Point(props){
                 when: "beforeChildren",
             }}
         >
-            {/* <img id="network_node" src="img/point.svg" alt=" network node"/> */}
         </motion.img>
         )
     }else{

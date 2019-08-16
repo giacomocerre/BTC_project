@@ -5,7 +5,6 @@ import Point from "../animation_component/point"
 import Connect from "../animation_component/connect"
 
 function Step2(props) {
-
         return (
             <motion.div
                 id="motion_map"

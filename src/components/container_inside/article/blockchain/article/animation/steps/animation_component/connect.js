@@ -2,7 +2,6 @@ import React from "react"
 import { motion } from "framer-motion"
 
 function Point(props){
-    console.log(props.step);
     if(props.step >= 2){
         return(
             <motion.img

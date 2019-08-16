@@ -1,10 +1,10 @@
 import React from "react"
-import Explain from "./article/blockchain_explain"
+import Animation from "./article/blockchain_explain"
 
 function Blockchain (){
     return(
         <section id="explain">
-            <Explain/>
+            <Animation/>
         </section>
     );
 }

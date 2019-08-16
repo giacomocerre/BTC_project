@@ -1,10 +1,9 @@
 import React from "react"
-import Animation from "./animation/animation_main"
+import AnimationStep from "./animation/animation_main"
 
 var step = 0;
 //ANIMATION
-class Explain extends React.Component {
-    
+class Animation extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,6 +15,10 @@ class Explain extends React.Component {
 
     StepForward = () => {
         step = step + 1;
+        console.log("********AVANTI ********");
+        console.log("step -->" + step);
+        console.log("zoom LEDGE -->" + this.state.ledge.zoom);
+        console.log("zoom MAP -->" + this.state.map.zoom);
         //STEP 1
         if(step === 0 ){
             this.setState({step:step})
@@ -24,28 +27,39 @@ class Explain extends React.Component {
         if(step === 1){
             this.setState({step:step})
             // LEDGE ZOOM
-            console.log(this.state.ledge.zoom);
-            // eslint-disable-next-line 
-            this.setState({ ...this.state.ledge.zoom = this.state.ledge.zoom - 1, ...this.state.ledge.display = "none",});
+            this.setState(state => ({
+                ...state,
+                ledge: {
+                  ...state.ledge,
+                  zoom: state.ledge.zoom - 1,
+                  display: 'none'
+                }
+            }));
             //MAP APPEAR
-            // eslint-disable-next-line 
-            this.setState({ ...this.state.map.zoom = this.state.map.zoom + 1});
-            
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.ledge.zoom + 1,
+                }
+            }));
         }
         //APPEAR NETWORK
         if(step === 2){
             this.setState({step:step})
         }
+        //MAP ZOOM
         if(step === 3){
             this.setState({step:step})
-            //MAP ZOOM
-            // eslint-disable-next-line 
-            this.setState({ 
-                ...this.state.map.zoom = this.state.map.zoom + 5,
-                ...this.state.map.y = this.state.map.y + 600,
-                ...this.state.map.x = this.state.map.x + 100
-            });
-            
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.map.zoom + 5,
+                  y: this.state.map.y + 900,
+                  x: this.state.map.x + 100
+                }
+            }));
         }
         if(step === 4){
             this.setState({step:step})
@@ -62,6 +76,11 @@ class Explain extends React.Component {
     }
     StepBack = () => {
         step = step - 1;
+        console.log("********INDIETRO********");
+        console.log("step -->" + step);
+        console.log("zoom LEDGE -->" + this.state.ledge.zoom);
+        console.log("zoom MAP -->" + this.state.map.zoom);
+       
         
         if(step < 0 ){
             this.setState({step:step})
@@ -71,11 +90,22 @@ class Explain extends React.Component {
         if(step === 0){
             this.setState({step:step})
             // LEDGE ZOOM
-            // eslint-disable-next-line 
-            this.setState({ ...this.state.ledge.zoom = this.state.ledge.zoom + 1, ...this.state.ledge.display = "flex",});
+            this.setState(state => ({
+                ...state,
+                ledge: {
+                  ...state.ledge,
+                  zoom: state.ledge.zoom + 1,
+                  display: 'flex'
+                }
+              }));
             //MAP APPEAR
-            // eslint-disable-next-line 
-            this.setState({ ...this.state.map.zoom = this.state.map.zoom - 1});
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.map.zoom - 1
+                }
+              }));
         }
         //DISAPPEAR NETWORK
         if(step === 1){
@@ -84,12 +114,15 @@ class Explain extends React.Component {
         if(step === 2){
             this.setState({step:step})
              //MAP ZOOM
-            // eslint-disable-next-line 
-            this.setState({ 
-                ...this.state.map.zoom = this.state.map.zoom - 5,
-                ...this.state.map.y = this.state.map.y - 600,
-                ...this.state.map.x = this.state.map.x - 100
-            });
+             this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                    zoom: this.state.map.zoom - 5,
+                    y: this.state.map.y - 900,
+                    x: this.state.map.x - 100
+                }
+              }));
             
         }
         if(step === 3){
@@ -110,7 +143,7 @@ class Explain extends React.Component {
             <div id="content_animation">
             <div id="step back" class="command" onClick={this.StepBack}><img class="arrow" src="img/arrow_b.svg" alt="back"/></div>
             <div id="animation">
-                <Animation 
+                <AnimationStep 
                     step = {this.state.step}
                     ledge={this.state.ledge}
                     map={this.state.map}/>
@@ -120,4 +153,4 @@ class Explain extends React.Component {
         )
     }
 }    
-export default Explain
+export default Animation

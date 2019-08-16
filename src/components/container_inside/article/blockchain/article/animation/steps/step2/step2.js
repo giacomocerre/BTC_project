@@ -1,8 +1,8 @@
 import React from "react"
 import { motion } from "framer-motion"
-import Map from "./animation_component/map"
-import Point from "./animation_component/point"
-import Connect from "./animation_component/connect"
+import Map from "../animation_component/map"
+import Point from "../animation_component/point"
+import Connect from "../animation_component/connect"
 
 function Step2(props) {
 

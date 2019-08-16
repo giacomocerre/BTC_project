@@ -1,6 +1,6 @@
 import React from "react"
-import Step1 from "./steps/step1"
-import Step2 from "./steps/step2"
+import Step1 from "./steps/step1/step1"
+import Step2 from "./steps/step2/step2"
 
 function Animation(props) {
     console.log(props.step)

@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import Ledge from "./animation_component/ledge"
+import Ledge from "../animation_component/ledge"
 
 function Step1(props) {
         return (

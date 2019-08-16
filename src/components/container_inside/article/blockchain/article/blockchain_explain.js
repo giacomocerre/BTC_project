@@ -44,14 +44,12 @@ class Animation extends React.Component {
                 }
             }));
         }
-        //STEP 2
+        //APPEAR NETWORK
         if(step === 2){
-            //APPEAR NETWORK
             this.setState({step:step})
         }
-        //STEP 3
+        //MAP ZOOM
         if(step === 3){
-            //MAP ZOOM
             this.setState({step:step})
             this.setState(state => ({
                 ...state,
@@ -62,6 +60,7 @@ class Animation extends React.Component {
                   x: this.state.map.x + 100
                 }
             }));
+        }
         if(step === 4){
             this.setState({step:step})
             

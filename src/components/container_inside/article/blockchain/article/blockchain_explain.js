@@ -1,6 +1,7 @@
 import React from "react"
 import AnimationStep from "./animation/animation_main"
-
+import Explain from "./animation/explain_step"
+    
 var step = 0;
 //ANIMATION
 class Animation extends React.Component {
@@ -15,10 +16,6 @@ class Animation extends React.Component {
 
     StepForward = () => {
         step = step + 1;
-        console.log("********AVANTI ********");
-        console.log("step -->" + step);
-        console.log("zoom LEDGE -->" + this.state.ledge.zoom);
-        console.log("zoom MAP -->" + this.state.map.zoom);
         //STEP 1
         if(step === 0 ){
             this.setState({step:step})
@@ -140,15 +137,18 @@ class Animation extends React.Component {
 
     render() {
         return (
+        <div>
             <div id="content_animation">
-            <div id="step back" class="command" onClick={this.StepBack}><img class="arrow" src="img/arrow_b.svg" alt="back"/></div>
-            <div id="animation">
-                <AnimationStep 
-                    step = {this.state.step}
-                    ledge={this.state.ledge}
-                    map={this.state.map}/>
+                <div id="step back" class="command" onClick={this.StepBack}><img class="arrow" src="img/arrow_b.svg" alt="back"/></div>
+                <div id="animation">
+                    <AnimationStep 
+                        step = {this.state.step}
+                        ledge={this.state.ledge}
+                        map={this.state.map}/>
+                </div>
+                <div id="step forward" class="command" onClick={this.StepForward}><img class="arrow" src="img/arrow_f.svg" alt="forward"/></div>
             </div>
-            <div id="step forward" class="command" onClick={this.StepForward}><img class="arrow" src="img/arrow_f.svg" alt="forward"/></div>
+            <Explain/>
         </div>
         )
     }

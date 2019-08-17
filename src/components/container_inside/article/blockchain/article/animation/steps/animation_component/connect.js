@@ -1,6 +1,6 @@
 import React from "react"
 
-function Connect(props){
+function Connection(props){
     if(props.step >= 2){
         var el_from = document.getElementById(props.from);
         var el_to   = document.getElementById(props.to);
@@ -9,8 +9,9 @@ function Connect(props){
         var x2 = el_to.offsetLeft + (el_to.offsetWidth/2);
         var y2 = el_to.offsetTop + (el_to.offsetHeight/2);
         return(
+            
             <svg id="connect">
-                <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="#333"/>
+                <line class={props.line} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#333"/>             
             </svg>
         )
     }else{
@@ -18,4 +19,4 @@ function Connect(props){
     }
 }
 
-export default Connect
+export default Connection

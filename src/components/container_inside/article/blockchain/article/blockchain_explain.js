@@ -10,7 +10,7 @@ class Animation extends React.Component {
         this.state = {
             step    : step,
             ledge   :{zoom:1, display:"flex"},
-            map     :{zoom:0, x:0, y:0, rotate:0},
+            map     :{zoom:0, x:0, y:0, rotate:0, line:"path_in"},
         };
     }
 
@@ -54,7 +54,8 @@ class Animation extends React.Component {
                   ...state.map,
                   zoom: state.map.zoom + 5,
                   y: this.state.map.y + 900,
-                  x: this.state.map.x + 100
+                  x : this.state.map.x + 100,
+                  line: "path_in"
                 }
             }));
         }
@@ -73,12 +74,6 @@ class Animation extends React.Component {
     }
     StepBack = () => {
         step = step - 1;
-        console.log("********INDIETRO********");
-        console.log("step -->" + step);
-        console.log("zoom LEDGE -->" + this.state.ledge.zoom);
-        console.log("zoom MAP -->" + this.state.map.zoom);
-       
-        
         if(step < 0 ){
             this.setState({step:step})
             step = -1
@@ -117,7 +112,8 @@ class Animation extends React.Component {
                   ...state.map,
                     zoom: this.state.map.zoom - 5,
                     y: this.state.map.y - 900,
-                    x: this.state.map.x - 100
+                    x: this.state.map.x - 100,
+                    line:"path_out"
                 }
               }));
             

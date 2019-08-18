@@ -1,9 +1,9 @@
 import React from "react"
 
-function Explain(){
+function Explain(props){
     return (
     <div id="content_explain">
-        <p>Explain</p>
+        <p>{props.step}</p>
     </div>
         );
 }

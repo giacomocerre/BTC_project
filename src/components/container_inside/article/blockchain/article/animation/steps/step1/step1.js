@@ -4,6 +4,7 @@ import Ledge from "../animation_component/ledge"
 
 function Step1(props) {
         return (
+            <div>
             <motion.div
                 id="motion_ledge"
                 class="motion"
@@ -15,8 +16,9 @@ function Step1(props) {
                 duration: 1,
                 }}
             >
-                <Ledge/>
+                <Ledge id="registry"/>
             </motion.div>
+            </div>
         )
 }    
 export default Step1

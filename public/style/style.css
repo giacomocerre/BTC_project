@@ -263,6 +263,12 @@ div#animation {
 img.arrow {
     width: 30px;
 }
+.table_title{
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+}
 table#registry {
     width: 50%;
     margin-left: auto;
@@ -344,11 +350,72 @@ svg .path_in {
     }
 }
 div#sender_node {
-    height: 560px;
-    width: 90%;
+    height: 79vh;
+    width: 45%;
     position: relative;
-    bottom: 560px;
+    bottom: 557px;
+    right: 27%;
     margin-left: auto;
     margin-right: auto;
-    background: #D2644F;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 10px solid #D2644F;
 }
+#send_content h1{
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+    font-weight: 800;
+    font-size: 1.6em;
+}
+.arrow_left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    position: absolute;
+    bottom: 75%;
+    left: 100%;
+    border-left: 30px solid #D2644F;
+  }
+
+table#send_ledge, table#send_add {
+    width: 50%;
+    background: #f6f6f6;
+    font-size: 0.7em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius:5px;
+}
+table#send_ledge{
+    border: 3px solid #333;
+}
+table#send_add{
+    border: 3px solid #D2644F;
+}
+#send_ledge th.col, #send_add th.col {
+    color: #333;
+    width: 10%;
+}
+.red{
+    color: #D2644F;
+}
+.blue{
+    color: rgb(52, 152, 219);
+}
+.line_send{
+    border: none;
+    border-top: 5px dotted #f00;
+    color: #fff;
+    background-color: transparent;
+    height: 1px;
+    width: 15%;
+    transform: rotate(-90deg);
+    position: relative;
+    right: 20%;
+    top: 30px;
+}
+

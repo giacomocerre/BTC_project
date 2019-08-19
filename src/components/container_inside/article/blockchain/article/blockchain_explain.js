@@ -61,7 +61,7 @@ class Animation extends React.Component {
                   ...state.map,
                   zoom: state.map.zoom + 5,
                   y: this.state.map.y + 950,
-                  x : this.state.map.x + 100,
+                  x : this.state.map.x + 500,
                 }
             }));
             this.setState(state => ({
@@ -142,7 +142,7 @@ class Animation extends React.Component {
                   ...state.map,
                     zoom: this.state.map.zoom - 5,
                     y: this.state.map.y - 950,
-                    x: this.state.map.x - 100
+                    x: this.state.map.x - 500
                 }
               }));  
               this.setState(state => ({

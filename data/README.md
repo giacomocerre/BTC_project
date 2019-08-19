@@ -2,4 +2,5 @@
 
 ## data folder 
 
- qui vanno i file json
+ qui vanno i file json per i grafici
+ 

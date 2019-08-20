@@ -22,6 +22,9 @@ body,
     line-height: 22px;
 }
 /* 1 - open */
+/* div#measure {
+    display: none;
+} */
 #open{
     height: 100%;
     background-image: url("../img/homeback.jpg");

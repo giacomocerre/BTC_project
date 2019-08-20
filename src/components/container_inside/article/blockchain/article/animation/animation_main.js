@@ -4,7 +4,6 @@ import Step2n3 from "./steps/step2n3/step2n3"
 import Step4 from "./steps/step4/step4"
 
 function AnimationStep(props) {
-    console.log(props)
         return (
             <div>
                 <Step1 
@@ -21,6 +20,7 @@ function AnimationStep(props) {
                     color={props.point.base_color} 
                     m_color={props.point.m_color} 
                     r_color={props.point.r_color}
+                    responsive ={props.responsive}
                     /> 
                 <Step4 
                     step={props.step} 

@@ -1,18 +1,20 @@
 import React from "react"
 import AnimationStep from "./animation/animation_main"
 import Explain from "./animation/explain_step"
-    
-var step = 0;
+
+
+
+var step = 0; 
 //ANIMATION
 class Animation extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
-            step    : step,
-            ledge   :{zoom:1, display:"flex"},
-            map     :{zoom:0, x:0, y:0, rotate:0},
-            point   :{base_color:"#333", m_color:"#333", r_color:"#333"},
-            sender  :{from_scale:0, to_scale:1}
+            step        : step,
+            ledge       :{zoom:1, display:"flex"},
+            map         :{zoom:0, x:0, y:0, rotate:0},
+            point       :{base_color:"#333", m_color:"#333", r_color:"#333"},
+            sender      :{from_scale:0, to_scale:1}
         };
     }
     //*********************************
@@ -186,6 +188,7 @@ class Animation extends React.Component {
                 <div id="animation">
                     <AnimationStep 
                         step = {this.state.step}
+                        responsive={this.props.responsive}
                         ledge={this.state.ledge}
                         map={this.state.map}
                         point={this.state.point}

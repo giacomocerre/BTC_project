@@ -1,10 +1,10 @@
 import React from "react"
 import Animation from "./article/blockchain_explain"
 
-function Blockchain (){
+function Blockchain (props){
     return(
         <section id="explain">
-            <Animation/>
+            <Animation responsive={props.responsive}/>
         </section>
     );
 }

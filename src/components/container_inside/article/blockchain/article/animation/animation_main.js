@@ -5,7 +5,7 @@ import Step4 from "./steps/step4/step4"
 
 function AnimationStep(props) {
         return (
-            <div>
+            <div id="motion_content">   
                 <Step1 
                     step={props.step} 
                     scale={props.ledge.zoom} 

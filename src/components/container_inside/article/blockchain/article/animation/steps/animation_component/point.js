@@ -7,7 +7,7 @@ function Point(props){
         <motion.div
         id={props.id}
         class="net_node"
-        style={{width:"30px", height:"30px", top:props.top, left:props.left, background:props.color, position:"absolute",}}
+        style={{width:"30px", height:"30px", marginTop:props.top, marginLeft:props.left, background:props.color}}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{

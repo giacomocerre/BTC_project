@@ -283,6 +283,11 @@ div#motion {
     margin-left: auto;
     margin-right: auto;
 }
+div#motion_map{
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: contain; 
+}
 h3#ledger_main {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -309,17 +314,39 @@ td.signature {
     font-family: "Signature", sans-serif;
     font-size: 1.3em;
 }
-.motion{
+#motion_content{
+    height: 100%;
+}
+#motion_ledge{
     justify-content: center;
     align-items: center;
+    height: 100%;
     display: flex;
-    height: -webkit-fill-available;
+    position: relative;
+}
+#flex_pc{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#p_c{
+    width: 100%;
+    position: relative;
+}
+div#motion_map{
+    height: 100%;
+    width: 100%;
     position: relative;
 }
 img#world_map {
     width: 100%;
 }
 .net_node {
+    position: absolute;
+    top:auto;
     border-radius: 100%;
     z-index: 2;
 }
@@ -356,7 +383,7 @@ div#sender_node {
     height: 79vh;
     width: 45%;
     position: relative;
-    bottom: 700px;
+    bottom: 79.5vh;
     right: 27%;
     margin-left: auto;
     margin-right: auto;

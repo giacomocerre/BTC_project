@@ -23,6 +23,7 @@ function Step2n3(props) {
                 }}
             >
                 {/* POINT STEP 2 
+                NON FUNZIONA -- RIGAURDARE IL RESPONSIVE
                 *************************************************************
                     TOP = { misura fissa + proporzione responsive + "%"} 
                 *************************************************************/} 

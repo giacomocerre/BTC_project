@@ -32,11 +32,11 @@ function Step2n3(props) {
                 <Point step={props.step} id="point_5" top={60 - props.responsive + "%"} left="90%"  color={props.color}/>
                 <Point step={props.step} id="point_6" top={50 + props.responsive + "%"} left="50%"  color={props.color}/>
                 <Point step={props.step} id="point_7" top={40 + props.responsive + "%"} left="40%"  color={props.color}/>
-                <Point step={props.step} id="point_8" top={20 + props.responsive + "%"} left="43%"  color={props.color}/>
+                <Point step={props.step} id="point_8" top={20 + props.responsive + "%"} left="43%"  color={props.m_color}/>
                 <Point step={props.step} id="point_9" top={15 + props.responsive + "%"} left="73%"  color={props.color}/>
                 <Point step={props.step} id="point_10" top={20 + props.responsive + "%"} left="60%"  color={props.color}/>
                 <Point step={props.step} id="point_11" top={15 + props.responsive + "%"} left="10%"  color={props.color}/>
-                <Point step={props.step} id="point_12" top={27 + props.responsive + "%"} left="47%"  color={props.color}/>
+                <Point step={props.step} id="point_12" top={27 + props.responsive + "%"} left="47%"  color={props.r_color}/>
 
                 {/* CONNECTION LINE  - STEP 3 */}
                 <Connection id="connect_1"   class="connection"  step={props.step}  from="point_11"   to="point_4"/>

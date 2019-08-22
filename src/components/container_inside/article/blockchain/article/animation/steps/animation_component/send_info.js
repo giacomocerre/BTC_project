@@ -8,7 +8,12 @@ function SendInfo(){
             <h1>Transiction from <span class="red">Red</span> to <span class="blue">Blue</span></h1>
             <Ledge id="send_ledge"/>
             <LedgeAdd id="send_add"/>
-            <hr class="line_send"/>
+            <hr class="v_line"/>
+            <div id="send_icon">
+                <img id="mex" class="trans_icon col3" src="../img/mex.svg" alt="mex"/>
+                <hr class="h_line col3"/>
+                <img id="plane" class="trans_icon col3" src="../img/plane.svg" alt="plane"/>
+            </div>
         </div>
     );
 }

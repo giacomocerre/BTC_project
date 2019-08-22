@@ -15,7 +15,6 @@ function Point(props){
             when: "beforeChildren",
         }}
         >
-            <p>{props.id}</p>
         </motion.div>
         )
     }else{

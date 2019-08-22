@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import SendInfo from "../animation_component/send_info"
 
 function Step4(props){
-    if (props.step === 4 ){
+    if ( props.step === 4 || props.step === 5){
         return(
             <motion.div
                     id="sender_node"

@@ -233,8 +233,8 @@ img.block,img.connector  {
 
 div#content_animation {
     background: #fff;
-    width: 95%;
-    height: 80vh;
+    width: 1300px;
+    height: 600px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -334,6 +334,7 @@ td.signature {
 }
 #p_c{
     width: 100%;
+    height: 100%;
     position: relative;
 }
 div#motion_map{
@@ -379,11 +380,28 @@ svg .path_in {
       stroke-dashoffset: 0;
     }
 }
+svg .miner_in {
+    stroke-dasharray: 10;
+    stroke-width: 5; 
+    stroke-linecap: round;
+    animation: dash 10s infinite linear;
+    -webkit-animation: dash 10s infinite linear;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 600;
+    }
+  }
+  @-webkit-keyframes dash {
+    to {
+      stroke-dashoffset: 600;
+    }
+}
 div#sender_node {
-    height: 79vh;
+    height: 100%;
     width: 45%;
     position: relative;
-    bottom: 79.5vh;
+    bottom: 100%;
     right: 27%;
     margin-left: auto;
     margin-right: auto;
@@ -406,7 +424,7 @@ div#sender_node {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     position: absolute;
-    bottom: 75%;
+    bottom: 80%;
     left: 100%;
     border-left: 30px solid #D2644F;
   }
@@ -436,16 +454,64 @@ table#send_add{
 .blue{
     color: rgb(52, 152, 219);
 }
-.line_send{
+.v_line{
     border: none;
     border-top: 5px dotted #f00;
     color: #fff;
     background-color: transparent;
     height: 1px;
     width: 15%;
-    transform: rotate(-90deg);
     position: relative;
     right: 20%;
     top: 30px;
+    transform: rotate(-90deg);
 }
-
+.h_line{
+    border: none;
+    border-top: 5px dotted #f00;
+    color: #fff;
+    background-color: transparent;
+    height: 1px;
+    width: 15%;
+    position: relative;
+    top: 30px;
+    margin:20px;
+}
+div#send_icon {
+    margin-top: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+img#plane {
+    width: 80px;
+}
+img#mex {
+    width: 70px;
+}
+.col3{
+    width: 25%;
+    float: left;
+    position: relative;
+    left: 25px;
+}
+#flex_miner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#m_c{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom:200%
+}
+.miner_node {
+    position: absolute;
+    top:auto;
+    border-radius: 100%;
+    z-index: 2;
+}

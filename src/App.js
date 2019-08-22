@@ -27,12 +27,12 @@ class App extends React.Component {
     }
     else if(window.innerWidth <= 1200 && window.innerWidth > 480){
       this.setState({
-        responsive: 0
+        responsive: 20
       });
     }
     else if(window.innerWidth <= 480){
       this.setState({
-        responsive: 0
+        responsive: 40
       });
     }
     this.setState({

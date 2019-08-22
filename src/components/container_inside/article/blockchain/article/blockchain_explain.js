@@ -62,7 +62,7 @@ class Animation extends React.Component {
                 map: {
                   ...state.map,
                   zoom: state.map.zoom + 5,
-                  y: this.state.map.y + 950,
+                  y: this.state.map.y + 850,
                   x : this.state.map.x + 500,
                 }
             }));
@@ -91,6 +91,23 @@ class Animation extends React.Component {
         //**** STEP 5 - AVANTI ****
         if(step === 5){
             this.setState({step:step})
+            this.setState(state => ({
+                ...state,
+                sender: {
+                  ...state.sender,
+                  from_scale: 1,
+                  to_scale: 0,
+                }
+            }));
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.map.zoom - 5,
+                  y: this.state.map.y-+ 850,
+                  x : this.state.map.x - 500,
+                }
+            }));
         }
         //**** STEP 6 - AVANTI ****
         if(step === 6){
@@ -143,7 +160,7 @@ class Animation extends React.Component {
                 map: {
                   ...state.map,
                     zoom: this.state.map.zoom - 5,
-                    y: this.state.map.y - 950,
+                    y: this.state.map.y - 850,
                     x: this.state.map.x - 500
                 }
               }));  
@@ -159,6 +176,7 @@ class Animation extends React.Component {
         //**** STEP 3 - INDIETRO ****
         if(step === 3){
             this.setState({step:step})
+            // sender info disappear
             this.setState(state => ({
                 ...state,
                 sender: {
@@ -172,6 +190,25 @@ class Animation extends React.Component {
         //**** STEP 4 - INDIETRO ****
         if(step === 4){
             this.setState({step:step})
+            // sender info appear
+            this.setState(state => ({
+                ...state,
+                sender: {
+                  ...state.sender,
+                  from_scale: 0,
+                  to_scale: 1,
+                }
+            }));
+            // map zoom
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.map.zoom + 5,
+                  y: this.state.map.y + 850,
+                  x : this.state.map.x + 500,
+                }
+            }));
             
         }
         //**** STEP 5 - INDIETRO ****

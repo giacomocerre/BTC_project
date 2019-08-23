@@ -12,6 +12,7 @@ function Step5(props){
                         <Miner step={props.step} id="m_2"  top={400} left={460}  color={props.color}/>
 
                         <MinerConnection id="m_connect_51"  class="connection"  step={props.step}  from="p_6" to="m_2"/>
+
                         
                     </div>
                 </div>

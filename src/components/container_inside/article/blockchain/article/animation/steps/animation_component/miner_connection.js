@@ -12,6 +12,7 @@ function MinerConnection(props) {
         var y1 = el_from.offsetTop + (el_from.offsetHeight / 2);
         var x2 = el_to.offsetLeft + (el_to.offsetWidth / 2);
         var y2 = el_to.offsetTop + (el_to.offsetHeight / 2);
+        // rivedere keyframe
         var sendPlane = css`
             0% {
                 top:500px;

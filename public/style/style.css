@@ -337,6 +337,11 @@ td.signature {
     height: 100%;
     position: relative;
 }
+#map_container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
 div#motion_map{
     height: 100%;
     width: 100%;
@@ -458,7 +463,7 @@ table#send_add{
 }
 .v_line{
     border: none;
-    border-top: 5px dotted #f00;
+    border-top: 5px dotted #D2644F;
     color: #fff;
     background-color: transparent;
     height: 1px;
@@ -470,7 +475,7 @@ table#send_add{
 }
 .h_line{
     border: none;
-    border-top: 5px dotted #f00;
+    border-top: 5px dotted #D2644F;
     color: #fff;
     background-color: transparent;
     height: 1px;
@@ -516,4 +521,11 @@ img#mex {
     top:auto;
     border-radius: 100%;
     z-index: 2;
+}
+#p_miner{
+    width: 30px;
+    height: 30px;
+    margin-top: 115px;
+    margin-left: 440px;
+    background : #D2644F;
 }

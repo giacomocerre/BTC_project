@@ -1,5 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
+import Delay from "react-delay"
 
 function MinerConnection(props) {
     if (props.step >= 5) {
@@ -10,6 +11,7 @@ function MinerConnection(props) {
         var x2 = el_to.offsetLeft + (el_to.offsetWidth / 2);
         var y2 = el_to.offsetTop + (el_to.offsetHeight / 2);
         return (
+            <Delay wait={1000}>
             <motion.svg
             id={props.id}
             class="miner_in"
@@ -21,12 +23,14 @@ function MinerConnection(props) {
                 when: "beforeChildren",
             }}
             >
-                <line class="miner_in" x1={x1} y1={y1} x2={x2} y2={y2} stroke="#5184AF"/>           
-            </motion.svg>
+                <line class="miner_in" x1={x1} y1={y1} x2={x2} y2={y2} stroke="#D2644F"/>           
+            </motion.svg>                
+            </Delay>
         )
     } else {
         return (false)
     }
 }
+
 
 export default MinerConnection

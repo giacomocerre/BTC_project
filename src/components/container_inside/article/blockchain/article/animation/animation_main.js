@@ -29,6 +29,7 @@ function AnimationStep(props) {
                     to_scale={props.sender.to_scale}/>
                 <Step5
                     step={props.step}
+                    m_color={props.point.m_color}
                     color={props.point.base_color} />
             </div>
         )

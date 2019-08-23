@@ -359,6 +359,24 @@ svg.connect {
     height: 100vh;
     z-index: 1;
 }
+
+svg .miner_in {
+    stroke-dasharray: 10;
+    stroke-width: 5; 
+    stroke-linecap: round;
+    animation: dash 10s infinite linear;
+    -webkit-animation: dash 10s infinite linear;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 600;
+    }
+  }
+  @-webkit-keyframes dash {
+    to {
+      stroke-dashoffset: 600;
+    }
+}
 svg .path_in {
     stroke-dasharray: 1300;
     animation: dash 4s linear;
@@ -379,24 +397,8 @@ svg .path_in {
     to {
       stroke-dashoffset: 0;
     }
-}
-svg .miner_in {
-    stroke-dasharray: 10;
-    stroke-width: 5; 
-    stroke-linecap: round;
-    animation: dash 10s infinite linear;
-    -webkit-animation: dash 10s infinite linear;
   }
-  @keyframes dash {
-    to {
-      stroke-dashoffset: 600;
-    }
-  }
-  @-webkit-keyframes dash {
-    to {
-      stroke-dashoffset: 600;
-    }
-}
+
 div#sender_node {
     height: 100%;
     width: 45%;

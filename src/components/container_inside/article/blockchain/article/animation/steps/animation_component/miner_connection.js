@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { css } from "styled-components"
+// import styled from "styled-components"
 import Delay from "react-delay"
 
 
@@ -13,14 +13,6 @@ function MinerConnection(props) {
         var x2 = el_to.offsetLeft + (el_to.offsetWidth / 2);
         var y2 = el_to.offsetTop + (el_to.offsetHeight / 2);
         // rivedere keyframe
-        var sendPlane = css`
-            0% {
-                top:500px;
-            }
-            100% {
-                top: 0px;
-            }
-      `;
         var imgStyle = {
             position: "absolute",
             width: "30px",
@@ -28,10 +20,7 @@ function MinerConnection(props) {
             left: "0",
             transform:"rotate(" + x1 + "deg)",
             marginTop: y1,
-            marginLeft: x1,
-            webkitAnimation: `${sendPlane} 2s infinite  normal ease-out` ,
-            animation: `${sendPlane} 2s infinite  normal ease-out`,
-            
+            marginLeft: x1,        
           };
         return (
             <Delay wait={1000}>
@@ -49,7 +38,7 @@ function MinerConnection(props) {
                 <line class="miner_in" x1={x1} y1={y1} x2={x2} y2={y2} stroke="#D2644F"/>
                 
             </motion.svg> 
-            <img class="plane" src="../img/plane.svg" alt="plane" style={imgStyle}/>               
+            <img class="plane" src="../img/plane.svg" alt="plane" style={imgStyle}/>          */}
             </Delay>
         )
     } else {

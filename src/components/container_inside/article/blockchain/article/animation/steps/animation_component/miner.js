@@ -1,31 +1,26 @@
 import React from "react"
 import { motion } from "framer-motion"
+import Delay from "react-delay"
 
 function Miner(props){
-    var show = 0
-    var hide = 0
-    if(props.step === 5){
-        show = 0
-        hide = 1
-    }else{
-        show = 1
-        hide = 0
-    }
     if(props.step >= 4){
         return(
-        <motion.div
-        id={props.id}
-        class="miner_node"
-        style={{width:"50px", height:"50px", marginTop:props.top, marginLeft:props.left, borderColor:props.color}}
-        initial={{ opacity: hide }}
-        animate={{ opacity: hide }}
-        transition={{
-            duration: 4,
-            when: "beforeChildren",
-        }}
-        >
-            <img class="point_miner" src="../img/miner.svg" alt="miner"/>
-        </motion.div>
+        <Delay wait={2000}>
+            <div id={props.id} class="miner_node" style={{width:"50px", height:"50px", marginTop:props.top, marginLeft:props.left}}>
+                <motion.img
+                class="point_miner"
+                src="../img/miner.svg"
+                alt="miner"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                    duration: 4,
+                }}
+                >
+
+                </motion.img>
+            </div>
+        </Delay>
         )
     }else{
         return(false)

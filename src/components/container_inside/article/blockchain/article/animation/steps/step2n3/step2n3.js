@@ -29,11 +29,6 @@ function Step2n3(props) {
                     duration: 1,
                     }}
                 >
-                    {/* POINT STEP 2 
-                    NON FUNZIONA -- RIGAURDARE IL RESPONSIVE
-                    *************************************************************
-                        TOP = { misura fissa + proporzione responsive + "%"} 
-                    *************************************************************/} 
                     <div id="flex_pc">
                         <div id="p_c">
                             <Point step={props.step} id="p_1"  show_hide={div_display} top={100} left={130}  color={props.color}/>   

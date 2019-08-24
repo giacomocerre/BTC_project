@@ -21,7 +21,6 @@ function AnimationStep(props) {
                     color={props.point.base_color} 
                     m_color={props.point.m_color} 
                     r_color={props.point.r_color}
-                    responsive ={props.responsive}
                     /> 
                 <Step4 
                     step={props.step} 
@@ -30,7 +29,8 @@ function AnimationStep(props) {
                 <Step5
                     step={props.step}
                     m_color={props.point.m_color}
-                    color={props.point.base_color} />
+                    color={props.point.base_color}
+                    display={props.miner.display} />
             </div>
         )
 }    

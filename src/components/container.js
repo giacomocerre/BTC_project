@@ -6,7 +6,7 @@ function Container(props){
     return (
         <div id="container">
             <Sidebar/>
-            <Content responsive={props.responsive}/>
+            <Content/>
         </div>
     );
 }

@@ -369,8 +369,8 @@ svg .miner_in {
     stroke-dasharray: 10;
     stroke-width: 5; 
     stroke-linecap: round;
-    animation: dash 10s infinite linear;
-    -webkit-animation: dash 10s infinite linear;
+    animation: dash 30s infinite linear;
+    -webkit-animation: dash 30s infinite linear;
   }
   @keyframes dash {
     to {
@@ -529,6 +529,439 @@ img#mex {
     margin-left: 440px;
     background : #D2644F;
 }
-img.plane {
-
+/* plane animation */
+.plane{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 0;
+    margin-top: 115px;
+    margin-left: 440px;
+    opacity: 0;
+}
+img#plane_1 {
+    transform: scaleX(-1) rotate(30deg);
+    -webkit-animation : plane1 3s linear;
+    -moz-animation    : plane1 3s linear;
+    -o-animation      : plane1 3s linear;
+    animation         : plane1 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane1 {
+    
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 10px;
+        left: -300px;
+    }
+    100%{
+        top : 10px;
+        left: -300px;
+        opacity: 0;
+    }
+}
+@keyframes plane1 {
+    
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 10px;
+        left: -300px;
+    }
+    100%{
+        top : 10px;
+        left: -300px;
+        opacity: 0;
+    }
+}
+img#plane_2 {
+    transform:rotate(100deg);
+    -webkit-animation : plane2 3s linear;
+    -moz-animation    : plane2 3s linear;
+    -o-animation      : plane2 3s linear;
+    animation         : plane2 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane2 {
+    
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 250px;
+        left: 95px;
+    }
+    100%{
+        top : 250px;
+        left: 95px;
+        opacity: 0;
+    }
+}
+@keyframes plane2 {
+    
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 250px;
+        left: 95px;
+    }
+    100%{
+        top : 250px;
+        left: 95px;
+        opacity: 0;
+    }
+}
+img#plane_3 {
+    transform:rotate(30deg);
+    -webkit-animation : plane3 3s linear;
+    -moz-animation    : plane3 3s linear;
+    -o-animation      : plane3 3s linear;
+    animation         : plane3 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane3 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 0px;
+        left: 300px;
+    }
+    100%{
+        top : 0px;
+        left: 300px;
+        opacity: 0;
+    }
+}
+@keyframes plane3 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 0px;
+        left: 300px;
+    }
+    100%{
+        top : 0px;
+        left: 300px;
+        opacity: 0;
+    }
+}
+img#plane_4 {
+    transform: scaleX(-1) rotate(80deg);
+    -webkit-animation : plane4 3s linear;
+    -moz-animation    : plane4 3s linear;
+    -o-animation      : plane4 3s linear;
+    animation         : plane4 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane4 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 250px;
+        left: -210px;
+    }
+    100%{
+        top : 250px;
+        left: -210px;
+        opacity: 0;
+    }
+}
+@keyframes plane4 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 250px;
+        left: -210px;
+    }
+    100%{
+        top : 250px;
+        left: -210px;
+        opacity: 0;
+    }
+}
+img#plane_5 {
+    transform:rotate(90deg);
+    -webkit-animation : plane5 3s linear;
+    -moz-animation    : plane5 3s linear;
+    -o-animation      : plane5 3s linear;
+    animation         : plane5 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane5 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 320px;
+        left: 450px;
+    }
+    100%{
+        top : 320px;
+        left: 450px;
+        opacity: 0;
+    }
+}
+@keyframes plane5 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 320px;
+        left: 450px;
+    }
+    100%{
+        top : 320px;
+        left: 450px;
+        opacity: 0;
+    }
+}
+img#plane_6 {
+    transform:rotate(60deg);
+    -webkit-animation : plane6 3s linear;
+    -moz-animation    : plane6 3s linear;
+    -o-animation      : plane6 3s linear;
+    animation         : plane6 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane6 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 100px;
+        left: 200px;
+    }
+    100%{
+        top : 100px;
+        left: 200px;
+        opacity: 0;
+    }
+}
+@keyframes plane6 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 100px;
+        left: 200px;
+    }
+    100%{
+        top : 100px;
+        left: 200px;
+        opacity: 0;
+    }
+}
+img#plane_7 {
+    transform: scaleX(-1) rotate(45deg);
+    -webkit-animation : plane7 3s linear;
+    -moz-animation    : plane7 3s linear;
+    -o-animation      : plane7 3s linear;
+    animation         : plane7 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane7 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 100px;
+        left: -300px;
+    }
+    100%{
+        top : 100px;
+        left: -300px;
+        opacity: 0;
+    }
+}
+@keyframes plane7 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 100px;
+        left: -300px;
+    }
+    100%{
+        top : 100px;
+        left: -300px;
+        opacity: 0;
+    }
+}
+img#plane_8 {
+    transform: scaleY(-1) rotate(180deg);
+    -webkit-animation : plane8 3s linear;
+    -moz-animation    : plane8 3s linear;
+    -o-animation      : plane8 3s linear;
+    animation         : plane8 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane8 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : -40px;
+        left: -80px;
+    }
+    100%{
+        top : -40px;
+        left: -80px;
+        opacity: 0;
+    }
+}
+@keyframes plane8 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : -40px;
+        left: -80px;
+    }
+    100%{
+        top : -40px;
+        left: -80px;
+        opacity: 0;
+    }
+}
+img#plane_9 {
+    transform: scaleX(-1) rotate(450deg);
+    /* transform:rotate(60deg); */
+    -webkit-animation : plane9 3s linear;
+    -moz-animation    : plane9 3s linear;
+    -o-animation      : plane9 3s linear;
+    animation         : plane9 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane9 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 290px;
+        left: -180px;
+    }
+    100%{
+        top : 290px;
+        left: -180px;
+        opacity: 0;
+    }
+}
+@keyframes plane9 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 290px;
+        left: -180px;
+    }
+    100%{
+        top : 290px;
+        left: -180px;
+        opacity: 0;
+    }
+}
+img#plane_10 {
+    transform:rotate(100deg);
+    /* transform:rotate(60deg); */
+    -webkit-animation : plane10 3s linear;
+    -moz-animation    : plane10 3s linear;
+    -o-animation      : plane10 3s linear;
+    animation         : plane10 3s linear;
+    animation-iteration-count : 1;
+}
+@-webkit-keyframes plane10 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 100px;
+        left: 10px;
+    }
+    100%{
+        top : 100px;
+        left: 10px;
+        opacity: 0;
+    }
+}
+@keyframes plane10 {
+    0% {
+        opacity: 1;
+        top : 0px;
+        left: 0px;
+    }
+    95% {
+        opacity: 1;
+        top : 100px;
+        left: 10px;
+    }
+    100%{
+        top : 100px;
+        left: 10px;
+        opacity: 0;
+    }
 }

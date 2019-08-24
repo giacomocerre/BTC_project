@@ -14,7 +14,9 @@ class Animation extends React.Component {
             ledge       :{zoom:1, display:"flex"},
             map         :{zoom:0, x:0, y:0, rotate:0},
             point       :{base_color:"#333", m_color:"#333", r_color:"#333"},
-            sender      :{from_scale:0, to_scale:1}
+            sender      :{from_scale:0, to_scale:1},
+            miner       :{display:"block"}
+            
         };
     }
     //*********************************
@@ -106,6 +108,14 @@ class Animation extends React.Component {
                   zoom: state.map.zoom - 5,
                   y: this.state.map.y-+ 850,
                   x : this.state.map.x - 500,
+                }
+            }));
+             // miner
+             this.setState(state => ({
+                ...state,
+                miner: {
+                  ...state.miner,
+                  display: "block"
                 }
             }));
         }
@@ -209,6 +219,14 @@ class Animation extends React.Component {
                   x : this.state.map.x + 500,
                 }
             }));
+            // miner
+            this.setState(state => ({
+                ...state,
+                miner: {
+                  ...state.miner,
+                  display: "none"
+                }
+            }));
             
         }
         //**** STEP 5 - INDIETRO ****
@@ -225,11 +243,11 @@ class Animation extends React.Component {
                 <div id="animation">
                     <AnimationStep 
                         step = {this.state.step}
-                        responsive={this.props.responsive}
                         ledge={this.state.ledge}
                         map={this.state.map}
                         point={this.state.point}
-                        sender={this.state.sender}/>
+                        sender={this.state.sender}
+                        miner={this.state.miner}/>
                 </div>
                 <div id="step forward" class="command" onClick={this.StepForward}><img class="arrow" src="img/arrow_f.svg" alt="forward"/></div>
             </div>

@@ -3,7 +3,7 @@ import Miner from "../animation_component/miner"
 import MinerConnection from "../animation_component/miner_connection"
 
 function Step5(props){
-    if ( props.step >= 4 ){
+    if ( props.step >= 5 ){
         return(
                 <div id="flex_miner" style={{display:props.display}}>
                     <div id="m_c">

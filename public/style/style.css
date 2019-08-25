@@ -405,20 +405,19 @@ svg .path_in {
   }
 
 div#sender_node {
-    height: 100%;
+    height: 90%;
     width: 45%;
     position: relative;
-    bottom: 100%;
-    right: 27%;
+    bottom: 95%;
+    right: 23%;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
     box-sizing: border-box;
-    border-radius: 20px;
-    border: 10px solid #D2644F;
+    border: 1px solid #333;
 }
 #send_content h1{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Playfair Display", sans-serif;
     width: 100%;
     text-align: center;
     margin: 20px 0px;
@@ -428,13 +427,26 @@ div#sender_node {
 .arrow_left {
     width: 0;
     height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
     position: absolute;
-    bottom: 80%;
-    left: 100%;
-    border-left: 30px solid #D2644F;
-  }
+    bottom: -21px;
+    right: 95%;
+    transform: rotate(315deg);
+    border-left: 16px solid #8B0309;
+}
+
+.arrow_right {
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    position: absolute;
+    bottom: -21px;
+    right: 9px;
+    transform: rotate(585deg);
+    border-left: 16px solid #8B0309;
+}
 
 table#send_ledge, table#send_add {
     width: 50%;
@@ -455,52 +467,17 @@ table#send_add{
     color: #333;
     width: 10%;
 }
-.red{
-    color: #D2644F;
-}
-.blue{
-    color: rgb(52, 152, 219);
-}
-.v_line{
-    border: none;
-    border-top: 5px dotted #D2644F;
-    color: #fff;
-    background-color: transparent;
-    height: 1px;
-    width: 15%;
-    position: relative;
-    right: 20%;
-    top: 30px;
-    transform: rotate(-90deg);
-}
-.h_line{
-    border: none;
-    border-top: 5px dotted #D2644F;
-    color: #fff;
-    background-color: transparent;
-    height: 1px;
-    width: 15%;
-    position: relative;
-    top: 30px;
-    margin:20px;
-}
-div#send_icon {
-    margin-top: 80px;
-    overflow: hidden;
+div#papyrus {
+    width: 110%;
+    height: 80px;
     display: flex;
+    align-items: center;
     justify-content: center;
-}
-img#plane {
-    width: 80px;
-}
-img#mex {
-    width: 70px;
-}
-.col3{
-    width: 25%;
-    float: left;
     position: relative;
-    left: 25px;
+    right: 5%;
+    margin-top: 40px;
+    background: #D2644F;
+    color: #f6f6f6;
 }
 #flex_miner{
     width: 100%;

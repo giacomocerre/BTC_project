@@ -3,9 +3,9 @@ import { motion } from "framer-motion"
 import Delay from "react-delay"
 
 function Miner(props){
-    if(props.step >= 4){
+    if(props.step >= 5){
         return(
-        <Delay wait={2000}>
+        <Delay wait={1000}>
             <div id={props.id} class="miner_node" style={{width:"50px", height:"50px", marginTop:props.top, marginLeft:props.left}}>
                 <motion.img
                 class="point_miner"

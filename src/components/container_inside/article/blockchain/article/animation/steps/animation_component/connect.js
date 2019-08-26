@@ -10,8 +10,8 @@ function Connection(props){
         var y2 = el_to.offsetTop + (el_to.offsetHeight/2);
         return(
             
-            <svg id={props.id} class="connect">
-                <line class="path_in" x1={x1} y1={y1} x2={x2} y2={y2} stroke="#444"/>             
+            <svg id={props.id} class="connect" style={{display:props.show_hide}}>
+                <line class="path_in" x1={x1} y1={y1} x2={x2} y2={y2} stroke="#ccc"/>             
             </svg>
         )
     }else{

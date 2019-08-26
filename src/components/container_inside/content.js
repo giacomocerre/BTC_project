@@ -12,7 +12,7 @@ function Content(props){
             <Division id="ev_div" text="Evolution"/>
             <Evolution />
             <Division id="bc_div" text="Blockchain"/>
-            <Blockchain responsive={props.responsive}/>
+            <Blockchain/>
         </div>
     );
 }

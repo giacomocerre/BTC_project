@@ -7,7 +7,7 @@ function Point(props){
         <motion.div
         id={props.id}
         class="net_node"
-        style={{width:"30px", height:"30px", marginTop:props.top, marginLeft:props.left, background:props.color}}
+        style={{width:"30px", height:"30px", marginTop:props.top, marginLeft:props.left, background:props.color, display:props.show_hide}}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
@@ -15,7 +15,6 @@ function Point(props){
             when: "beforeChildren",
         }}
         >
-            <p>{props.id}</p>
         </motion.div>
         )
     }else{

@@ -1,14 +1,18 @@
 import React from "react"
-import Ledge from "./ledge"
 import LedgeAdd from "./ledge_add"
 
 function SendInfo(){
     return(
         <div id="send_content">
-            <h1>Transiction from <span class="red">Red</span> to <span class="blue">Blue</span></h1>
-            <Ledge id="send_ledge"/>
+            <div id="papyrus">
+                <h1 id="pap_title">Transiction Red  - Blue</h1>
+                <div class="arrow_left"></div>
+                <div class="arrow_right"></div>
+            </div>
+            <div id="send_trx">
+               
+            </div>
             <LedgeAdd id="send_add"/>
-            <hr class="line_send"/>
         </div>
     );
 }

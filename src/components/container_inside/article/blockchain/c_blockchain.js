@@ -4,7 +4,7 @@ import Animation from "./article/blockchain_explain"
 function Blockchain (props){
     return(
         <section id="explain">
-            <Animation responsive={props.responsive}/>
+            <Animation/>
         </section>
     );
 }

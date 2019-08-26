@@ -14,7 +14,9 @@ class Animation extends React.Component {
             ledge       :{zoom:1, display:"flex"},
             map         :{zoom:0, x:0, y:0, rotate:0},
             point       :{base_color:"#333", m_color:"#333", r_color:"#333"},
-            sender      :{from_scale:0, to_scale:1}
+            sender      :{from_scale:0, to_scale:1},
+            miner       :{display:"block"}
+            
         };
     }
     //*********************************
@@ -62,7 +64,7 @@ class Animation extends React.Component {
                 map: {
                   ...state.map,
                   zoom: state.map.zoom + 5,
-                  y: this.state.map.y + 950,
+                  y: this.state.map.y + 850,
                   x : this.state.map.x + 500,
                 }
             }));
@@ -91,6 +93,31 @@ class Animation extends React.Component {
         //**** STEP 5 - AVANTI ****
         if(step === 5){
             this.setState({step:step})
+            this.setState(state => ({
+                ...state,
+                sender: {
+                  ...state.sender,
+                  from_scale: 1,
+                  to_scale: 0,
+                }
+            }));
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.map.zoom - 5,
+                  y: this.state.map.y-+ 850,
+                  x : this.state.map.x - 500,
+                }
+            }));
+             // miner
+             this.setState(state => ({
+                ...state,
+                miner: {
+                  ...state.miner,
+                  display: "block"
+                }
+            }));
         }
         //**** STEP 6 - AVANTI ****
         if(step === 6){
@@ -143,7 +170,7 @@ class Animation extends React.Component {
                 map: {
                   ...state.map,
                     zoom: this.state.map.zoom - 5,
-                    y: this.state.map.y - 950,
+                    y: this.state.map.y - 850,
                     x: this.state.map.x - 500
                 }
               }));  
@@ -159,6 +186,7 @@ class Animation extends React.Component {
         //**** STEP 3 - INDIETRO ****
         if(step === 3){
             this.setState({step:step})
+            // sender info disappear
             this.setState(state => ({
                 ...state,
                 sender: {
@@ -172,6 +200,33 @@ class Animation extends React.Component {
         //**** STEP 4 - INDIETRO ****
         if(step === 4){
             this.setState({step:step})
+            // sender info appear
+            this.setState(state => ({
+                ...state,
+                sender: {
+                  ...state.sender,
+                  from_scale: 0,
+                  to_scale: 1,
+                }
+            }));
+            // map zoom
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.map.zoom + 5,
+                  y: this.state.map.y + 850,
+                  x : this.state.map.x + 500,
+                }
+            }));
+            // miner
+            this.setState(state => ({
+                ...state,
+                miner: {
+                  ...state.miner,
+                  display: "none"
+                }
+            }));
             
         }
         //**** STEP 5 - INDIETRO ****
@@ -188,11 +243,11 @@ class Animation extends React.Component {
                 <div id="animation">
                     <AnimationStep 
                         step = {this.state.step}
-                        responsive={this.props.responsive}
                         ledge={this.state.ledge}
                         map={this.state.map}
                         point={this.state.point}
-                        sender={this.state.sender}/>
+                        sender={this.state.sender}
+                        miner={this.state.miner}/>
                 </div>
                 <div id="step forward" class="command" onClick={this.StepForward}><img class="arrow" src="img/arrow_f.svg" alt="forward"/></div>
             </div>

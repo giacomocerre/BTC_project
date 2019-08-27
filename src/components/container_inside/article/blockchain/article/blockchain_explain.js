@@ -13,7 +13,7 @@ class Animation extends React.Component {
             step        : step,
             ledge       :{zoom:1, display:"flex"},
             map         :{zoom:0, x:0, y:0, rotate:0},
-            point       :{base_color:"#333", m_color:"#333", r_color:"#333"},
+            point       :{base_color:"#333", m_color:"#333", r_color:"#333", show:"none"},
             sender      :{from_scale:0, to_scale:1},
             miner       :{display:"block"}
             
@@ -72,8 +72,9 @@ class Animation extends React.Component {
                 ...state,
                 point: {
                   ...state.point,
-                  m_color: "#D2644F",
-                  r_color: "#3498DB"
+                  m_color: "#3E606F",
+                  r_color: "#2F3840",
+                  show:"block"
                 }
             }));
         }
@@ -179,7 +180,8 @@ class Animation extends React.Component {
                 point: {
                   ...state.point,
                   m_color: "#333",
-                  r_color: "#333"
+                  r_color: "#333",
+                  show:"none"
                 }
             }));
         }

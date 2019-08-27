@@ -21,6 +21,7 @@ function AnimationStep(props) {
                     color={props.point.base_color} 
                     m_color={props.point.m_color} 
                     r_color={props.point.r_color}
+                    s_show={props.point.show}
                     /> 
                 <Step4 
                     step={props.step} 

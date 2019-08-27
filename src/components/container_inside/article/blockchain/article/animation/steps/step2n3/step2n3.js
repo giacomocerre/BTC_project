@@ -3,11 +3,11 @@ import { motion } from "framer-motion"
 import Point from "../animation_component/point"
 import Connection from "../animation_component/connect"
 function Step2n3(props) {
-    var div_display = "block"
+    var div_display = "flex"
     if(props.step >= 5){
         div_display = "none";
     }else{
-        div_display = "block";
+        div_display = "flex";
     }
     console.log(div_display)  
     
@@ -35,8 +35,8 @@ function Step2n3(props) {
                             <Point step={props.step} id="p_2"  show_hide={div_display} top={200} left={100}  color={props.color}/>   
                             <Point step={props.step} id="p_3"  show_hide={div_display} top={320} left={200}  color={props.color}/>  
                             <Point step={props.step} id="p_4"  show_hide={div_display} top={480} left={225}  color={props.color}/>  
-                            <Point step={props.step} id="p_5"  show_hide={div_display} top={150} left={480}  color={props.r_color}/>
-                            <Point step={props.step} id="p_6"                          top={115} left={440}  color={props.m_color}/>
+                            <Point step={props.step} id="p_5"  show_hide={div_display} top={150} left={480}  color={props.r_color} s_show={props.s_show}/>
+                            <Point step={props.step} id="p_6"                          top={115} left={440}  color={props.m_color} s_show={props.s_show}/>
                             <Point step={props.step} id="p_7"  show_hide={div_display} top={240} left={430}  color={props.color}/>
                             <Point step={props.step} id="p_8"  show_hide={div_display} top={290} left={530}  color={props.color}/>
                             <Point step={props.step} id="p_9"  show_hide={div_display} top={420} left={520}  color={props.color}/>

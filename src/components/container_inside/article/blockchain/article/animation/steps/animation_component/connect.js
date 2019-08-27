@@ -11,7 +11,7 @@ function Connection(props){
         return(
             
             <svg id={props.id} class="connect" style={{display:props.show_hide}}>
-                <line class="path_in" x1={x1} y1={y1} x2={x2} y2={y2} stroke="#ccc"/>             
+                <line class="path_in" x1={x1} y1={y1} x2={x2} y2={y2} stroke="#A1A69C"/>             
             </svg>
         )
     }else{

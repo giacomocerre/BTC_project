@@ -584,7 +584,6 @@ h5.send_info_title.red_title {
     width: 100%;
     height: 100%;
     position: relative;
-    bottom:200%
 }
 .miner_node {
     position: absolute;

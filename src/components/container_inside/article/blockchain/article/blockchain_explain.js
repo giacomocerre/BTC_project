@@ -15,7 +15,7 @@ class Animation extends React.Component {
             map         :{zoom:0, x:0, y:0, rotate:0},
             point       :{base_color:"#333", m_color:"#333", r_color:"#333", show:"none"},
             sender      :{from_scale:0, to_scale:1},
-            miner       :{display:"block", zoom:1, rotate:0}
+            miner       :{display:"block"}
             
         };
     }
@@ -125,15 +125,27 @@ class Animation extends React.Component {
             this.setState({step:step})
             this.setState(state => ({
               ...state,
-              miner: {
-                ...state.miner,
-                zoom: state.miner.zoom + 5,
-                // y: this.state.miner.y + 450,
-                // x : this.state.miner.x + 500,
+              sender: {
+                ...state.sender,
+                from_scale: 0,
+                to_scale: 1,
               }
           }));
             
-        }        
+        }
+        //**** STEP 7 - AVANTI ****
+        if(step === 7){
+          this.setState({step:step})
+          this.setState(state => ({
+            ...state,
+            sender: {
+              ...state.sender,
+              from_scale: 1,
+              to_scale: 0,
+            }
+        }));
+          
+      }        
     }
     //***********************************
     // ************ INDIETRO ************
@@ -245,14 +257,25 @@ class Animation extends React.Component {
             this.setState({step:step})
             this.setState(state => ({
               ...state,
-              miner: {
-                ...state.miner,
-                zoom: state.miner.zoom - 5,
-                // y: this.state.miner.y - 450,
-                // x : this.state.miner.x - 500,
+              sender: {
+                ...state.sender,
+                from_scale: 1,
+                to_scale: 0,
               }
           }));
-        }   
+        }  
+        if(step === 6){
+          this.setState({step:step})
+          this.setState(state => ({
+            ...state,
+            sender: {
+              ...state.sender,
+              from_scale: 0,
+              to_scale: 1,
+            }
+        }));
+          
+      } 
     }
 
     render() {

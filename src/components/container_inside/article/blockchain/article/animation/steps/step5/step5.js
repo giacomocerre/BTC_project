@@ -5,12 +5,12 @@ import MinerConnection from "../animation_component/miner_connection"
 function Step5(props){
     var mc_bottom = "200%";
     var m_hide="block";
-    var img_miner="../img/miner.svg"
+    var img_miner="../img/miner_1.svg"
     if ( props.step >= 5 ){
         if(props.step >= 6){
             mc_bottom = "103.3%"
             m_hide="none";
-            img_miner="../img/miner_g.svg"
+            img_miner="../img/miner_2.svg"
         }
         return(
                 <div id="flex_miner" style={{display:props.display}}>

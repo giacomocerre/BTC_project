@@ -35,7 +35,8 @@ function AnimationStep(props) {
                     display={props.miner.display}/>
                 <Step6
                     step={props.step}
-                      />
+                    from_scale={props.sender.from_scale} 
+                    to_scale={props.sender.to_scale}/>
             </div>
         )
 }    

@@ -404,17 +404,27 @@ svg .path_in {
     }
   }
 
+#p_6{
+    display: flex
+}
+h3.sm_name {
+    width: 100%;
+    text-align: center;
+    font-size: 0.6em;
+}
+
 div#sender_node {
     height: 90%;
     width: 45%;
     position: relative;
-    bottom: 95%;
-    right: 23%;
+    bottom: 100%;
+    right: 24%;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
-    box-sizing: border-box;
-    border: 1px solid #333;
+    -webkit-box-shadow: 0px 0px 46px -13px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 0px 46px -13px rgba(51,51,51,1);
+    box-shadow: 0px 0px 46px -13px rgba(51,51,51,1)
 }
 #send_content h1{
     font-family: "Playfair Display", sans-serif;
@@ -433,7 +443,49 @@ div#sender_node {
     bottom: -21px;
     right: 95%;
     transform: rotate(315deg);
-    border-left: 16px solid #8B0309;
+    border-left: 16px solid #000;
+}
+div#send_trx {
+    margin-top: 100px;
+}
+.wrapper{
+    width: 50%;
+    height: 80px;
+    position: relative;
+}
+.wrapper.wrapper_left {
+    /* background: url(../img/s_gradient.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background-image: linear-gradient(to right, #91AA9D, #3E606F,#3E606F);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrapper.wrapper_right {
+    /* background: url(../img/s_gradient3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1; */
+    background-image: linear-gradient(to right, #3E606F,#3E606F, #193441);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    float: right;
+    bottom: 80px;
+}
+.cut {
+    position: relative;
+    top: 25%;
+    left: 90%;
+    width: 60px;
+    height: 60px;
+    transform-origin: center top;
+    transform: rotate(45deg);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
 }
 
 .arrow_right {
@@ -445,23 +497,36 @@ div#sender_node {
     bottom: -21px;
     right: 9px;
     transform: rotate(585deg);
-    border-left: 16px solid #8B0309;
+    border-left: 16px solid #000;
 }
 
-table#send_ledge, table#send_add {
+table#send_add {
     width: 50%;
     background: #f6f6f6;
     font-size: 0.7em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    border-radius:5px;
 }
-table#send_ledge{
-    border: 3px solid #333;
+div#message {
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
-table#send_add{
-    border: 3px solid #D2644F;
+div#add_content {
+    width: 90%;
+    float: right;
+}
+img#sed_mex {
+    width: 10%;
+    float: left;
+}
+img#plane_send {
+    transform: rotate(-45deg);
+    width: 60px;
 }
 #send_ledge th.col, #send_add th.col {
     color: #333;
@@ -474,10 +539,38 @@ div#papyrus {
     align-items: center;
     justify-content: center;
     position: relative;
+    top: 20px;
     right: 5%;
     margin-top: 40px;
-    background: #D2644F;
-    color: #f6f6f6;
+    background: #444;
+    color: #f6f6f6; 
+}
+.send_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+h5.send_info_title {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+.send_info_title.miner_title {
+    position: relative;
+    text-align: right;
+    right: 40px;
+}
+h5.send_info_title.red_title {
+    text-align: left;
+    position: relative;
+    left: 30px;
 }
 #flex_miner{
     width: 100%;
@@ -491,7 +584,6 @@ div#papyrus {
     width: 100%;
     height: 100%;
     position: relative;
-    bottom:200%
 }
 .miner_node {
     position: absolute;
@@ -518,10 +610,10 @@ div#papyrus {
 }
 img#plane_1 {
     transform: scaleX(-1) rotate(30deg);
-    -webkit-animation : plane1 3s linear;
-    -moz-animation    : plane1 3s linear;
-    -o-animation      : plane1 3s linear;
-    animation         : plane1 3s linear;
+    -webkit-animation : plane1 2s linear;
+    -moz-animation    : plane1 2s linear;
+    -o-animation      : plane1 2s linear;
+    animation         : plane1 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane1 {
@@ -562,10 +654,10 @@ img#plane_1 {
 }
 img#plane_2 {
     transform:rotate(100deg);
-    -webkit-animation : plane2 3s linear;
-    -moz-animation    : plane2 3s linear;
-    -o-animation      : plane2 3s linear;
-    animation         : plane2 3s linear;
+    -webkit-animation : plane2 2s linear;
+    -moz-animation    : plane2 2s linear;
+    -o-animation      : plane2 2s linear;
+    animation         : plane2 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane2 {
@@ -606,10 +698,10 @@ img#plane_2 {
 }
 img#plane_3 {
     transform:rotate(30deg);
-    -webkit-animation : plane3 3s linear;
-    -moz-animation    : plane3 3s linear;
-    -o-animation      : plane3 3s linear;
-    animation         : plane3 3s linear;
+    -webkit-animation : plane3 2s linear;
+    -moz-animation    : plane3 2s linear;
+    -o-animation      : plane3 2s linear;
+    animation         : plane3 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane3 {
@@ -648,10 +740,10 @@ img#plane_3 {
 }
 img#plane_4 {
     transform: scaleX(-1) rotate(80deg);
-    -webkit-animation : plane4 3s linear;
-    -moz-animation    : plane4 3s linear;
-    -o-animation      : plane4 3s linear;
-    animation         : plane4 3s linear;
+    -webkit-animation : plane4 2s linear;
+    -moz-animation    : plane4 2s linear;
+    -o-animation      : plane4 2s linear;
+    animation         : plane4 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane4 {
@@ -690,10 +782,10 @@ img#plane_4 {
 }
 img#plane_5 {
     transform:rotate(90deg);
-    -webkit-animation : plane5 3s linear;
-    -moz-animation    : plane5 3s linear;
-    -o-animation      : plane5 3s linear;
-    animation         : plane5 3s linear;
+    -webkit-animation : plane5 2s linear;
+    -moz-animation    : plane5 2s linear;
+    -o-animation      : plane5 2s linear;
+    animation         : plane5 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane5 {
@@ -732,10 +824,10 @@ img#plane_5 {
 }
 img#plane_6 {
     transform:rotate(60deg);
-    -webkit-animation : plane6 3s linear;
-    -moz-animation    : plane6 3s linear;
-    -o-animation      : plane6 3s linear;
-    animation         : plane6 3s linear;
+    -webkit-animation : plane6 2s linear;
+    -moz-animation    : plane6 2s linear;
+    -o-animation      : plane6 2s linear;
+    animation         : plane6 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane6 {
@@ -774,10 +866,10 @@ img#plane_6 {
 }
 img#plane_7 {
     transform: scaleX(-1) rotate(45deg);
-    -webkit-animation : plane7 3s linear;
-    -moz-animation    : plane7 3s linear;
-    -o-animation      : plane7 3s linear;
-    animation         : plane7 3s linear;
+    -webkit-animation : plane7 2s linear;
+    -moz-animation    : plane7 2s linear;
+    -o-animation      : plane7 2s linear;
+    animation         : plane7 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane7 {
@@ -816,10 +908,10 @@ img#plane_7 {
 }
 img#plane_8 {
     transform: scaleY(-1) rotate(180deg);
-    -webkit-animation : plane8 3s linear;
-    -moz-animation    : plane8 3s linear;
-    -o-animation      : plane8 3s linear;
-    animation         : plane8 3s linear;
+    -webkit-animation : plane8 2s linear;
+    -moz-animation    : plane8 2s linear;
+    -o-animation      : plane8 2s linear;
+    animation         : plane8 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane8 {
@@ -859,10 +951,10 @@ img#plane_8 {
 img#plane_9 {
     transform: scaleX(-1) rotate(450deg);
     /* transform:rotate(60deg); */
-    -webkit-animation : plane9 3s linear;
-    -moz-animation    : plane9 3s linear;
-    -o-animation      : plane9 3s linear;
-    animation         : plane9 3s linear;
+    -webkit-animation : plane9 2s linear;
+    -moz-animation    : plane9 2s linear;
+    -o-animation      : plane9 2s linear;
+    animation         : plane9 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane9 {
@@ -902,10 +994,10 @@ img#plane_9 {
 img#plane_10 {
     transform:rotate(100deg);
     /* transform:rotate(60deg); */
-    -webkit-animation : plane10 3s linear;
-    -moz-animation    : plane10 3s linear;
-    -o-animation      : plane10 3s linear;
-    animation         : plane10 3s linear;
+    -webkit-animation : plane10 2s linear;
+    -moz-animation    : plane10 2s linear;
+    -o-animation      : plane10 2s linear;
+    animation         : plane10 2s linear;
     animation-iteration-count : 1;
 }
 @-webkit-keyframes plane10 {
@@ -941,4 +1033,25 @@ img#plane_10 {
         left: 10px;
         opacity: 0;
     }
+}
+/* step6 */
+div#flex_mining {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 200%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+div#m_v {
+    width: 75%;
+    height: 90%;
+    margin-left: 10%;
+    background: #f6f6f6;
+}
+div#validation {
+    width: 100%;
+    height: 100%;
 }

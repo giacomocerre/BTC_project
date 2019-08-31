@@ -1050,19 +1050,44 @@ div#m_v {
     width: 75%;
     height: 90%;
     margin-left: 10%;
-    background: #f6f6f6;
     text-align: center;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 46px -13px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 0px 46px -13px rgba(51,51,51,1);
+    box-shadow: 0px 0px 46px -13px rgba(51,51,51,1);
 }
 div#slot_header {
     text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to right, #91AA9D, #3E606F,#3E606F, #193441);
+    padding: 2px;
+    margin-top: 10px;
+}
+div#slot_header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6em;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin: 15px 0;
 }
 #slot_header p {
     font-family: "Crypt", sans-serif;
     letter-spacing: 2px;
     font-size: 1.5em;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #f6f6f6;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#switch_container {
+    width: 100%;
 }
 label.switch {
-    width: 100%;
+    width: 10%;
 }
 div#slot {
     width: 90%;
@@ -1084,7 +1109,7 @@ div > :global(.slot) {
 .slot-item {
     height: 100%;
     width: 100%;
-    display: flex;
+    display: flex;  
 }
 .slot-item div {
     border-radius: 3px;
@@ -1177,10 +1202,10 @@ div > :global(.slot) {
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 7px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -1188,28 +1213,31 @@ div > :global(.slot) {
   
   input:checked + .slider {
     background-color: #2196F3;
-    width: 10%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
   
   input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
-  }
+}
   
-  input:checked + .slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+}
 
-  .slider.round {
+.slider.round {
     border-radius: 34px;
-    width: 10%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
+}
   
-  .slider.round:before {
+.slider.round:before {
     border-radius: 50%;
-  }
+}
+div#know_value {
+    overflow: hidden;
+}

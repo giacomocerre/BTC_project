@@ -130,7 +130,7 @@ class Animation extends React.Component {
                 from_scale: 0,
                 to_scale: 1,
               }
-          }));
+          }));  
             
         }
         //**** STEP 7 - AVANTI ****

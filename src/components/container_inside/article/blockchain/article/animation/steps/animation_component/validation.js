@@ -11,14 +11,16 @@ function Validation (){
                         <div class="arrow_s_left"></div>
                         <div class="arrow_s_right"></div>
                     </div>
-
-                    <div id="slot_header">
+                    <div id="slot_header" class="know">
                         <h2>HEADER</h2>
                         <p>0 0 0 0 0 0 0 0 0 0 0</p>
                     </div>
 
                     <div id="slot">
                         <SlotMachine/>
+                    </div>
+                    <div id="function_val">
+        
                     </div>
                 </div>
             </div>

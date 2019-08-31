@@ -1241,7 +1241,33 @@ input:checked + .slider:before {
 div#know_value {
     overflow: hidden;
 }
+div#function_val {
+    width: 55%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 78%;
+}
+.plus{
+    margin: 0px 35px;
+    font-family: "Crypt", sans-serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.line_v{
+    float:left;
+}
+.mini{
+    font-size: 0.5em;
+    letter-spacing: 2px;
+}
+#val_p{
+    font-family: "Crypt", sans-serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+    letter-spacing: 6px;
+}
 img#block_validation {
     width: 40px;
-    margin-top: 25px;
 }

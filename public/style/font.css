@@ -3,4 +3,10 @@
     src: url("../font/Allison_Script.otf");
     src: url("../font/Allison_Script.otf") format("otf"),
     url("../font/Allison_Script.otf") format("opentype")
-    }
+}
+@font-face {
+    font-family: "Crypt";
+    src: url("../font/Calculator.ttf");
+    src: url("../font/Calculator.ttf") format("ttf"),
+    url("../font/Calculator.ttf") format("opentype")
+}

@@ -5,7 +5,7 @@ function SendInfo(){
     return(
         <div id="send_content">
             <div id="papyrus">
-                <h1 id="pap_title">Transiction A  - B</h1>
+                <h1 class="pap_title">Transiction A  - B</h1>
                 <div class="arrow_left"></div>
                 <div class="arrow_right"></div>
             </div>

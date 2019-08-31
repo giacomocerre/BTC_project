@@ -1241,3 +1241,7 @@ input:checked + .slider:before {
 div#know_value {
     overflow: hidden;
 }
+img#block_validation {
+    width: 40px;
+    margin-top: 25px;
+}

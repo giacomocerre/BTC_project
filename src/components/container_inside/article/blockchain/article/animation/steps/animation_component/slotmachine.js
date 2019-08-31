@@ -2,24 +2,24 @@ import React from 'react';
 import Slot from 'react-slot-machine';
 
 const list = ['?','0','1','2','3','4','5','6','7','8','9','A','B',' C','D','E','F','G','H','I','J','K','L','M','N','O' ,'P','Q','R','S','T','U','V','W','X','Y','Z'];
-
 class SlotMachine extends React.Component {
     constructor() {
         super();
         this.state = {
             target: 1,
             turn: false,
-            color: "#999"
+            color: "#999",
+            text_crypt: "? ? ? ? ? ? ?"
         };
     }
 
     colorChange = () => {
         if(this.state.color === "#999"){
             setTimeout(() => {
-                this.setState({color:"#50BB40"})
+                this.setState({color:"#50BB40", text_crypt: "LB3AW7X"})
             }, 6000);
         }else{
-            this.setState({color: "#999"})
+            this.setState({color: "#999", text_crypt:""})
         }
     }
 
@@ -122,6 +122,10 @@ class SlotMachine extends React.Component {
                 </div>
                 ))}
             </Slot>
+            <div id="function_val">
+                <p>{this.state.text_crypt}</p>
+                <img id="block_validation" src="../img/block.svg" alt="block validation"/>
+            </div>
             </div>
         );
     }

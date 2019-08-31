@@ -19,12 +19,10 @@ function Validation (){
                     <div id="slot">
                         <SlotMachine/>
                     </div>
-                    <div id="function_val">
-        
-                    </div>
                 </div>
             </div>
         )
 }
+
 
 export default Validation

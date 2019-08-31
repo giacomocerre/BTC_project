@@ -137,4 +137,5 @@ class SlotMachine extends React.Component {
 );
     }
 }
+
 export default SlotMachine

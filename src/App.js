@@ -3,12 +3,12 @@ import Open from './components/open';
 import Container from "./components/container"
 
 function App() {
-  return(
+    return(
       <div id="root">
-          <Open />
-          <Container/>
+        <Open />
+        <Container/>
       </div>
-  );
+    );
 }
 
 export default App;

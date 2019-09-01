@@ -1,18 +1,22 @@
 import React from "react"
 import AnimationStep from "./animation/animation_main"
 import Explain from "./animation/explain_step"
-    
-var step = 0;
+
+
+
+var step = 0; 
 //ANIMATION
 class Animation extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
-            step    : step,
-            ledge   :{zoom:1, display:"flex"},
-            map     :{zoom:0, x:0, y:0, rotate:0},
-            point   :{base_color:"#333", m_color:"#333", r_color:"#333"},
-            sender  :{from_scale:0, to_scale:1}
+            step        : step,
+            ledge       :{zoom:1, display:"flex"},
+            map         :{zoom:0, x:0, y:0, rotate:0},
+            point       :{base_color:"#333", m_color:"#333", r_color:"#333", show:"none"},
+            sender      :{from_scale:0, to_scale:1},
+            miner       :{display:"block"}
+            
         };
     }
     //*********************************
@@ -60,7 +64,7 @@ class Animation extends React.Component {
                 map: {
                   ...state.map,
                   zoom: state.map.zoom + 5,
-                  y: this.state.map.y + 950,
+                  y: this.state.map.y + 850,
                   x : this.state.map.x + 500,
                 }
             }));
@@ -68,8 +72,9 @@ class Animation extends React.Component {
                 ...state,
                 point: {
                   ...state.point,
-                  m_color: "#D2644F",
-                  r_color: "#3498DB"
+                  m_color: "#3E606F",
+                  r_color: "#2F3840",
+                  show:"block"
                 }
             }));
         }
@@ -89,12 +94,58 @@ class Animation extends React.Component {
         //**** STEP 5 - AVANTI ****
         if(step === 5){
             this.setState({step:step})
+            this.setState(state => ({
+                ...state,
+                sender: {
+                  ...state.sender,
+                  from_scale: 1,
+                  to_scale: 0,
+                }
+            }));
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.map.zoom - 5,
+                  y: this.state.map.y-+ 850,
+                  x : this.state.map.x - 500,
+                }
+            }));
+            // miner
+             this.setState(state => ({
+                ...state,
+                miner: {
+                  ...state.miner,
+                  display: "block"
+                }
+            }));
         }
         //**** STEP 6 - AVANTI ****
         if(step === 6){
             this.setState({step:step})
+            this.setState(state => ({
+              ...state,
+              sender: {
+                ...state.sender,
+                from_scale: 0,
+                to_scale: 1,
+              }
+          }));  
             
-        }        
+        }
+        //**** STEP 7 - AVANTI ****
+        if(step === 7){
+          this.setState({step:step})
+          this.setState(state => ({
+            ...state,
+            sender: {
+              ...state.sender,
+              from_scale: 1,
+              to_scale: 0,
+            }
+        }));
+          
+      }        
     }
     //***********************************
     // ************ INDIETRO ************
@@ -141,7 +192,7 @@ class Animation extends React.Component {
                 map: {
                   ...state.map,
                     zoom: this.state.map.zoom - 5,
-                    y: this.state.map.y - 950,
+                    y: this.state.map.y - 850,
                     x: this.state.map.x - 500
                 }
               }));  
@@ -150,13 +201,15 @@ class Animation extends React.Component {
                 point: {
                   ...state.point,
                   m_color: "#333",
-                  r_color: "#333"
+                  r_color: "#333",
+                  show:"none"
                 }
             }));
         }
         //**** STEP 3 - INDIETRO ****
         if(step === 3){
             this.setState({step:step})
+            // sender info disappear
             this.setState(state => ({
                 ...state,
                 sender: {
@@ -170,12 +223,59 @@ class Animation extends React.Component {
         //**** STEP 4 - INDIETRO ****
         if(step === 4){
             this.setState({step:step})
+            // sender info appear
+            this.setState(state => ({
+                ...state,
+                sender: {
+                  ...state.sender,
+                  from_scale: 0,
+                  to_scale: 1,
+                }
+            }));
+            // map zoom
+            this.setState(state => ({
+                ...state,
+                map: {
+                  ...state.map,
+                  zoom: state.map.zoom + 5,
+                  y: this.state.map.y + 850,
+                  x : this.state.map.x + 500,
+                }
+            }));
+            // miner
+            this.setState(state => ({
+                ...state,
+                miner: {
+                  ...state.miner,
+                  display: "none"
+                }
+            }));
             
         }
         //**** STEP 5 - INDIETRO ****
         if(step === 5){
             this.setState({step:step})
-        }   
+            this.setState(state => ({
+              ...state,
+              sender: {
+                ...state.sender,
+                from_scale: 1,
+                to_scale: 0,
+              }
+          }));
+        }  
+        if(step === 6){
+          this.setState({step:step})
+          this.setState(state => ({
+            ...state,
+            sender: {
+              ...state.sender,
+              from_scale: 0,
+              to_scale: 1,
+            }
+        }));
+          
+      } 
     }
 
     render() {
@@ -189,7 +289,8 @@ class Animation extends React.Component {
                         ledge={this.state.ledge}
                         map={this.state.map}
                         point={this.state.point}
-                        sender={this.state.sender}/>
+                        sender={this.state.sender}
+                        miner={this.state.miner}/>
                 </div>
                 <div id="step forward" class="command" onClick={this.StepForward}><img class="arrow" src="img/arrow_f.svg" alt="forward"/></div>
             </div>

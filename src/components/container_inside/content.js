@@ -5,14 +5,14 @@ import Blockchain from "./article/blockchain/c_blockchain"
 import Division from "./article/z_division"
 // import Fork from "fork"
 
-function Content(){
+function Content(props){
     return(
         <div id="content">
             <Intro />
             <Division id="ev_div" text="Evolution"/>
             <Evolution />
             <Division id="bc_div" text="Blockchain"/>
-            <Blockchain />
+            <Blockchain/>
         </div>
     );
 }

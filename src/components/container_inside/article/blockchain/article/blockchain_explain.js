@@ -5,6 +5,7 @@ import Explain from "./animation/explain_step"
 
 
 var step = 0; 
+var myopacity = 1;
 //ANIMATION
 class Animation extends React.Component {
     constructor() {
@@ -25,7 +26,7 @@ class Animation extends React.Component {
     StepForward = () => {
         step = step + 1;
         //**** STEP 0 - AVANTI ****
-        if(step === 0 ){
+        if(step <= 0 ){
             this.setState({step:step})
             step = 1;
         }
@@ -278,9 +279,18 @@ class Animation extends React.Component {
       } 
     }
 
+    Disappear(){
+      
+    }
+
     render() {
         return (
         <div>
+            <div id="overlay_start">
+              <h2 id="title_overlay">The Blockchain</h2>
+              <img id="play" src="../img/play.svg" alt="play button" onClick={Disappear}/>
+              <p id="iae">IAE - Interactive Animated Explanation</p>
+            </div>
             <div id="content_animation">
                 <div id="step back" class="command" onClick={this.StepBack}><img class="arrow" src="img/arrow_b.svg" alt="back"/></div>
                 <div id="animation">
@@ -298,5 +308,17 @@ class Animation extends React.Component {
         </div>
         )
     }
-}    
+}   
+
+function Disappear(){
+  var play = document.getElementById("overlay_start");
+      if (myopacity>0) {
+        myopacity -= .075;
+       setTimeout(function(){Disappear()},100);
+     }else{
+       play.style.display = "none";
+     }
+     play.style.opacity = myopacity;
+  
+}
 export default Animation

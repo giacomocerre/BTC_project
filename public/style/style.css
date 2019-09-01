@@ -266,11 +266,50 @@ div#animation {
 img.arrow {
     width: 30px;
 }
+.content_ledge {
+    background: #fff;
+    padding: 50px 0px;
+    -webkit-box-shadow: 0px 0px 46px -13px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 0px 46px -13px rgba(51,51,51,1);
+    box-shadow: 0px 0px 46px -13px rgba(51,51,51,1)
+}
+
 .table_title{
-    width: 100%;
+    width: 108%;
+    background: #333;
+    color: #fff;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Playfair Display", sans-serif;
     font-weight: 100;
+    position: relative;
+    right: 28px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    margin: 0;
+    margin-bottom: 50px;
+    z-index: 1
+}
+.border_trick{
+    width: 30px;
+    height: 0;
+    border-top: 35px solid black;
+    border-bottom: 35px solid black;
+    position: absolute;
+    top: 26%;
+    z-index: 0;
+
+}
+div#border_trik_l {
+    border-left: 35px solid transparent;
+    left: 100px;
+
+}
+div#border_trik_r {
+    border-right: 35px solid transparent;
+    right: 100px;
 }
 table#registry {
     width: 50%;
@@ -412,7 +451,49 @@ h3.sm_name {
     text-align: center;
     font-size: 0.6em;
 }
-
+div#overlay_start {
+    width: 1300px;
+    height: 600px;
+    position: absolute;
+    background-image: linear-gradient(to right, #91AA9D, #3E606F,#3E606F, #193441);
+    z-index: 9;
+    left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2#title_overlay {
+    width: 30%;
+    position: absolute;
+    top: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 3em;
+    border-bottom: 8px double #fff;
+    border-top: 8px double #fff;
+}
+p#iae {
+    position: absolute;
+    top: 90%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    /* border: 1px solid #fefefe; */
+    background: rgb(204,204,204, 0.4);
+    padding: 11px 0px;
+    font-size: 0.8em;
+}
+img#play {
+    width: 100px;
+    background: rgb(204,204,204, 0.3);
+    border-radius: 7px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    cursor: pointer;
+}
+img#play:hover{
+    background: rgb(77, 170, 171, 0.3);
+}
 div#sender_node {
     height: 90%;
     width: 45%;
@@ -455,9 +536,6 @@ div#send_trx {
     position: relative;
 }
 .wrapper.wrapper_left {
-    /* background: url(../img/s_gradient.jpg);
-    background-size: cover;
-    background-repeat: no-repeat; */
     background-image: linear-gradient(to right, #91AA9D, #3E606F,#3E606F);
     background-size: cover;
     background-repeat: no-repeat;

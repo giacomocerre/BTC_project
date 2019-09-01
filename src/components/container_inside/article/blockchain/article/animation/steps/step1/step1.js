@@ -16,6 +16,6 @@ function Step1(props) {
             >
                 <Ledge id="registry"/>
             </motion.div>
-        )
+        );
 }    
 export default Step1

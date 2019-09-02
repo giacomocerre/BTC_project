@@ -954,3 +954,132 @@ img#check_icon {
     top: 393px;
     left: 940px;
 }
+/* step 8 */
+#content_final_step{
+    position: relative;
+    bottom: 390%;
+    height: 100%;
+    width: 100%;
+    left: 5%;
+}
+div#final_ledge {
+    position: relative;
+    bottom: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    right: 200px;
+}
+div#final_ledge_registry {
+    width: 40%;
+}
+#final_ledge_registry h3.table_title {
+    width: 112%;
+    height: 60px;
+}
+#final_ledge_registry div#border_trik_l {
+    left: 247px;
+    top: 195px;
+}
+#final_ledge_registry div#border_trik_r {
+    left: 728px;
+    top: 195px;
+}
+table#final_registry {
+    font-size: 0.8em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f6f6f6;
+}
+div#final_add_content {
+    position: absolute;
+    bottom: 15%;
+    width: 48%;
+    font-size: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    right: 45%;
+    background: #fff;
+    padding: 30px;
+    border: 9px solid#328C49;
+    box-sizing: border-box;
+}
+div#content_final_add {
+    background: #f6f6f6;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bccf{
+    display: inline-grid;
+}
+div#final_blokchain {
+    position: absolute;
+    top: 0%;
+    width: 50%;
+    left: 75%;
+    float: right;
+}
+img.bcf_block {
+    width: 70px;
+}
+.bccf{
+    position: relative;
+}
+img.ccf_block {
+    width: 6px;
+    height: 45px;
+    display: block;
+    position: relative;
+    left: 31px;
+    bottom: 20px;
+    background: #000;
+}
+img#bcf_2 {
+    bottom: 30px;
+}
+img#ccf_2 {
+    bottom: 50px;
+}
+img#bcf_3 {
+    bottom: 60px;
+}
+img#ccf_3 {
+    bottom: 80px;
+}
+img#bcf_4 {
+    bottom: 90px;
+    z-index: 2;
+}
+img#ccf_4 {
+    bottom: 110px;
+    z-index: 1;
+}
+img#bcf_5 {
+    bottom: 120px;
+    z-index: 2;
+}
+hr#hr_tell {
+    position: absolute;
+    width: 210px;
+    bottom: 25%;
+    right: 100%;
+    height: 8px;
+    background: #328C49;
+    border: none;
+}
+img#new {
+    position: absolute;
+    top: 64.2%;
+    width: 50px;
+    right: 223%;
+}
+img#plus_ledge {
+    position: absolute;
+    width: 20px;
+    bottom: 37.8%;
+    right: 186%;
+    padding: 7px;
+}

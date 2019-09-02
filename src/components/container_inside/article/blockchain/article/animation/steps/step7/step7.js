@@ -13,14 +13,14 @@ function Step7(props) {
         if (props.step >= 7){
             return (
                     <div id="flex_mn">
-                        <img id="check_icon" src="../img/check.svg" alt="check"/>
+                        <img id="check_icon" src="../img/check.svg" alt="check" style={{display:mn_display}}/>
                         <div id="m_n">
                             <Point step={props.step} id="mn_1"  show_hide={mn_display} top={100} left={130}  color={props.color}/>   
                             <Point step={props.step} id="mn_2"  show_hide={mn_display} top={200} left={100}  color={props.color}/>   
                             <Point step={props.step} id="mn_3"  show_hide={mn_display} top={320} left={200}  color={props.color}/>  
                             <Point step={props.step} id="mn_4"  show_hide={mn_display} top={480} left={225}  color={props.color}/>  
                             <Point step={props.step} id="mn_5"  show_hide={mn_display} top={150} left={480}  color={props.color}/>
-                            <Point step={props.step} id="mn_6"                         top={115} left={440}  color={props.color}/>
+                            <Point step={props.step} id="mn_6"  show_hide={mn_display} top={115} left={440}  color={props.color}/>
                             <Point step={props.step} id="mn_7"  show_hide={mn_display} top={240} left={430}  color={props.color}/>
                             <Point step={props.step} id="mn_8"  show_hide={mn_display} top={290} left={530}  color={props.color}/>
                             <Point step={props.step} id="mn_9"  show_hide={mn_display} top={420} left={520}  color={props.color}/>

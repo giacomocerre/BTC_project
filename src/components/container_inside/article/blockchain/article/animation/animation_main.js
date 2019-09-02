@@ -5,6 +5,7 @@ import Step4 from "./steps/step4/step4"
 import Step5 from "./steps/step5/step5"
 import Step6 from "./steps/step6/step6"
 import Step7 from "./steps/step7/step7"
+import Step8 from "./steps/step8/step8"
 
 function AnimationStep(props) {
         return (
@@ -47,6 +48,8 @@ function AnimationStep(props) {
                     m_color={props.point.m_color} 
                     r_color={props.point.r_color}
                     s_show={props.point.show} />
+                <Step8 
+                    step={props.step}/>
             </div>
         )
 }    

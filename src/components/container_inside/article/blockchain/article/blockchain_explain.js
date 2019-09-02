@@ -108,7 +108,7 @@ class Animation extends React.Component {
                 map: {
                   ...state.map,
                   zoom: state.map.zoom - 5,
-                  y: this.state.map.y-+ 850,
+                  y: this.state.map.y - 850,
                   x : this.state.map.x - 500,
                 }
             }));
@@ -144,9 +144,20 @@ class Animation extends React.Component {
               from_scale: 1,
               to_scale: 0,
             }
-        }));
+          }));
+        }
+        //**** STEP 8 - AVANTI ****
+        if(step === 8){
+          this.setState({step:step})
+          this.setState(state => ({
+            ...state,
+            map: {
+              ...state.map,
+              zoom: state.map.zoom - 1,
+            }
+          }));
           
-      }        
+      }          
     }
     //***********************************
     // ************ INDIETRO ************
@@ -265,6 +276,7 @@ class Animation extends React.Component {
               }
           }));
         }  
+        //**** STEP 6 - INDIETRO ****
         if(step === 6){
           this.setState({step:step})
           this.setState(state => ({
@@ -274,9 +286,27 @@ class Animation extends React.Component {
               from_scale: 0,
               to_scale: 1,
             }
-        }));
-          
-      } 
+          })); 
+        }
+        //**** STEP 7 - INDIETRO ****
+        if(step === 7){
+          this.setState({step:step})
+          this.setState(state => ({
+            ...state,
+            map: {
+              ...state.map,
+              zoom: state.map.zoom + 1,
+            }
+          }));
+          this.setState(state => ({
+            ...state,
+            ledge: {
+              ...state.ledge,
+              zoom: state.ledge.zoom + 2,
+            }
+          }));
+        
+    }  
     }
 
     Disappear(){

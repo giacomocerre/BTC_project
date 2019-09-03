@@ -8,7 +8,7 @@ function Blockchain(){
             <motion.img
                 id="bcf_1" 
                 class="bccf bcf_block"
-                src="../img/block.svg"
+                src="img/block.svg"
                 alt="blockchain block"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -22,7 +22,7 @@ function Blockchain(){
                     <motion.img
                     id="ccf_1"
                     class="bccf ccf_block"
-                    src="../img/connector.svg"
+                    src="img/connector.svg"
                     alt="blockchain connector"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -37,7 +37,7 @@ function Blockchain(){
                     <motion.img
                     id="bcf_2" 
                     class="bccf bcf_block"
-                    src="../img/block.svg"
+                    src="img/block.svg"
                     alt="blockchain block"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -52,7 +52,7 @@ function Blockchain(){
                     <motion.img
                     id="ccf_2"
                     class="bccf ccf_block"
-                    src="../img/connector.svg"
+                    src="img/connector.svg"
                     alt="blockchain connector"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -67,7 +67,7 @@ function Blockchain(){
                     <motion.img
                     id="bcf_3" 
                     class="bccf bcf_block"
-                    src="../img/block.svg"
+                    src="img/block.svg"
                     alt="blockchain block"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -82,7 +82,7 @@ function Blockchain(){
                     <motion.img
                     id="ccf_3"
                     class="bccf ccf_block"
-                    src="../img/connector.svg"
+                    src="img/connector.svg"
                     alt="blockchain connector"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -97,7 +97,7 @@ function Blockchain(){
                     <motion.img
                     id="bcf_4" 
                     class="bccf bcf_block"
-                    src="../img/block.svg"
+                    src="img/block.svg"
                     alt="blockchain block"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -112,7 +112,7 @@ function Blockchain(){
                     <motion.img
                     id="ccf_4"
                     class="bccf ccf_block"
-                    src="../img/connector_g.svg"
+                    src="img/connector_g.svg"
                     alt="blockchain connector"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -127,7 +127,7 @@ function Blockchain(){
                     <motion.img
                     id="bcf_5" 
                     class="bccf bcf_block"
-                    src="../img/block_g.svg"
+                    src="img/block_g.svg"
                     alt="blockchain block"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -152,7 +152,7 @@ function Blockchain(){
                 </motion.hr> 
                 <motion.img
                     id="new" 
-                    src="../img/new.svg"
+                    src="img/new.svg"
                     alt="new icon"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -164,7 +164,7 @@ function Blockchain(){
                 </motion.img>
                 <motion.img
                     id="plus_ledge" 
-                    src="../img/plus.svg"
+                    src="img/plus.svg"
                     alt="plus icon"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}

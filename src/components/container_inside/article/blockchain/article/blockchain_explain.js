@@ -318,11 +318,13 @@ class Animation extends React.Component {
         <div>
             <div id="overlay_start">
               <h2 id="title_overlay">The Blockchain</h2>
-              <img id="play" src="../img/play.svg" alt="play button" onClick={Disappear}/>
+              <img id="play" src="img/play.svg" alt="play button" onClick={Disappear}/>
               <p id="iae">IAE - Interactive Animated Explanation</p>
             </div>
             <div id="content_animation">
-                <div id="step back" class="command" onClick={this.StepBack}><img class="arrow" src="img/arrow_b.svg" alt="back"/></div>
+                <div id="step back" class="command" onClick={this.StepBack}>
+                  <img class="arrow" src="img/arrow_b.svg" alt="back"/>
+                </div>
                 <div id="animation">
                     <AnimationStep 
                         step = {this.state.step}
@@ -332,7 +334,9 @@ class Animation extends React.Component {
                         sender={this.state.sender}
                         miner={this.state.miner}/>
                 </div>
-                <div id="step forward" class="command" onClick={this.StepForward}><img class="arrow" src="img/arrow_f.svg" alt="forward"/></div>
+                <div id="step forward" class="command" onClick={this.StepForward}>
+                  <img class="arrow" src="img/arrow_f.svg" alt="forward"/>
+                </div>
             </div>
             <Explain step = {this.state.step}/>
         </div>

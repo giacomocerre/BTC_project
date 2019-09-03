@@ -6,12 +6,12 @@ function Step5(props){
     var mc_bottom = "200%";
     var m_hide="block";
     var s_hide = "block";
-    var img_miner="../img/miner_1.svg"
+    var img_miner="img/miner_1.svg"
     if ( props.step >= 5 ){
         if(props.step >= 6){
             mc_bottom = "103.3%"
             m_hide="none";
-            img_miner="../img/miner_2.svg"
+            img_miner="img/miner_2.svg"
         }
         if(props.step >= 8){
             s_hide = "none"

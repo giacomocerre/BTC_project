@@ -15,7 +15,7 @@ function SendInfo(){
                         <h5 class="send_info_title red_title">A</h5>
                     </div>
                     <div class="cut">
-                        <img id="plane_send" src="../img/plane_w.svg" alt="plane"/>
+                        <img id="plane_send" src="img/plane_w.svg" alt="plane"/>
                     </div>
                 </div>
                 <div class=" wrapper wrapper_right">
@@ -25,7 +25,7 @@ function SendInfo(){
                 </div>
             </div>
             <div id="message">
-                <img id="sed_mex" src="../img/mex.svg" alt="send mex"/>
+                <img id="sed_mex" src="img/mex.svg" alt="send mex"/>
                 <LedgeAdd id="send_add"/>
             </div>
         </div>

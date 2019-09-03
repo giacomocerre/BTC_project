@@ -13,7 +13,7 @@ function Step7(props) {
         if (props.step >= 7){
             return (
                     <div id="flex_mn">
-                        <img id="check_icon" src="../img/check.svg" alt="check" style={{display:mn_display}}/>
+                        <img id="check_icon" src="img/check.svg" alt="check" style={{display:mn_display}}/>
                         <div id="m_n">
                             <Point step={props.step} id="mn_1"  show_hide={mn_display} top={100} left={130}  color={props.color}/>   
                             <Point step={props.step} id="mn_2"  show_hide={mn_display} top={200} left={100}  color={props.color}/>   

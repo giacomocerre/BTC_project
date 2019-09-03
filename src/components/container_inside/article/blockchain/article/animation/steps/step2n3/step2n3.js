@@ -20,7 +20,7 @@ function Step2n3(props) {
                 <motion.div
                     id="motion_map"
                     style={{
-                        background:"url('../img/world.svg')", 
+                        background:"url('img/world.svg')", 
                         backgroundPosition:"center",
                         backgroundRepeat:"no-repeat",
                         backgroundSize: "contain"}}

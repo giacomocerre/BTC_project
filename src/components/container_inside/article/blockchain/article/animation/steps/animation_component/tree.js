@@ -7,7 +7,7 @@ function Tree(props){
             <>
                 <motion.img
                     id="tc_2"
-                    src="../img/connector_g.svg"
+                    src="img/connector_g.svg"
                     alt="connector block"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -18,7 +18,7 @@ function Tree(props){
                 />
                 <motion.img
                     id="tb_3"
-                    src="../img/block_g.svg"
+                    src="img/block_g.svg"
                     alt="tree block"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

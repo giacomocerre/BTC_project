@@ -128,15 +128,15 @@ class SlotMachine extends React.Component {
                 </Slot>
                 </div>
                 <div id="bt_content">
-                    <img id="tb_1" src="../img/block.svg" alt="tree block"/>
-                    <img id="tc_1" src="../img/connector.svg" alt="connector block"/>
-                    <img id="tb_2" src="../img/block.svg" alt="tree block"/>
+                    <img id="tb_1" src="img/block.svg" alt="tree block"/>
+                    <img id="tc_1" src="img/connector.svg" alt="connector block"/>
+                    <img id="tb_2" src="img/block.svg" alt="tree block"/>
                     <Tree block={this.state.block}/>
                 </div>
                 <div id="function_val">
                     <p id="val_p" class="line_v">{this.state.text_crypt}</p>
                     <p class="line_v plus">+</p>
-                    <img id="block_validation" class="libe_v" src="../img/block.svg" alt="block validation"/>
+                    <img id="block_validation" class="libe_v" src="img/block.svg" alt="block validation"/>
                     <p class="line_v plus">=</p>
                     <p id="val_h" class="line_v">HEADER<span class="mini"> (00000000000)</span></p>
 

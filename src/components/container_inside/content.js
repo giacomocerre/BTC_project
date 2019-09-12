@@ -2,6 +2,7 @@ import React from "react"
 import Intro from "./article/intro/a_intro"
 import Evolution from "./article/evolution/b_evolution"
 import Blockchain from "./article/blockchain/c_blockchain"
+import ProContro from "./article/pro_contro/pro_contro"
 import Division from "./article/z_division"
 // import Fork from "fork"
 
@@ -9,10 +10,12 @@ function Content(props){
     return(
         <div id="content">
             <Intro />
-            <Division id="ev_div" text="Evolution"/>
+            <Division type="no" id="ev_div" text="Evolution" n_block="1"/>
             <Evolution />
-            <Division id="bc_div" text="Blockchain"/>
+            <Division type="no" id="bc_div" text="Blockchain" n_block="2"/>
             <Blockchain/>
+            <Division type="choose" id="pc_div" text_1="Oro" text_2="Pirite" n_block="3"/>
+            <ProContro/>
         </div>
     );
 }

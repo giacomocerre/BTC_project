@@ -5,7 +5,7 @@ function PyriteGold(props) {
     return (
         <article id="pyrite_gold" class={props.class} style={{ justifyContent: props.justify }}>
             <div id="pg_text" class="article_text">
-                <h2 class="article_title">Oro & Pirite</h2>
+                <h2 class="article_title">Il paradosso dell'oro e della pirite</h2>
                 <p class="par">Esiste una lega metallica fatta da stagno e zolfo che ha il colore dell’oro. Il suo nome è pirite ed era nota in passato come l’oro degli stolti.
                 L’oro, quello vero, è da millenni utilizzato come valore, e poi come controvalore, per le emissioni valutarie degli Stati, un sistema che per molti secoli ha in qualche modo garantito la stabilità degli scambi monetari. Con l’avvento del sistema fluttuante del 1971 ad opera degli Stati Uniti lo scenario è cambiato.
                 <br /><br />

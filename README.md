@@ -21,8 +21,7 @@ https://nodejs.org/en/
 
 4. Clonare repository nella posizione che si desidera:
 ```bash
-git clone https://github.com/evt-project/evt-viewer.git
-cd evt-viewer
+git clone https://github.com/giacomocerre/BTC_project
 ```
 5. Installare le dipendenze, eseguire, [ingnorare i WARN message, sono irrilevanti.]:
 ```bash
@@ -52,8 +51,7 @@ https://nodejs.org/en/
 
 4. Clonare repository nella posizione che si desidera:
 ```bash
-git clone https://github.com/evt-project/evt-viewer.git
-cd evt-viewer
+git clone https://github.com/giacomocerre/BTC_project
 ```
 5. Installare le dipendenze, eseguire, [ingnorare i WARN message, sono irrilevanti.]:
 ```bash
@@ -74,8 +72,7 @@ npm start
 
 3. Clonare repository nella posizione che si desidera:
 ```bash
-git clone https://github.com/evt-project/evt-viewer.git
-cd evt-viewer
+git clone https://github.com/giacomocerre/BTC_project
 ```
 4. Installare le Dipendenze, eseguire [ingnorare i WARN message, sono irrilevanti.]:
 ```bash

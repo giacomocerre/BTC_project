@@ -172,7 +172,7 @@ p.title_explain {
 }
 div#content_explain {
     width: 80%;
-    margin: auto;
+    position: absolute;
 }
 .time_episode h5{
     margin: 0;

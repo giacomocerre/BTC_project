@@ -5,6 +5,7 @@ import Explain from "./animation/explain_step"
 
 
 var step = 0; 
+var myopacity = 1;
 //ANIMATION
 class Animation extends React.Component {
     constructor() {
@@ -25,7 +26,7 @@ class Animation extends React.Component {
     StepForward = () => {
         step = step + 1;
         //**** STEP 0 - AVANTI ****
-        if(step === 0 ){
+        if(step <= 0 ){
             this.setState({step:step})
             step = 1;
         }
@@ -107,7 +108,7 @@ class Animation extends React.Component {
                 map: {
                   ...state.map,
                   zoom: state.map.zoom - 5,
-                  y: this.state.map.y-+ 850,
+                  y: this.state.map.y - 850,
                   x : this.state.map.x - 500,
                 }
             }));
@@ -130,7 +131,7 @@ class Animation extends React.Component {
                 from_scale: 0,
                 to_scale: 1,
               }
-          }));
+          }));  
             
         }
         //**** STEP 7 - AVANTI ****
@@ -143,9 +144,20 @@ class Animation extends React.Component {
               from_scale: 1,
               to_scale: 0,
             }
-        }));
+          }));
+        }
+        //**** STEP 8 - AVANTI ****
+        if(step === 8){
+          this.setState({step:step})
+          this.setState(state => ({
+            ...state,
+            map: {
+              ...state.map,
+              zoom: state.map.zoom - 1,
+            }
+          }));
           
-      }        
+      }          
     }
     //***********************************
     // ************ INDIETRO ************
@@ -264,6 +276,7 @@ class Animation extends React.Component {
               }
           }));
         }  
+        //**** STEP 6 - INDIETRO ****
         if(step === 6){
           this.setState({step:step})
           this.setState(state => ({
@@ -273,16 +286,45 @@ class Animation extends React.Component {
               from_scale: 0,
               to_scale: 1,
             }
-        }));
-          
-      } 
+          })); 
+        }
+        //**** STEP 7 - INDIETRO ****
+        if(step === 7){
+          this.setState({step:step})
+          this.setState(state => ({
+            ...state,
+            map: {
+              ...state.map,
+              zoom: state.map.zoom + 1,
+            }
+          }));
+          this.setState(state => ({
+            ...state,
+            ledge: {
+              ...state.ledge,
+              zoom: state.ledge.zoom + 2,
+            }
+          }));
+        
+    }  
+    }
+
+    Disappear(){
+      
     }
 
     render() {
         return (
         <div>
+            <div id="overlay_start">
+              <h2 id="title_overlay">The Blockchain</h2>
+              <img id="play" src="img/play.svg" alt="play button" onClick={Disappear}/>
+              <p id="iae">IAE - Interactive Animated Explanation</p>
+            </div>
             <div id="content_animation">
-                <div id="step back" class="command" onClick={this.StepBack}><img class="arrow" src="img/arrow_b.svg" alt="back"/></div>
+                <div id="step back" class="command" onClick={this.StepBack}>
+                  <img class="arrow" src="img/arrow_b.svg" alt="back"/>
+                </div>
                 <div id="animation">
                     <AnimationStep 
                         step = {this.state.step}
@@ -292,11 +334,25 @@ class Animation extends React.Component {
                         sender={this.state.sender}
                         miner={this.state.miner}/>
                 </div>
-                <div id="step forward" class="command" onClick={this.StepForward}><img class="arrow" src="img/arrow_f.svg" alt="forward"/></div>
+                <div id="step forward" class="command" onClick={this.StepForward}>
+                  <img class="arrow" src="img/arrow_f.svg" alt="forward"/>
+                </div>
             </div>
             <Explain step = {this.state.step}/>
         </div>
         )
     }
-}    
+}   
+
+function Disappear(){
+  var play = document.getElementById("overlay_start");
+      if (myopacity>0) {
+        myopacity -= .075;
+       setTimeout(function(){Disappear()},100);
+     }else{
+       play.style.display = "none";
+     }
+     play.style.opacity = myopacity;
+  
+}
 export default Animation

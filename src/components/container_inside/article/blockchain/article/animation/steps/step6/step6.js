@@ -15,7 +15,7 @@ function Step6(props){
               damping: 20
             }}
         >
-            <Validation/>
+            <Validation start={props.start}/>
         </motion.div>
         )
         }else{

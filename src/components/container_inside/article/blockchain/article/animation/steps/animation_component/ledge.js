@@ -2,8 +2,10 @@ import React from "react"
 
 function Ledge(props){
     return(
-        <div class="content_ledge">
+        <div id={props.id} class="content_ledge">
             <h3 class="table_title">Main Ledge</h3>
+            <div id="border_trik_l" class="border_trick"></div>
+            <div id="border_trik_r" class="border_trick"></div>
             <table id={props.id}>
                 <tr>
                     <th class="col">Sender</th>

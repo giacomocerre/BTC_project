@@ -328,13 +328,17 @@ class Animation extends React.Component {
     render() {
         return (
         <div>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis luctus metus, a eleifend metus. Duis vitae aliquet lacus. Maecenas vel eros vel eros viverra sodales id et turpis. Praesent at purus rhoncus, fringilla lectus sit amet, interdum ex. In ultrices mauris aliquet, vestibulum ipsum ut, tempus est. Proin vel congue lacus, id vestibulum diam. Mauris maximus, erat a laoreet rhoncus, nibh dui iaculis nibh, eget cursus libero est nec tellus.</p>
+            </div>
+            <Explain explain = {this.state.explain}/>
             <div id="overlay_start">
               <h2 id="title_overlay">The Blockchain</h2>
               <img id="play" src="img/play.svg" alt="play button" onClick={Disappear}/>
               <p id="iae">IAE - Interactive Animated Explanation</p>
             </div>
             <div id="content_animation">
-                <Explain explain = {this.state.explain}/>
+                
                 <div id="step back" class="command" onClick={this.StepBack}>
                   <img class="arrow" src="img/arrow_b.svg" alt="back"/>
                 </div>

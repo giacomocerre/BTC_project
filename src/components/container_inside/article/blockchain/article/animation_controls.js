@@ -1,8 +1,6 @@
 import React from "react"
-import AnimationStep from "./animation/animation_main"
+import AnimationStep from "./animation/animation_steps"
 import Explain from "./animation/explain_step"
-
-
 
 var step = 0; 
 var myopacity = 1;
@@ -17,8 +15,7 @@ class Animation extends React.Component {
             point       :{base_color:"#333", m_color:"#333", r_color:"#333", show:"none"},
             sender      :{from_scale:0, to_scale:1},
             miner       :{display:"block"},
-            explain     : "La Blockchain è un enorme registro di transazioni, un libro mastro dove vengono segnati i debiti e i crediti degli utenti che ne fanno parte."
-            
+            explain     : "La Blockchain è un enorme registro di transazioni, un libro mastro dove vengono segnati i debiti e i crediti degli utenti che ne fanno parte.",
         };
     }
     //*********************************
@@ -36,6 +33,7 @@ class Animation extends React.Component {
         if(step === 1){
             this.setState({step:step})
             this.setState({explain: "Ogni nodo nel netework possiede una copia della blockchain. La copia è aggiornata all’ultimo blocco di transazione verificato."})
+            this.setState({fade:"right"})
             // *** LEDGE ZOOM ***
             this.setState(state => ({
                 ...state,
@@ -295,7 +293,7 @@ class Animation extends React.Component {
         //**** STEP 6 - INDIETRO ****
         if(step === 6){
           this.setState({step:step})
-          this.setState({explain: ""})
+          this.setState({explain: "I miner, che sono in ascolto di tutte le transazioni, mettono quella di A, in fondo al loro blocco di transazioni che stanno ascoltando e conteporaneamente cercano di verificare se la transazione del nostro esempio è valida o meno. La validazione avviene attraverso la genrazione di stringe alfanumeriche casuali, date in pasto ad una funzione sha256 insieme al contenuto del blocco stesso, se l’output della funzione presenta un numero di 0 iniziali pari a quello contenuto nell’header del blocco, il blocco viene considerate valido. Per essere totalmente valido si effettua una contro validazione immediata in collaborazione con con tutti gli alti miners "})
           this.setState(state => ({
             ...state,
             sender: {
@@ -308,7 +306,7 @@ class Animation extends React.Component {
         //**** STEP 7 - INDIETRO ****
         if(step === 7){
           this.setState({step:step})
-          this.setState({explain: "I miner, che sono in ascolto di tutte le transazioni, mettono quella di A, in fondo al loro blocco di transazioni che stanno ascoltando e conteporaneamente cercano di verificare se la transazione del nostro esempio è valida o meno. La validazione avviene attraverso la genrazione di stringe alfanumeriche casuali, date in pasto ad una funzione sha256 insieme al contenuto del blocco stesso, se l’output della funzione presenta un numero di 0 iniziali pari a quello contenuto nell’header del blocco, il blocco viene considerate valido. Per essere totalmente valido si effettua una contro validazione immediata in collaborazione con con tutti gli alti miners "})
+          this.setState({explain: "Alla fine della controvalidazione il miner che ha validato per primo invia il blocco a tutti gli utenti delle rete."})
           this.setState(state => ({
             ...state,
             map: {
@@ -325,10 +323,6 @@ class Animation extends React.Component {
           }));
         
     }  
-    }
-
-    Disappear(){
-      
     }
 
     render() {

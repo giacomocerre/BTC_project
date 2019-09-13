@@ -170,6 +170,9 @@ div.par {
 p.title_explain {
     width: 50%;
 }
+div#content_explain {
+    position: absolute;
+}
 .time_episode h5{
     margin: 0;
     font-size: 0.8em;
@@ -914,12 +917,13 @@ div#know_value {
     overflow: hidden;
 }
 div#function_val {
-    width: 55%;
+    width: 75%;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 78%;
+    font-size: 1.4em;
 }
 .plus{
     margin: 0px 35px;

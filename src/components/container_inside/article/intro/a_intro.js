@@ -8,7 +8,7 @@ function Intro() {
         <section id="intro">
             <div id="scroller_full_page">
                 <PyriteGold class="article" justify="center" page="1"/>
-                <CryptoStory class="article" justify="center" page="3"/>
+                <CryptoStory class="article" justify="right" page="3"/>
             </div>
         </section>
     );

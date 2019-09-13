@@ -14,8 +14,9 @@ body,
     font-family: "Playfair Display", serif;
 }
 .article_title{
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 1.6em;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 .par{
     font-size: 1em;
@@ -46,21 +47,21 @@ div#open_content {
 h1#main_title {
     font-family: "Playfair Display", serif;
     font-weight: 400;
-    width: 40%;
+    width: 70%;
     padding: 20px;
     margin: auto;
     background: rgb(246, 246, 246,0.5);
-    font-size: 4em;
+    font-size: 3em;
     text-transform: uppercase;
 }
 #open_content .subtitle{
     font-family: "Playfair Display", sans-serif;
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.2em;
     color: #f3f3f3;
 } 
 img#logo{
-    width: 18%;
+    width: 15%;
 }
 #start_block {
     position: absolute;
@@ -90,11 +91,14 @@ div#content {
     width: 100%;
     height: 100%;
 }
+div#svg_Content {
+    position: relative;
+    top: 200px;
+}
 /* INTRO */
 article.article {
     width: 80%;
     float: right;
-    display: flex;
     align-items: center;
 }
 div.article_text {
@@ -128,50 +132,67 @@ img.check_icon {
     position: relative;
     left: 2px;
 }
-div#time_line {
-width: 50%;
-    text-align: center;
-    position: relative;
-    height: auto;
-    overflow: hidden;
-
-}
 #cryptostory{
     align-items: normal;
+    margin-top: 50px;
 }
-hr.line_of_time {
-    border: none;
-    border-left: 5px solid #333;
-    border-radius: 100px;
-    width: 0px;
-    position: absolute;
-    left: 50%;
-    height: 100%;
+div#timeline{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
 }
-#time_line .react-reveal {
+#timeline_par {
+    width: 100%;
+    padding-left: 5%;
+    border-left: 3px solid #333;
+    padding-bottom: 200px;
+}
+img.point_icon {
+    width: 70px;
+    background: #fff;
+}
+div.par {
     position: relative;
-    top: 100px;
+    right: 87px;
+    padding-top: 40px;
+    width: 60%;
 }
-p.check_line {
+.time_episode {
+    float: right;
+    width: 97%;
+    background: rgb(238,238,238,0.3);
+    line-height: 32px;
+    border-radius: 20px;
+    position: relative;
+    left: 20%;
+    bottom: 70px;
+}
+p.title_explain {
     width: 50%;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
 }
-span.year {
-    position: relative;
-    left: 60px;
-    top: 55px;
+div#content_explain {
+    width: 80%;
+    margin: auto;
 }
-span.value {
-    position: relative;
-    left: 180px;
-    top: 55px;
+.time_episode h5{
+    margin: 0;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #eee;
+    border: 3px solid #eee;
+    box-sizing: border-box;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.time_episode p{
+    margin: 0;
+    padding: 10px 20px 10px 20px;
+    font-size: 0.9em;
+    line-height: 25px;
 }
 
-article#BTC_market {
-    height: 1000px;
-}
 /* DIVISION */
 div.division {
     display: inline-block;
@@ -182,7 +203,9 @@ div.division {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 }
+
 h5.num_block {
     font-size: 1em;
     color: #f6f6f6;
@@ -204,6 +227,17 @@ h2.block_title {
     top: 20px;
     font-size: 2.5em;
     color: #F6F6F6;
+}
+div#pc_div {
+    background: #333;
+}
+div.pro_contro {
+    width: 50%;
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* SIDEBAR */
 div#sidebar {
@@ -884,12 +918,13 @@ div#know_value {
     overflow: hidden;
 }
 div#function_val {
-    width: 55%;
+    width: 75%;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 78%;
+    font-size: 1.4em;
 }
 .plus{
     margin: 0px 35px;
@@ -1082,4 +1117,32 @@ img#plus_ledge {
     bottom: 37.8%;
     right: 186%;
     padding: 7px;
+}
+/* *************** */
+/* *************** */
+/* try */
+/* *************** */
+/* *************** */
+
+.try_Text {
+    width: 80%;
+    float: right;
+    padding-right: 50px;
+    line-height: 30px;
+}
+.try_Text h1,
+.try_Text h2,
+.try_Text h3{
+    text-transform: uppercase;
+}
+.try_Text h1{
+    font-size: 1.8em;
+}
+.try_Text h2{
+    font-size: 1.4em;
+    text-transform: none;
+}
+.try_Text h3{
+    font-size: 1.2em;
+    text-transform: none;
 }

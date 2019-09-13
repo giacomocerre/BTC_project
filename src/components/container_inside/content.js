@@ -4,18 +4,22 @@ import Evolution from "./article/evolution/b_evolution"
 import Blockchain from "./article/blockchain/c_blockchain"
 import ProContro from "./article/pro_contro/pro_contro"
 import Division from "./article/z_division"
+import Conclusion from "./article/conclusion/conclusion"
+
 // import Fork from "fork"
 
 function Content(props){
     return(
         <div id="content">
             <Intro />
-            <Division type="no" id="ev_div" text="Evolution" n_block="1"/>
+            <Division type="no" id="ev_div" text="Evoluzione" n_block="1"/>
             <Evolution />
             <Division type="no" id="bc_div" text="Blockchain" n_block="2"/>
             <Blockchain/>
             <Division type="choose" id="pc_div" text_1="Oro" text_2="Pirite" n_block="3"/>
             <ProContro/>
+            <Division type="no" id="final" text="Conclusioni" n_block="4"/>
+            <Conclusion/>
         </div>
     );
 }

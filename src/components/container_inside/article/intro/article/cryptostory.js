@@ -16,8 +16,8 @@ function Cryptostory(props){
                             <Fade bottom>
                                 <div>
                                     <div class="time_episode">
-                                        <h5>Satoshi Nakatomo</h5>
-                                        <p>La <b>nascità delle cryptovalute</b> vede come suo creatore una delle personalità più misteriose mai esistite, meglio conosciuto con l'alias di <b>Satoshi Nakatomo</b>, la quale identità tutt’oggi è ancora avvolta nel mistero.</p>
+                                        <h5>Satoshi Nakamoto</h5>
+                                        <p>La <b>nascità delle cryptovalute</b> vede come suo creatore una delle personalità più misteriose mai esistite, meglio conosciuto con l'alias di <b>Satoshi Nakamoto</b>, la quale identità tutt’oggi è ancora avvolta nel mistero.</p>
                                     </div>
                                 </div>
                             </Fade>
@@ -30,7 +30,7 @@ function Cryptostory(props){
                                 <div>
                                     <div class="time_episode">
                                         <h5>White Paper</h5>
-                                        <p><b>Nel 2008</b> Satoshi Nakatomo pubblica il <b>wihite paper di Bitcoin</b>, all’interno del quale vengono definite le specifiche per una moneta digitale decentralizzata, che permette di <b>inviare pagamenti tra utenti senza passare da un’amministrazione centralizzata</b>. Questa moneta si chiama <b>Bitcoin</b> e si appoggia ad una rete P2P chiamata <b>Blockchain</b>.</p>
+                                        <p><b>Nel 2008</b> Satoshi Nakamoto pubblica il <b>wihite paper di Bitcoin</b>, all’interno del quale vengono definite le specifiche per una moneta digitale decentralizzata, che permette di <b>inviare pagamenti tra utenti senza passare da un’amministrazione centralizzata</b>. Questa moneta si chiama <b>Bitcoin</b> e si appoggia ad una rete P2P chiamata <b>Blockchain</b>.</p>
                                     </div>
                                 </div>
                             </Fade>

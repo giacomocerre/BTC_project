@@ -171,7 +171,8 @@ p.title_explain {
     width: 50%;
 }
 div#content_explain {
-    position: absolute;
+    width: 80%;
+    margin: auto;
 }
 .time_episode h5{
     margin: 0;
@@ -1116,4 +1117,32 @@ img#plus_ledge {
     bottom: 37.8%;
     right: 186%;
     padding: 7px;
+}
+/* *************** */
+/* *************** */
+/* try */
+/* *************** */
+/* *************** */
+
+.try_Text {
+    width: 80%;
+    float: right;
+    padding-right: 50px;
+    line-height: 30px;
+}
+.try_Text h1,
+.try_Text h2,
+.try_Text h3{
+    text-transform: uppercase;
+}
+.try_Text h1{
+    font-size: 1.8em;
+}
+.try_Text h2{
+    font-size: 1.4em;
+    text-transform: none;
+}
+.try_Text h3{
+    font-size: 1.2em;
+    text-transform: none;
 }

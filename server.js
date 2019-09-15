@@ -35,8 +35,16 @@ var minersRev = JSON.parse(data5);
 
 var data6 = fs.readFileSync('./data/vis_final_raee.json', 'utf8');
 var raee = JSON.parse(data6);
+
+var data7 = fs.readFileSync('./data/vis_final_btc_network_consumption.json', 'utf8');
+var btcConsumption = JSON.parse(data7);
+
 // Get call
 app.get('/marketCap', function (req, res) {
+    res.json(marketCap)
+});
+
+app.get('/btcConsumption', function (req, res) {
     res.json(marketCap)
 });
 

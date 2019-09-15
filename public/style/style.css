@@ -172,7 +172,8 @@ p.title_explain {
 }
 div#content_explain {
     width: 80%;
-    position: absolute;
+    position: relative;
+    left: 20%;
 }
 .time_episode h5{
     margin: 0;
@@ -487,7 +488,7 @@ h3.sm_name {
 }
 div#overlay_start {
     width: 1300px;
-    height: 600px;
+    height: 635px;
     position: absolute;
     background-image: linear-gradient(to right, #91AA9D, #3E606F,#3E606F, #193441);
     z-index: 9;
@@ -1145,4 +1146,11 @@ img#plus_ledge {
 .try_Text h3{
     font-size: 1.2em;
     text-transform: none;
+}
+img#notify {
+    width: 50px;
+    position: absolute;
+    right: 100px;
+    margin-top: 30px;
+    cursor: pointer;
 }

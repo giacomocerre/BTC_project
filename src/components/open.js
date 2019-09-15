@@ -2,7 +2,6 @@ import React from 'react'
 
 class Open extends React.Component {
     state = { active: 0 };
-  
     componentDidMount() {
       window.addEventListener("scroll", this.handleScroll);
     }
@@ -31,10 +30,10 @@ class Open extends React.Component {
           url = "img/lock_open.png"
       }
       return (
-        <section id="open" class="full_height">
+        <section id="open" className="full_height">
             <div id="open_content">
                 <h1 id="main_title">Blockchain: <br/>Il prezzo del consenso</h1>
-                <p class="subtitle">Dolor sit amet der mit losel numn sit amet der fun cus mein.</p>
+                <p className="subtitle">Dolor sit amet der mit losel numn sit amet der fun cus mein.</p>
                 <img id="logo" src="img/logo.png" alt="logo" />
             </div>
             <div id="start_block">

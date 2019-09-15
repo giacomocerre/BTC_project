@@ -1,6 +1,29 @@
 import React from "react"
 
 class ConsumptionMiners extends React.Component {
+    state = {
+        data: null
+    }
+    
+    componentDidMount() {
+        this.callAPI()
+    }
+
+    callAPI() {
+        fetch("http://localhost:3030/marketCap")
+            .then(res => res.json())
+            .then((d) => {
+                this.setState({
+                    data: d.map(btc => ({
+                        Name: btc.Name,
+                        AvgCap: btc.AvgCap,
+                        Year: btc.Year,
+                    }))
+                });
+                console.log(this.state.data[0].Name);
+            })
+    }
+
     render(){
         return(
             <div className="try_Text">

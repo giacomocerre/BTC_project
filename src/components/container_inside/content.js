@@ -12,13 +12,13 @@ function Content(props){
     return(
         <div id="content">
             <Intro />
-            <Division type="no" id="ev_div" text="Evoluzione" n_block="1"/>
+            <Division type="no" id="ev_div" text="Evoluzione" n_block="Two"/>
             <Evolution />
-            <Division type="no" id="bc_div" text="Blockchain" n_block="2"/>
+            <Division type="no" id="bc_div" text="Blockchain" n_block="Three"/>
             <Blockchain/>
-            <Division type="choose" id="pc_div" text_1="Oro" text_2="Pirite" n_block="3"/>
+            <Division type="choose" id="pc_div" text_1="Oro" text_2="Pirite" n_block="Four"/>
             <ProContro/>
-            <Division type="no" id="final" text="Conclusioni" n_block="4"/>
+            <Division type="no" id="final" text="Conclusioni" n_block="Five"/>
             <Conclusion/>
         </div>
     );

@@ -22,6 +22,12 @@ class Animation extends React.Component {
     //************ AVANTI *************
     //*********************************
     StepForward = () => {
+        //for notify the message step
+        var NotifyImage =  document.getElementById("notify"); 
+        var NotifyMex   = document.getElementById("content_explain"); 
+        NotifyImage.src = "img/notify.svg";
+        NotifyMex.style.display = "none" 
+
         step = step + 1;
         //**** STEP 0 - AVANTI ****
         if(step <= 0 ){
@@ -171,6 +177,10 @@ class Animation extends React.Component {
     // ************ INDIETRO ************
     //***********************************
     StepBack = () => {
+        var NotifyImage =  document.getElementById("notify"); 
+        var NotifyMex   = document.getElementById("content_explain"); 
+        NotifyImage.src = "img/notify.svg";
+        NotifyMex.style.display = "none" 
         step = step - 1;
 
         if(step < 0 ){
@@ -332,7 +342,7 @@ class Animation extends React.Component {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis luctus metus, a eleifend metus. Duis vitae aliquet lacus. Maecenas vel eros vel eros viverra sodales id et turpis. Praesent at purus rhoncus, fringilla lectus sit amet, interdum ex. In ultrices mauris aliquet, vestibulum ipsum ut, tempus est. Proin vel congue lacus, id vestibulum diam. Mauris maximus, erat a laoreet rhoncus, nibh dui iaculis nibh, eget cursus libero est nec tellus.</p>
               
             </div> */}
-            <Explain explain = {this.state.explain}/>
+            <Explain explain = {this.state.explain} />
             <div id="overlay_start">
               <h2 id="title_overlay">The Blockchain</h2>
               <img id="play" src="img/play.svg" alt="play button" onClick={Disappear}/>
@@ -351,7 +361,7 @@ class Animation extends React.Component {
                         point   = {this.state.point}
                         sender  = {this.state.sender}
                         miner   = {this.state.miner}
-                        />
+                      />
                 </div>
                 <div id="step forward" class="command" onClick={this.StepForward}>
                   <img class="arrow" src="img/arrow_f.svg" alt="forward"/>

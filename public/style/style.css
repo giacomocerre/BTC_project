@@ -1147,3 +1147,10 @@ img#plus_ledge {
     font-size: 1.2em;
     text-transform: none;
 }
+img#notify {
+    width: 50px;
+    position: absolute;
+    right: 100px;
+    margin-top: 30px;
+    cursor: pointer;
+}

@@ -9,6 +9,8 @@ class Division extends React.Component {
     }
     
     ChooseOP(event){
+        const { pageYOffset } = window;
+        const block4 = document.getElementById( "pc_div" ).offsetTop
         const id = event.target.id;
         if(id === "pro"){
             document.getElementById("pro").style.width = "100%";
@@ -16,6 +18,16 @@ class Division extends React.Component {
             document.getElementById("pro_task").style.display = "block"
             document.getElementById("contro_task").style.display = "none"
             document.getElementById("concl").style.display = "block"
+            // var blockColor4 = document.getElementById("block4")
+            // var blockColor5 = document.getElementById("block5")
+            // var blockColor6 = document.getElementById("block6")
+            
+            // if(pageYOffset > block4){
+            //     blockColor4.src="img/block_g.svg"
+            //     blockColor5.src="img/block_g.svg"
+            //     blockColor6.src="img/block_g.svg"
+            // }
+            
             
         }else{
             document.getElementById("contro").style.width = "100%";

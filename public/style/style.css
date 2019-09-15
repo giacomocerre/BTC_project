@@ -259,7 +259,7 @@ div#tree {
 p.cap {
     position: absolute;
     right: 65%;
-    background: rgb(238,238,238,0.4);
+    background: rgb(238,238,238);
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.8em;
@@ -282,6 +282,17 @@ p.cap {
 #hover_7:hover ~ #cap7,
 #hover_8:hover ~ #cap8,
 #hover_9:hover ~ #cap9{
+    opacity: 1;
+}
+#cap1:hover,
+#cap2:hover,
+#cap3:hover,
+#cap4:hover,
+#cap5:hover,
+#cap6:hover,
+#cap7:hover,
+#cap8:hover,
+#cap9:hover{
     opacity: 1;
 }
 #block1{

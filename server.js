@@ -45,7 +45,7 @@ app.get('/marketCap', function (req, res) {
 });
 
 app.get('/btcConsumption', function (req, res) {
-    res.json(marketCap)
+    res.json(btcConsumption)
 });
 
 app.get('/CO2Emission', function (req, res) {

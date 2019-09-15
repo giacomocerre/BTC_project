@@ -10,17 +10,17 @@ class ConsumptionMiners extends React.Component {
     }
 
     callAPI() {
-        fetch("http://localhost:3030/marketCap")
+        fetch("http://localhost:3030//btcConsumption")
             .then(res => res.json())
             .then((d) => {
                 this.setState({
                     data: d.map(btc => ({
-                        Name: btc.Name,
-                        AvgCap: btc.AvgCap,
-                        Year: btc.Year,
+                        date: btc.date,
+                        Min_Energy: btc.Minimum_AnnualEnergy,
+                        Est_Energy: btc.Estimated_AnnualEnergy,
                     }))
                 });
-                console.log(this.state.data[0].Name);
+                console.log(this.state.data[0].Min_Energy);
             })
     }
 

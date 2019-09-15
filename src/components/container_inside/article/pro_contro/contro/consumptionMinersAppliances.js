@@ -1,6 +1,33 @@
 import React from "react"
 
 class ConsumptionMinersAppliances extends React.Component {
+    state = {
+        data: null
+    }
+    
+    componentDidMount() {
+        this.callAPI()
+    }
+
+    callAPI() {
+        fetch("http://localhost:3030/elAppliances")
+            .then(res => res.json())
+            .then((d) => {
+                this.setState({
+                    data: d.map(hw => ({
+                        Name: hw.Name,
+                        Type: hw.Type,
+                        Price: hw.Price,
+                        AnnualEnergy: hw.AnnualEnergy,
+                        HashRate: hw.HashRate,
+                        Value: hw.Value,
+                        ReleaseDate: hw.ReleaseDate,
+                    }))
+                });
+                console.log(this.state.data[0].Type);
+            })
+    }
+    
     render(){
         return(
             <div className="try_Text">

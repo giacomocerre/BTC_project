@@ -36,5 +36,4 @@ class Explain extends React.Component {
             );
     }
 }
-
 export default Explain

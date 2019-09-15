@@ -8,6 +8,7 @@ html,
 body,
 #main_root,
 #root{
+    scroll-behavior: smooth;
     height: 100%;
     width: 100%;
     color: #333;
@@ -36,7 +37,8 @@ body,
     justify-content: center;
     align-items: center;
     display: flex;
-    z-index: 1;
+    z-index: 10;
+    position: relative;
 }
 div#open_content {
     width: 100%;
@@ -205,6 +207,8 @@ div.division {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    z-index: 10;
+    position: relative;
 }
 
 h5.num_block {
@@ -248,10 +252,32 @@ div#sidebar {
     justify-content: center;
     align-items: center;
     display: flex;
-    z-index: -1;
+    z-index: 9;
 }
 div#tree {
     width: 50px;
+}
+p.cap {
+    position: absolute;
+    right: 65%;
+    background: rgb(238,238,238,0.4);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 100;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+#hover_1:hover ~ #cap1,
+#hover_2:hover ~ #cap2,
+#hover_3:hover ~ #cap3{
+    opacity: 1;
 }
 #block1{
     top: 5px;

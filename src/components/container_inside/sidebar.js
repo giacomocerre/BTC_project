@@ -1,7 +1,5 @@
 import React from "react"
 
-// let ev_bottom = 0;
-// let bc_bottom = 0;
 class Sidebar extends React.Component {
     state = { active: 0 };
     render() {

@@ -332,6 +332,8 @@ div#content_animation {
     display: flex;
     background: #f6f6f6;
     cursor: pointer;
+    z-index: 10;
+    position: relative;
 }
 div#animation {
     width: 80%;

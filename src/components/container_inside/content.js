@@ -18,8 +18,10 @@ function Content(props){
             <Blockchain/>
             <Division type="choose" id="pc_div" text_1="Oro" text_2="Pirite" n_block="Four"/>
             <ProContro/>
-            <Division type="no" id="final" text="Conclusioni" n_block="Five"/>
-            <Conclusion/>
+            <div id="concl">
+                <Division type="no" id="final" text="Conclusioni" n_block="Five"/>
+                <Conclusion/>
+            </div>
         </div>
     );
 }

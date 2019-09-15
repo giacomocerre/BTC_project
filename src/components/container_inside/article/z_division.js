@@ -10,6 +10,19 @@ class Division extends React.Component {
     
     ChooseOP(event){
         const id = event.target.id;
+        if(id === "pro"){
+            document.getElementById("pro").style.width = "100%";
+            document.getElementById("contro").style.display = "none"
+            document.getElementById("pro_task").style.display = "block"
+            document.getElementById("contro_task").style.display = "block"
+            document.getElementById("concl").style.display = "block"
+            
+        }else{
+            document.getElementById("contro").style.width = "100%";
+            document.getElementById("pro").style.display = "none"
+            document.getElementById("contro_task").style.display = "block"
+            document.getElementById("concl").style.display = "block"
+        }
     }
 
     render(){

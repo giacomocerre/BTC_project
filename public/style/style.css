@@ -1237,3 +1237,8 @@ div.pro_contro {
 #contro{
     background: #D2644F;
 }
+#pro_task,
+#contro_task,
+#concl{
+    display: none;
+}

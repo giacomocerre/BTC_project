@@ -9,12 +9,16 @@ import Raee from "./contro/Raee"
 function ProContro() {
     return(
         <div>
-            <Pro />
-            <ConsumptionMiners />
-            <ConsumptionMinersIndustrial />
-            <ConsumptionMinersAppliances />
-            <Emission />
-            <Raee />
+            <div id="pro_task">
+                <Pro />
+            </div>
+            <div id="contro_task">
+                <ConsumptionMiners />
+                <ConsumptionMinersIndustrial />
+                <ConsumptionMinersAppliances />
+                <Emission />
+                <Raee />
+            </div>
         </div>
     )
 }

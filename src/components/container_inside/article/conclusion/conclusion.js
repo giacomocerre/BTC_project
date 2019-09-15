@@ -2,7 +2,7 @@ import React from "react"
 
 function Conclusion(){
     return(
-        <div className="try_Text">
+        <div class="try_Text">
             <h1>Conclusini</h1>
             <p>Come abbiamo visto Blockchain è una tecnologia potenzialmente ottima che può essere sfruttata in molte situazioni, ma la proof-of-woork, che al momento è la soluzione più utilizzata in larga scala per garantirne la sicurezza, è la soluzione migliore che abbiamo adesso a disposizione? I benefici offerti da blockchain devono per forza essere controbilanciati dai notevoli effetti collaterali derivati dalla sua misura di sicurezza più utilizzata? </p>
             <h2>Attacchi 51%</h2>

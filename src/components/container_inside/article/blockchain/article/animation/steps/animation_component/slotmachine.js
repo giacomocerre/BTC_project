@@ -31,14 +31,14 @@ class SlotMachine extends React.Component {
             <>
             <div id="slot_container">
                 <div id="switch_container">
-                <label class="switch">
+                <label className="switch">
                         <input 
                         id="check_slot"
                         type="checkbox" 
                         onChange={({ target }) => this.setState({ turn: target.checked })}
                         onClick={this.colorChange}
                         checked = {this.state.turn}/>
-                    <span class="slider round"></span>
+                    <span className="slider round"></span>
                 </label>
                 </div>
                 {/* rolling div */}
@@ -134,11 +134,11 @@ class SlotMachine extends React.Component {
                     <Tree block={this.state.block}/>
                 </div>
                 <div id="function_val">
-                    <p id="val_p" class="line_v">{this.state.text_crypt}</p>
-                    <p class="line_v plus">+</p>
-                    <img id="block_validation" class="libe_v" src="img/block.svg" alt="block validation"/>
-                    <p class="line_v plus">=</p>
-                    <p id="val_h" class="line_v">HEADER<span class="mini"> (00000000000)</span></p>
+                    <p id="val_p" className="line_v">{this.state.text_crypt}</p>
+                    <p className="line_v plus">+</p>
+                    <img id="block_validation" className="libe_v" src="img/block.svg" alt="block validation"/>
+                    <p className="line_v plus">=</p>
+                    <p id="val_h" className="line_v">HEADER<span className="mini"> (00000000000)</span></p>
 
                 </div>
             </>

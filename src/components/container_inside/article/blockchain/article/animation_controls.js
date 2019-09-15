@@ -338,7 +338,7 @@ class Animation extends React.Component {
     render() {
         return (
         <div>
-            {/* <div class="try_Text">
+            {/* <div className="try_Text">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis luctus metus, a eleifend metus. Duis vitae aliquet lacus. Maecenas vel eros vel eros viverra sodales id et turpis. Praesent at purus rhoncus, fringilla lectus sit amet, interdum ex. In ultrices mauris aliquet, vestibulum ipsum ut, tempus est. Proin vel congue lacus, id vestibulum diam. Mauris maximus, erat a laoreet rhoncus, nibh dui iaculis nibh, eget cursus libero est nec tellus.</p>
               
             </div> */}
@@ -350,8 +350,8 @@ class Animation extends React.Component {
             </div>
             <div id="content_animation">
                 
-                <div id="step back" class="command" onClick={this.StepBack}>
-                  <img class="arrow" src="img/arrow_b.svg" alt="back"/>
+                <div id="step back" className="command" onClick={this.StepBack}>
+                  <img className="arrow" src="img/arrow_b.svg" alt="back"/>
                 </div>
                 <div id="animation">
                     <AnimationStep 
@@ -363,8 +363,8 @@ class Animation extends React.Component {
                         miner   = {this.state.miner}
                       />
                 </div>
-                <div id="step forward" class="command" onClick={this.StepForward}>
-                  <img class="arrow" src="img/arrow_f.svg" alt="forward"/>
+                <div id="step forward" className="command" onClick={this.StepForward}>
+                  <img className="arrow" src="img/arrow_f.svg" alt="forward"/>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react"
 
 function ProContro(){
     return(
-        <div class="try_Text">
+        <div className="try_Text">
             <h1>Pro - Oro</h1>
             <h2>L’importanza della decentralizzazione</h2>
             <h3>Una moneta libera - Pro</h3>

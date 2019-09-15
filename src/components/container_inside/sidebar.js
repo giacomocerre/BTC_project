@@ -15,17 +15,17 @@ class Sidebar extends React.Component {
                                 </div>
                     : active === 2 ? 
                                 <div id="tree">
-                                    <img id="block1" class="block" src="img/block.svg" alt="block"/> 
-                                    <img class="connector"src="img/connector.svg" alt ="connector" style={{bottom: 5+'px'}}/>
-                                    <img id="block2" class="block" src="img/block.svg" alt="block" style={{bottom: 10+'px'}}/> 
+                                    <img id="block1" className="block" src="img/block.svg" alt="block"/> 
+                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 5+'px'}}/>
+                                    <img id="block2" className="block" src="img/block.svg" alt="block" style={{bottom: 10+'px'}}/> 
                                 </div>
                     : active === 3 ?    
                                 <div id="tree">
-                                    <img id="block1" class="block" src="img/block.svg" alt="block"/> 
-                                    <img class="connector"src="img/connector.svg" alt ="connector" style={{bottom: 5+'px'}}/>
-                                    <img id="block2" class="block" src="img/block.svg" alt="block" style={{bottom: 10+'px'}}/> 
-                                    <img class="connector"src="img/connector.svg" alt ="connector" style={{bottom: 15+'px'}}/>
-                                    <img id="block2" class="block" src="img/block.svg" alt="block" style={{bottom: 20+'px'}}/> 
+                                    <img id="block1" className="block" src="img/block.svg" alt="block"/> 
+                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 5+'px'}}/>
+                                    <img id="block2" className="block" src="img/block.svg" alt="block" style={{bottom: 10+'px'}}/> 
+                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 15+'px'}}/>
+                                    <img id="block2" className="block" src="img/block.svg" alt="block" style={{bottom: 20+'px'}}/> 
                                 </div>
                     : null}                    
                 </div>

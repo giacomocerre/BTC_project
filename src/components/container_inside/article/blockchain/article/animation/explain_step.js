@@ -18,7 +18,7 @@ class Explain extends React.Component {
             <div id="notify_content">
                 <img id="notify" src="img/notify.svg" alt="noify" onClick={this.ChangeImage}/>
                 <div id="content_explain" style={{display:"none"}}>
-                    <p class="tooltip_explain">{this.props.explain}</p>
+                    <p className="tooltip_explain">{this.props.explain}</p>
                 </div>
             </div>
             );

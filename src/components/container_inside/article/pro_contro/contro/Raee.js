@@ -1,6 +1,28 @@
 import React from "react"
 
 class Raee extends React.Component {
+    state = {
+        data: null
+    }
+    
+    componentDidMount() {
+        this.callAPI()
+    }
+
+    callAPI() {
+        fetch("http://localhost:3030/CO2Emission")
+            .then(res => res.json())
+            .then((d) => {
+                this.setState({
+                    data: d.map(raee => ({
+                        date: raee.date,
+                        ElectronicWaste: raee.ElectronicWaste,                      
+                    }))
+                });
+                console.log(this.state.data[0].ElectronicWaste);
+            })
+    }
+    
     render(){
         return(
             <div className="try_Text">

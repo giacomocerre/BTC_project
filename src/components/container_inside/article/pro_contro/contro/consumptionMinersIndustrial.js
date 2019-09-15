@@ -20,7 +20,7 @@ class ConsumptionMinersIndustrial extends React.Component {
                         Year: com.Year,
                     }))
                 });
-                console.log(this.state.data[0].Country);
+                console.log(this.state.data[0].AnnualEnergy);
             })
     }
     

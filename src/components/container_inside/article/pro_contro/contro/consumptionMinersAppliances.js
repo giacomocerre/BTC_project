@@ -24,7 +24,7 @@ class ConsumptionMinersAppliances extends React.Component {
                         ReleaseDate: hw.ReleaseDate,
                     }))
                 });
-                console.log(this.state.data[0].Type);
+                console.log(this.state.data[0].AnnualEnergy);
             })
     }
     

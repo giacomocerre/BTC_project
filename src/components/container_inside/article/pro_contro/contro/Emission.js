@@ -1,6 +1,29 @@
 import React from "react"
 
 class Emission extends React.Component {
+    state = {
+        data: null
+    }
+    
+    componentDidMount() {
+        this.callAPI()
+    }
+
+    callAPI() {
+        fetch("http://localhost:3030/CO2Emission")
+            .then(res => res.json())
+            .then((d) => {
+                this.setState({
+                    data: d.map(em => ({
+                        Country: em.Country,
+                        Year: em.Year,
+                        AnnualCO2Emission: em.AnnualCO2Emission,                       
+                    }))
+                });
+                console.log(this.state.data[0].AnnualCO2Emission);
+            })
+    }
+    
     render(){
         return(
             <div className="try_Text">

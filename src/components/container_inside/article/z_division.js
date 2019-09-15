@@ -9,8 +9,8 @@ class Division extends React.Component {
     }
     
     ChooseOP(event){
-        const { pageYOffset } = window;
-        const block4 = document.getElementById( "pc_div" ).offsetTop
+        // const { pageYOffset } = window;
+        // const block4 = document.getElementById( "pc_div" ).offsetTop
         const id = event.target.id;
         if(id === "pro"){
             document.getElementById("pro").style.width = "100%";

@@ -275,7 +275,13 @@ p.cap {
 }
 #hover_1:hover ~ #cap1,
 #hover_2:hover ~ #cap2,
-#hover_3:hover ~ #cap3{
+#hover_3:hover ~ #cap3,
+#hover_4:hover ~ #cap4,
+#hover_5:hover ~ #cap5,
+#hover_6:hover ~ #cap6,
+#hover_7:hover ~ #cap7,
+#hover_8:hover ~ #cap8,
+#hover_9:hover ~ #cap9{
     opacity: 1;
 }
 #block1{
@@ -1150,12 +1156,6 @@ img#plus_ledge {
 /* *************** */
 /* *************** */
 
-.try_Text {
-    width: 80%;
-    float: right;
-    padding-right: 50px;
-    line-height: 30px;
-}
 .try_Text h1,
 .try_Text h2,
 .try_Text h3{

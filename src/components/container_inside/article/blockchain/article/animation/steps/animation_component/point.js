@@ -14,7 +14,7 @@ function Point(props){
         return(
         <motion.div
         id={props.id}
-        class="net_node"
+        className="net_node"
         style={{
             width:"30px", 
             height:"30px", 
@@ -32,7 +32,7 @@ function Point(props){
             when: "beforeChildren",
         }}
         >
-            <h3 class="sm_name" style={{display:props.s_show, color:"#fff"}}>{text}</h3>
+            <h3 className="sm_name" style={{display:props.s_show, color:"#fff"}}>{text}</h3>
         </motion.div>
         )
     }else{

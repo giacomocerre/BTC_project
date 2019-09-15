@@ -1,7 +1,31 @@
 import React from "react"
 
-function Evolution (){
-    return(
+class Evolution extends React.Component {
+    state = {
+        data: null
+    };
+    
+    componentDidMount() {
+        this.callAPI()
+    };
+
+    callAPI() {
+        fetch("http://localhost:3030/marketCap")
+            .then(res => res.json())
+            .then((d) => {
+                this.setState({
+                    data: d.map(crypto => ({
+                        Name: crypto.Name,
+                        AvgCAP: crypto.AvgCAP,
+                        Year: crypto.Year
+                    }))
+                });
+                console.log(this.state.data[0].Name);
+            })
+    };
+    
+    render() {
+        return( 
         <section id="evolution" className="content_info">
                 <article id="BTC_market" className="article">
                     <div className="article_width">
@@ -22,7 +46,7 @@ function Evolution (){
                     <div id="BTCm_Graph"></div>
                 </article>
 			</section>
-    );
+        )};
 }
 
 export default Evolution

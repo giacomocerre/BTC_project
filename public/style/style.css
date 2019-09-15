@@ -170,6 +170,11 @@ div.par {
 p.title_explain {
     width: 50%;
 }
+div#content_explain {
+    width: 80%;
+    position: relative;
+    left: 20%;
+}
 .time_episode h5{
     margin: 0;
     font-size: 0.8em;
@@ -483,7 +488,7 @@ h3.sm_name {
 }
 div#overlay_start {
     width: 1300px;
-    height: 600px;
+    height: 635px;
     position: absolute;
     background-image: linear-gradient(to right, #91AA9D, #3E606F,#3E606F, #193441);
     z-index: 9;
@@ -914,12 +919,13 @@ div#know_value {
     overflow: hidden;
 }
 div#function_val {
-    width: 55%;
+    width: 75%;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 78%;
+    font-size: 1.4em;
 }
 .plus{
     margin: 0px 35px;
@@ -1112,4 +1118,39 @@ img#plus_ledge {
     bottom: 37.8%;
     right: 186%;
     padding: 7px;
+}
+/* *************** */
+/* *************** */
+/* try */
+/* *************** */
+/* *************** */
+
+.try_Text {
+    width: 80%;
+    float: right;
+    padding-right: 50px;
+    line-height: 30px;
+}
+.try_Text h1,
+.try_Text h2,
+.try_Text h3{
+    text-transform: uppercase;
+}
+.try_Text h1{
+    font-size: 1.8em;
+}
+.try_Text h2{
+    font-size: 1.4em;
+    text-transform: none;
+}
+.try_Text h3{
+    font-size: 1.2em;
+    text-transform: none;
+}
+img#notify {
+    width: 50px;
+    position: absolute;
+    right: 100px;
+    margin-top: 30px;
+    cursor: pointer;
 }

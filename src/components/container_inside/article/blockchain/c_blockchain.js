@@ -1,5 +1,5 @@
 import React from "react"
-import Animation from "./article/blockchain_explain"
+import Animation from "./article/animation_controls"
 
 function Blockchain (props){
     return(

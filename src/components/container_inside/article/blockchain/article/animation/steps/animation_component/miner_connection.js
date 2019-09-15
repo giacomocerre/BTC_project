@@ -6,7 +6,7 @@ function MinerConnection(props) {
     if (props.step >= 5) {
         return (
             <Delay wait={1000}>
-                <img id={props.plane} class="plane" src="img/plane_3e6.svg" alt="plane"/>
+                <img id={props.plane} className="plane" src="img/plane_3e6.svg" alt="plane"/>
             </Delay>
         )
     } else {

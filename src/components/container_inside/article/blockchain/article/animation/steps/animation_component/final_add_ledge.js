@@ -18,18 +18,18 @@ function FinalNewAdd(props){
                     <div id="content_final_add">
                         <table id={props.id}>
                             <tr>
-                                <th class="col">Sender</th>
-                                <th class="col">Receiver</th>
-                                <th class="col">Amount</th>
-                                <th class="col">Sender Signature</th>
-                                <th class="col">Receiver Signature</th>
+                                <th className="col">Sender</th>
+                                <th className="col">Receiver</th>
+                                <th className="col">Amount</th>
+                                <th className="col">Sender Signature</th>
+                                <th className="col">Receiver Signature</th>
                             </tr>
                             <tr>
-                                <td class="light_col" style={{textAlign:"center"}}>A</td>
-                                <td class="light_col" style={{textAlign:"center"}}>B</td>
-                                <td class="light_col" style={{textAlign:"center"}}>321</td>
-                                <td class="light_col signature" style={{textAlign:"center"}}>A</td>
-                                <td class="light_col signature" style={{textAlign:"center"}}>B</td>
+                                <td className="light_col" style={{textAlign:"center"}}>A</td>
+                                <td className="light_col" style={{textAlign:"center"}}>B</td>
+                                <td className="light_col" style={{textAlign:"center"}}>321</td>
+                                <td className="light_col signature" style={{textAlign:"center"}}>A</td>
+                                <td className="light_col signature" style={{textAlign:"center"}}>B</td>
                             </tr>
                         </table>
                     </div>

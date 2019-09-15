@@ -1,8 +1,6 @@
 import React from "react"
-import AnimationStep from "./animation/animation_main"
+import AnimationStep from "./animation/animation_steps"
 import Explain from "./animation/explain_step"
-
-
 
 var step = 0; 
 var myopacity = 1;
@@ -17,14 +15,19 @@ class Animation extends React.Component {
             point       :{base_color:"#333", m_color:"#333", r_color:"#333", show:"none"},
             sender      :{from_scale:0, to_scale:1},
             miner       :{display:"block"},
-            explain     : "La Blockchain è un enorme registro di transazioni, un libro mastro dove vengono segnati i debiti e i crediti degli utenti che ne fanno parte."
-            
+            explain     : "La Blockchain è un enorme registro di transazioni, un libro mastro dove vengono segnati i debiti e i crediti degli utenti che ne fanno parte.",
         };
     }
     //*********************************
     //************ AVANTI *************
     //*********************************
     StepForward = () => {
+        //for notify the message step
+        var NotifyImage =  document.getElementById("notify"); 
+        var NotifyMex   = document.getElementById("content_explain"); 
+        NotifyImage.src = "img/notify.svg";
+        NotifyMex.style.display = "none" 
+
         step = step + 1;
         //**** STEP 0 - AVANTI ****
         if(step <= 0 ){
@@ -36,6 +39,7 @@ class Animation extends React.Component {
         if(step === 1){
             this.setState({step:step})
             this.setState({explain: "Ogni nodo nel netework possiede una copia della blockchain. La copia è aggiornata all’ultimo blocco di transazione verificato."})
+            this.setState({fade:"right"})
             // *** LEDGE ZOOM ***
             this.setState(state => ({
                 ...state,
@@ -173,6 +177,10 @@ class Animation extends React.Component {
     // ************ INDIETRO ************
     //***********************************
     StepBack = () => {
+        var NotifyImage =  document.getElementById("notify"); 
+        var NotifyMex   = document.getElementById("content_explain"); 
+        NotifyImage.src = "img/notify.svg";
+        NotifyMex.style.display = "none" 
         step = step - 1;
 
         if(step < 0 ){
@@ -295,7 +303,7 @@ class Animation extends React.Component {
         //**** STEP 6 - INDIETRO ****
         if(step === 6){
           this.setState({step:step})
-          this.setState({explain: ""})
+          this.setState({explain: "I miner, che sono in ascolto di tutte le transazioni, mettono quella di A, in fondo al loro blocco di transazioni che stanno ascoltando e conteporaneamente cercano di verificare se la transazione del nostro esempio è valida o meno. La validazione avviene attraverso la genrazione di stringe alfanumeriche casuali, date in pasto ad una funzione sha256 insieme al contenuto del blocco stesso, se l’output della funzione presenta un numero di 0 iniziali pari a quello contenuto nell’header del blocco, il blocco viene considerate valido. Per essere totalmente valido si effettua una contro validazione immediata in collaborazione con con tutti gli alti miners "})
           this.setState(state => ({
             ...state,
             sender: {
@@ -308,7 +316,7 @@ class Animation extends React.Component {
         //**** STEP 7 - INDIETRO ****
         if(step === 7){
           this.setState({step:step})
-          this.setState({explain: "I miner, che sono in ascolto di tutte le transazioni, mettono quella di A, in fondo al loro blocco di transazioni che stanno ascoltando e conteporaneamente cercano di verificare se la transazione del nostro esempio è valida o meno. La validazione avviene attraverso la genrazione di stringe alfanumeriche casuali, date in pasto ad una funzione sha256 insieme al contenuto del blocco stesso, se l’output della funzione presenta un numero di 0 iniziali pari a quello contenuto nell’header del blocco, il blocco viene considerate valido. Per essere totalmente valido si effettua una contro validazione immediata in collaborazione con con tutti gli alti miners "})
+          this.setState({explain: "Alla fine della controvalidazione il miner che ha validato per primo invia il blocco a tutti gli utenti delle rete."})
           this.setState(state => ({
             ...state,
             map: {
@@ -327,22 +335,23 @@ class Animation extends React.Component {
     }  
     }
 
-    Disappear(){
-      
-    }
-
     render() {
         return (
         <div>
+            {/* <div className="try_Text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis luctus metus, a eleifend metus. Duis vitae aliquet lacus. Maecenas vel eros vel eros viverra sodales id et turpis. Praesent at purus rhoncus, fringilla lectus sit amet, interdum ex. In ultrices mauris aliquet, vestibulum ipsum ut, tempus est. Proin vel congue lacus, id vestibulum diam. Mauris maximus, erat a laoreet rhoncus, nibh dui iaculis nibh, eget cursus libero est nec tellus.</p>
+              
+            </div> */}
+            <Explain explain = {this.state.explain} />
             <div id="overlay_start">
               <h2 id="title_overlay">The Blockchain</h2>
               <img id="play" src="img/play.svg" alt="play button" onClick={Disappear}/>
               <p id="iae">IAE - Interactive Animated Explanation</p>
             </div>
             <div id="content_animation">
-                <Explain explain = {this.state.explain}/>
-                <div id="step back" class="command" onClick={this.StepBack}>
-                  <img class="arrow" src="img/arrow_b.svg" alt="back"/>
+                
+                <div id="step back" className="command" onClick={this.StepBack}>
+                  <img className="arrow" src="img/arrow_b.svg" alt="back"/>
                 </div>
                 <div id="animation">
                     <AnimationStep 
@@ -352,10 +361,10 @@ class Animation extends React.Component {
                         point   = {this.state.point}
                         sender  = {this.state.sender}
                         miner   = {this.state.miner}
-                        />
+                      />
                 </div>
-                <div id="step forward" class="command" onClick={this.StepForward}>
-                  <img class="arrow" src="img/arrow_f.svg" alt="forward"/>
+                <div id="step forward" className="command" onClick={this.StepForward}>
+                  <img className="arrow" src="img/arrow_f.svg" alt="forward"/>
                 </div>
             </div>
         </div>

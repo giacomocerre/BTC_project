@@ -1,38 +1,59 @@
 import React from "react"
 import * as d3 from "d3"
+// import RaeeGraph from "./graphRaee"
 
 class Raee extends React.Component {
-    state = {
-        data: null
+    constructor(){
+        super();
+        this.state = {
+            data: []
+        }
     }
     
     componentDidMount() {
         this.callAPI()
-        this.draw()
+    }
+
+    componentWillMount() {
+        //this.draw(this.state.data)
+    }
+
+    componentDidUpdate() {
+        this.draw(this.state.data.data)
     }
 
     callAPI() {
+        var data1 = [];
         fetch("http://localhost:3030/raee")
             .then(res => res.json())
             .then((d) => {
-                this.setState({
-                    data: d.map(raee => ({
-                        date: raee.date,
-                        ElectronicWaste: raee.ElectronicWaste_kt,                      
-                    }))
-                });
+                this.setState(state => ({
+                    ...state,
+                    data : {
+                        ...state.data,
+                        data: d.map(raee => ({
+                            date: raee.date,
+                            ElectronicWaste: raee.ElectronicWaste_kt,                      
+                        }))
+                    }
+                }))          
                 console.log(this.state.data);
+                //this.draw(this.state.data)   
             })
+            data1 = {...this.state.data.data};
+            console.log(this.state.data)
+            //this.draw(this.state.data)       
     }
 
-    draw() {
+    draw(data) {
+        console.log(data)
         // set the dimensions and margins of the graph
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
         width = 460 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
-        var svg = d3.select("#raeeGraph")
+        var svg = d3.select("#RaeeGraph")
             .append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
@@ -40,31 +61,31 @@ class Raee extends React.Component {
             .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
-// Add X axis --> it is a date format
-var x = d3.scaleTime()
-  .domain(d3.extent(this.state.data, function(d) { return d.date; }))
-  .range([ 0, width ]);
-svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(x));
+        // Add X axis --> it is a date format
+        var x = d3.scaleTime()
+            .domain(d3.extent(data, function(d) { return new Date(d.date) }))
+            .range([ 0, width ]);
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
 
-// Add Y axis
-var y = d3.scaleLinear()
-  .domain([0, d3.max(this.state.data, function(d) { return +d.ElectronicWaste; })])
-  .range([ height, 0 ]);
-svg.append("g")
-  .call(d3.axisLeft(y));
+        // Add Y axis
+        var y = d3.scaleLinear()
+            .domain([0, d3.max(data, function(d) { return +d.ElectronicWaste; })])
+            .range([ height, 0 ]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
 
-// Add the line
-svg.append("path")
-  .datum(this.state.data)
-  .attr("fill", "none")
-  .attr("stroke", "steelblue")
-  .attr("stroke-width", 1.5)
-  .attr("d", d3.line()
-    .x(function(d) { return x(d.date) })
-    .y(function(d) { return y(d.ElectronicWaste) })
-    )
+        // Add the line
+        svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", "steelblue")
+            .attr("stroke-width", 1.5)
+            .attr("d", d3.line()
+            .x(function(d) { return x(new Date(d.date)) })
+            .y(function(d) { return y(+d.ElectronicWaste) })
+        )
 
 }
     
@@ -79,7 +100,8 @@ svg.append("path")
                 Il continuo aumento della difficoltà per minare I blocchi, e quindi la richiesta di corrente necessaria per eseguire calcoli sempre più complessi, intacca l’efficienza di macchine che non possono essere usate per nessun altro scopo e che, in media dopo un anno e mezzo circa tenendo conto della legge di Koomey, diventano obsolete, smettono di generare profitto, e devono essere sostituite da nuove ASIC. Una volta che viene sostituita un’asic diventa un RAEE.
                 Il grafico presentato mostra una stima delle kilotonnellate di rifiuti elettronici generati dalla sola rete bitcoin. I dati, così come riportati da digiconomist, sono ottenuti facendo una stima lower bound che tiene conto della durata media dell’hardware, del numero di hardware per il mining nella rete, e del peso del suddetto hardware. Così come è possibile ottenere una stima minima di miners presenti nella rete, è possibile anche ottenere il peso minimo dell’hardware utilizzato. I risultati mostrati tengono conto del fatto che l’hardware, vista la legge di Koomey sopra citata, abbia una durata vitale di un anno e mezzo. La stima non tiene conto dell’hardware più pesante e dei sistemi di raffreddamento, ma ci dà un’idea di quanta sia la produzione minima di RAEE dell’intera rete Bitcoin.
                 </p>
-                <div id="RaeeGraph"></div>
+                <div id="RaeeGraph">{console.log(this.state.data)}</div>
+                
             </div>
         )}
 }

@@ -20,7 +20,7 @@ class Emission extends React.Component {
                         AnnualCO2Emission: em.Annual_CO2_emissions_ktGWh,                       
                     }))
                 });
-                console.log(this.state.data[0].Year);
+                console.log(this.state.data);
             })
     }
     

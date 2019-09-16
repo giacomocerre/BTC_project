@@ -17,10 +17,10 @@ class Emission extends React.Component {
                     data: d.map(em => ({
                         Country: em.Country,
                         Year: em.Year,
-                        AnnualCO2Emission: em.AnnualCO2Emission,                       
+                        AnnualCO2Emission: em.Annual_CO2_emissions_ktGWh,                       
                     }))
                 });
-                console.log(this.state.data[0].AnnualCO2Emission);
+                console.log(this.state.data[0].Year);
             })
     }
     

@@ -10,16 +10,16 @@ class Raee extends React.Component {
     }
 
     callAPI() {
-        fetch("http://localhost:3030/CO2Emission")
+        fetch("http://localhost:3030/raee")
             .then(res => res.json())
             .then((d) => {
                 this.setState({
                     data: d.map(raee => ({
                         date: raee.date,
-                        ElectronicWaste: raee.ElectronicWaste,                      
+                        ElectronicWaste: raee.ElectronicWaste_kt,                      
                     }))
                 });
-                console.log(this.state.data[0].ElectronicWaste);
+                console.log(this.state.data[0].date);
             })
     }
     

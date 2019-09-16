@@ -16,7 +16,7 @@ class ConsumptionMinersIndustrial extends React.Component {
                 this.setState({
                     data: d.map(com => ({
                         Country: com.Country,
-                        AnnualEnergy: com.AnnualEnergy,
+                        AnnualEnergy: com.AnnualEnergy_GWh,
                         Year: com.Year,
                     }))
                 });

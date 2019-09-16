@@ -18,8 +18,8 @@ class ConsumptionMinersAppliances extends React.Component {
                         Name: hw.Name,
                         Type: hw.Type,
                         Price: hw.Price,
-                        AnnualEnergy: hw.AnnualEnergy,
-                        HashRate: hw.HashRate,
+                        AnnualEnergy: hw.AnnualEnergy_KWh,
+                        HashRate: hw.HashRate_THs,
                         Value: hw.Value,
                         ReleaseDate: hw.ReleaseDate,
                     }))

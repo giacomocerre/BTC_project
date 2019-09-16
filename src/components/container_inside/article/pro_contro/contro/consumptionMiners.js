@@ -20,7 +20,7 @@ class ConsumptionMiners extends React.Component {
                         Est_Energy: btc.Estimated_Estimated_AnnualEnergy_GWh,
                     }))
                 });
-                console.log(this.state.data[0].Min_Energy);
+                console.log(this.state.data);
             })
     }
 

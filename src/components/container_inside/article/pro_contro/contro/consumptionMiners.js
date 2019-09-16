@@ -1,27 +1,41 @@
 import React from "react"
 
 class ConsumptionMiners extends React.Component {
-    state = {
-        data: null
+    constructor(){
+        super();
+        this.state = {
+            data: []
+        }
     }
     
     componentDidMount() {
         this.callAPI()
     }
 
+    componentDidUpdate() {
+        this.draw(this.state.data.data)
+    }
+
     callAPI() {
         fetch("http://localhost:3030/btcConsumption")
             .then(res => res.json())
             .then((d) => {
-                this.setState({
+                this.setState(state => ({
+                    ...state,
+                    data : {
+                        ...state.data,
                     data: d.map(btc => ({
                         date: btc.date,
                         Min_Energy: btc.Minimum_AnnualEnergy_GWh,
                         Est_Energy: btc.Estimated_Estimated_AnnualEnergy_GWh,
                     }))
-                });
-                console.log(this.state.data);
-            })
+                }
+            }))
+        })
+    }
+
+    draw(data){
+        console.log(data)
     }
 
     render(){
@@ -35,6 +49,7 @@ class ConsumptionMiners extends React.Component {
                 <p>È possibile definire con certezza un numero minimo di miner nella rete, e con esso anche il consumo complessivo da essi generato. Assumendo infatti che ogni miner nella rete sia un miner razionale, ovverosia un miner che mini in maniera legittima e con profitto, e che ogni miner utilizzi la propria macchina per più tempo possibile, è possibile vedere per ogni intervallo di tempo quale è la macchina che produce in quel momento il maggior numero di terahash possibili; se si divide poi I terahash complessivi della rete per I terahash della macchina più performante si ottiene il numero di miner, che andrà poi moltiplicato per il consumo della macchina. Questo calcolo ci dà una stima minima dei consumi sotto la quale non si può andare, ma è verosimile pensare che, per varie ragioni non tutti I miner nella rete utilizzino sempre la macchina più performante sul mercato (né che tutti I miner siano miner razionali). 
                 È quindi proposta una stima che tiene conto anche dei costi di gestione e di altri fattori come affidabilità e profitto generato dalle macchine. I dati per questa stima, forniti da digiconomist, non prendono in considerazione i consumi dei sistemi di raffreddamento ma, tenendo conto dei guadagni generati dal mining, dalle stime sui costi della corrente, e da un indice che ipotizza che ogni miner spenda almeno il 60% dei propri guadagni in operazioni di manutenzione e gestione, ci danno un’idea più precisa di quali possano essere I veri consumi dell’intera rete bitcoin. 
                 </p>
+                <div id="ComMinersGraph"></div>
             </div>
         )}
 }

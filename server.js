@@ -3,20 +3,18 @@ var express=require('express');
 var bodyparser=require('body-parser');
 var fs=require('fs');
 var cors=require('cors');
+var path=require('path')
 
 var app=express();
 // parser type
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(bodyparser.json());
 app.use(cors())
+app.use(express.static(path.join(__dirname, 'build')));
 
 // PORT DECLARATION
 const PORT = 3030;
 
-// SERVER LISTEN
-var server=app.listen(PORT, function () {
-    console.log("Server running on " + PORT)
-});
 // FileSystem, parse JSON file
 var data1=fs.readFileSync('./data/vis_final_market_cap(inflated).json', 'utf8');
 var marketCap=JSON.parse(data1);
@@ -67,3 +65,10 @@ app.get('/raee', function (req, res) {
 app.get('/minersRev', function (req, res) {
     res.json(minersRev)
 });
+
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+
+// SERVER LISTEN
+app.listen(process.env.PORT || 3030);

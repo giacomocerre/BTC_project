@@ -38,7 +38,7 @@ class Open extends React.Component {
             </div>
             <div id="start_block">
                 <img id="lock" src={url} alt="lock" />
-                <p>Block One</p>
+                <p>Blocco 1</p>
             </div>
         </section>
       );

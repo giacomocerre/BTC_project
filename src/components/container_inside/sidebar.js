@@ -45,29 +45,25 @@ class Sidebar extends React.Component {
 
                                     <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 40+'px', transform:"rotate(45deg)", right:30+"px" }}/>
                                     <a id="hover_4" href="#explain"><img id="block4" className="block block_pro" src="img/block.svg" alt="block" style={{bottom: 60+'px', right:55+"px"}}/></a> 
-                                    <a href="#"><p id="cap4" class="cap" style={{top:30+'%', right:50+"%"}}>Decentralizzata</p></a>
+                                    <a href="#"><p id="cap4" class="cap" style={{top:34+'%', right:50+"%"}}>Decentralizzata</p></a>
 
                                     <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 70+'px', right:55+"px" }}/>
                                     <a id="hover_5" href="#explain"><img id="block5" className="block block_pro" src="img/block.svg" alt="block" style={{bottom: 80+'px', right:55+"px"}}/></a> 
-                                    <a href="#"><p id="cap5" class="cap" style={{top:40+'%', right:60+"%"}}>Oltre</p></a>
-
-                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 85+'px', right:55+"px" }}/>
-                                    <a id="hover_6" href="#explain"><img id="block6" className="block block_pro" src="img/block.svg" alt="block" style={{bottom: 90+'px', right:55+"px"}}/></a> 
-                                    <a href="#"><p id="cap6" class="cap" style={{top:50+'%', right:55+"%"}}>Applicazioni</p></a>
+                                    <a href="#"><p id="cap5" class="cap" style={{top:44+'%', right:60+"%"}}>Oltre</p></a>
 
                                     {/* CONTRO TREE */}
 
-                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 375+'px', transform:"rotate(-45deg)", left:30+"px" }}/>
-                                    <a id="hover_7" href="#explain"><img id="block7" className="block block_contro" src="img/block.svg" alt="block" style={{bottom: 395+'px', left:55+"px"}}/></a> 
-                                    <a href="#"><p id="cap7" class="cap" style={{top:30+'%', right:20+"%"}}>Consumi</p></a>
+                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 265+'px', transform:"rotate(-45deg)", left:30+"px" }}/>
+                                    <a id="hover_7" href="#explain"><img id="block7" className="block block_contro" src="img/block.svg" alt="block" style={{bottom: 285+'px', left:55+"px"}}/></a> 
+                                    <a href="#"><p id="cap7" class="cap" style={{top:34+'%', right:20+"%"}}>Consumi</p></a>
 
-                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 405+'px', left:55+"px" }}/>
-                                    <a id="hover_8" href="#"><img id="block8" className="block block_contro" src="img/block.svg" alt="block" style={{bottom: 415+'px', left:55+"px"}}/></a> 
-                                    <a href="#"><p id="cap8" class="cap" style={{top:40+'%', right:15+"%"}}>Inquinamento</p></a>
+                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 295+'px', left:55+"px" }}/>
+                                    <a id="hover_8" href="#"><img id="block8" className="block block_contro" src="img/block.svg" alt="block" style={{bottom: 305+'px', left:55+"px"}}/></a> 
+                                    <a href="#"><p id="cap8" class="cap" style={{top:44+'%', right:15+"%"}}>Inquinamento</p></a>
 
-                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 420+'px', left:55+"px" }}/>
-                                    <a id="hover_9" href="#"><img id="block9" className="block block_contro" src="img/block.svg" alt="block" style={{bottom: 425+'px', left:55+"px"}}/></a> 
-                                    <a href="#"><p id="cap9" class="cap" style={{top:50+'%', right:15+"%"}}>Smaltimento</p></a>
+                                    <img className="connector"src="img/connector.svg" alt ="connector" style={{bottom: 310+'px', left:55+"px" }}/>
+                                    <a id="hover_9" href="#"><img id="block9" className="block block_contro" src="img/block.svg" alt="block" style={{bottom: 315+'px', left:55+"px"}}/></a> 
+                                    <a href="#"><p id="cap9" class="cap" style={{top:56+'%', right:15+"%"}}>Smaltimento</p></a>
                                 </div>
                     : null}                    
                 </div>

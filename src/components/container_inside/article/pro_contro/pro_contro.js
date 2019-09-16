@@ -1,16 +1,18 @@
 import React from "react"
-import Pro from "./pro/pro"
 import ConsumptionMiners from "./contro/consumptionMiners"
 import ConsumptionMinersIndustrial from "./contro/consumptionMinersIndustrial"
 import ConsumptionMinersAppliances from "./contro/consumptionMinersAppliances"
 import Emission from "./contro/Emission"
 import Raee from "./contro/Raee"
+import Decentralization from "./pro/decentralization"
+import BeyondTheCoin from "./pro/beyond_the_coin"
 
 function ProContro() {
     return(
         <div>
             <article id="pro_task" className="article">
-                <Pro />
+                <Decentralization/>
+                <BeyondTheCoin/>
             </article>
             <article id="contro_task" className="article">
                 <ConsumptionMiners />

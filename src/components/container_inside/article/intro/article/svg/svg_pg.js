@@ -46,7 +46,7 @@ class SvgPG extends React.Component {
                 <div id="pyrite_cont">
                     <SvgLines animate={this.state.animation} duration={10000} style={{ opacity: this.state.opacity }}>
                         <svg version="1.1"
-                            id="pyrite"
+                            id="pyrite_icon"
                             xmlns="http://www.w3.org/2000/svg"
                             x="0px"
                             y="0px" 

@@ -8,6 +8,7 @@ html,
 body,
 #main_root,
 #root{
+    scroll-behavior: smooth;
     height: 100%;
     width: 100%;
     color: #333;
@@ -36,7 +37,8 @@ body,
     justify-content: center;
     align-items: center;
     display: flex;
-    z-index: 1;
+    z-index: 10;
+    position: relative;
 }
 div#open_content {
     width: 100%;
@@ -205,6 +207,8 @@ div.division {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    z-index: 10;
+    position: relative;
 }
 
 h5.num_block {
@@ -225,21 +229,22 @@ hr.line_open.line_right {
 }
 h2.block_title {
     position: relative;
-    top: 20px;
     font-size: 2.5em;
     color: #F6F6F6;
+    opacity: 1;
+    -webkit-transition: .9s;
+    transition: .9s;
+    padding: 50px;
 }
 div#pc_div {
-    background: #333;
+    display: table;
+	width:100%;
+    height:100%;
+    background-color: #333;
+    z-index: 9;
+    position: relative;
 }
-div.pro_contro {
-    width: 50%;
-    float: left;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 /* SIDEBAR */
 div#sidebar {
     position: fixed;
@@ -248,10 +253,49 @@ div#sidebar {
     justify-content: center;
     align-items: center;
     display: flex;
-    z-index: -1;
+    z-index: 9;
 }
 div#tree {
     width: 50px;
+}
+p.cap {
+    position: absolute;
+    right: 65%;
+    background: rgb(238,238,238);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 100;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+#hover_1:hover ~ #cap1,
+#hover_2:hover ~ #cap2,
+#hover_3:hover ~ #cap3,
+#hover_4:hover ~ #cap4,
+#hover_5:hover ~ #cap5,
+#hover_6:hover ~ #cap6,
+#hover_7:hover ~ #cap7,
+#hover_8:hover ~ #cap8,
+#hover_9:hover ~ #cap9{
+    opacity: 1;
+}
+#cap1:hover,
+#cap2:hover,
+#cap3:hover,
+#cap4:hover,
+#cap5:hover,
+#cap6:hover,
+#cap7:hover,
+#cap8:hover,
+#cap9:hover{
+    opacity: 1;
 }
 #block1{
     top: 5px;
@@ -277,6 +321,8 @@ div#content_animation {
     border-bottom: 1px solid #ccc;
     margin-top: 50px;
     margin-bottom: 50px;
+    z-index: 9;
+    position: relative;
 }
 .command {
     width: 10%;
@@ -290,6 +336,8 @@ div#content_animation {
     display: flex;
     background: #f6f6f6;
     cursor: pointer;
+    z-index: 10;
+    position: relative;
 }
 div#animation {
     width: 80%;
@@ -496,6 +544,7 @@ div#overlay_start {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
 h2#title_overlay {
     width: 30%;
@@ -1125,12 +1174,6 @@ img#plus_ledge {
 /* *************** */
 /* *************** */
 
-.try_Text {
-    width: 80%;
-    float: right;
-    padding-right: 50px;
-    line-height: 30px;
-}
 .try_Text h1,
 .try_Text h2,
 .try_Text h3{
@@ -1147,10 +1190,74 @@ img#plus_ledge {
     font-size: 1.2em;
     text-transform: none;
 }
+div#notify_content {
+    position: absolute;
+    height: auto;
+    width: 60%;
+    right: 7%;
+    z-index: 99;
+}
 img#notify {
     width: 50px;
     position: absolute;
-    right: 100px;
+    right: 0;
     margin-top: 30px;
     cursor: pointer;
+}
+#content_explain_noti{
+    position: absolute;
+    width: 70%;
+    top: 30px;
+    left: 17%;
+    padding: 10px 20px;
+    background:#FFF5CC;
+    z-index: 10;
+    border-radius: 10px;
+    border: 3px solid #F2E8B6;
+}
+.arrow_right_noti{
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    position: absolute;
+    top: 15px;
+    left: 100%;
+    transform: rotate(360deg);
+    border-left: 13px solid #F2E8B6;
+}
+p.tooltip_explain {
+    line-height: 30px;
+}
+div.pro_contro {
+    height: 100%;
+    width: 50%;
+    opacity: 1;
+    -webkit-transition: all 0.9s;
+    -moz-transition: all 0.9s;
+    transition: all 0.9s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+
+}
+#pc_div:hover .pro_contro{
+    width:0%;
+    opacity: 0;
+}
+#pc_div:hover .pro_contro:hover {
+    width:100%;
+    opacity: 1;
+}
+#pro_task,
+#contro_task,
+#concl{
+    display: none;
+}
+div#pro{
+    background-image: linear-gradient(to right, #738668,#738668, #81A68A,#D8B982)
+}
+div#contro{
+    background-image: linear-gradient(to right, #D8B982, #D9946C,#A6524B,#A6524B)
 }

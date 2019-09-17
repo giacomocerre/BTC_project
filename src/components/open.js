@@ -32,13 +32,14 @@ class Open extends React.Component {
       return (
         <section id="open" className="full_height">
             <div id="open_content">
+                
                 <h1 id="main_title">Blockchain: <br/>Il prezzo del consenso</h1>
                 <p className="subtitle">Dolor sit amet der mit losel numn sit amet der fun cus mein.</p>
                 <img id="logo" src="img/logo.png" alt="logo" />
             </div>
             <div id="start_block">
                 <img id="lock" src={url} alt="lock" />
-                <p>Block One</p>
+                <p>Blocco 1</p>
             </div>
         </section>
       );

@@ -24,7 +24,7 @@ class Animation extends React.Component {
     StepForward = () => {
         //for notify the message step
         var NotifyImage =  document.getElementById("notify"); 
-        var NotifyMex   = document.getElementById("content_explain"); 
+        var NotifyMex   = document.getElementById("content_explain_noti"); 
         NotifyImage.src = "img/notify.svg";
         NotifyMex.style.display = "none" 
 
@@ -178,7 +178,7 @@ class Animation extends React.Component {
     //***********************************
     StepBack = () => {
         var NotifyImage =  document.getElementById("notify"); 
-        var NotifyMex   = document.getElementById("content_explain"); 
+        var NotifyMex   = document.getElementById("content_explain_noti"); 
         NotifyImage.src = "img/notify.svg";
         NotifyMex.style.display = "none" 
         step = step - 1;
@@ -354,6 +354,7 @@ class Animation extends React.Component {
                   <img className="arrow" src="img/arrow_b.svg" alt="back"/>
                 </div>
                 <div id="animation">
+
                     <AnimationStep 
                         step    = {this.state.step}
                         ledge   = {this.state.ledge}

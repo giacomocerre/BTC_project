@@ -1,4 +1,6 @@
 import React from "react"
+import * as d3 from "d3"
+import * as d3ScaleChromatic from 'd3-scale-chromatic'
 
 class ConsumptionMiners extends React.Component {
     constructor(){
@@ -27,7 +29,7 @@ class ConsumptionMiners extends React.Component {
                     data: d.map(btc => ({
                         date: btc.date,
                         Min_Energy: btc.Minimum_AnnualEnergy_GWh,
-                        Est_Energy: btc.Estimated_Estimated_AnnualEnergy_GWh,
+                        Est_Energy: btc.Estimated_AnnualEnergy_GWh,
                     }))
                 }
             }))
@@ -36,6 +38,69 @@ class ConsumptionMiners extends React.Component {
 
     draw(data){
         console.log(data)
+        // set the dimensions and margins of the graph
+        var margin = {top: 10, right: 100, bottom: 30, left: 30},
+        width = 460 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+
+        // append the svg object to the body of the page
+        var svg = d3.select("#ComMinersGraph")
+                    .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform",
+                                "translate(" + margin.left + "," + margin.top + ")");
+    
+        var allGroup = ["Min_Energy", "Est_Energy"]
+
+        // Reformat the data: we need an array of arrays of {x, y} tuples
+        var dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
+        return {
+            name: grpName,
+            values: data.map(function(d) {
+                return {date: d.date, value: +d[grpName]};
+            })
+            };
+        });
+        // I strongly advise to have a look to dataReady with
+        // console.log(dataReady)
+        // console.log(dataReady.values.date)
+  
+        // A color scale: one color for each group
+        var myColor = d3.scaleOrdinal()
+            .domain(allGroup)
+            .range(d3ScaleChromatic.schemeSet2);
+  
+      // Add X axis --> it is a date format
+      var x = d3.scaleTime()
+                .domain(d3.extent(data, function(d) { return new Date(d.date) }))
+                .range([ 0, width ]);
+            svg.append("g")
+                .attr("transform", 
+                        "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+  
+      // Add Y axis
+      var y = d3.scaleLinear()
+      .domain([0, d3.max(data, function(d) { return d.Est_Energy; })])
+        .range([ height, 0 ]);
+      svg.append("g")
+        .call(d3.axisLeft(y));
+  
+      // Add the lines
+      var line = d3.line()
+        .x(function(d) { return x(new Date(d.date)) })
+        .y(function(d) { return y(d.value) })
+      svg.selectAll("myLines")
+        .data(dataReady)
+        .enter()
+        .append("path")
+          .attr("d", function(d){ return line(d.values) } )
+          .attr("stroke", function(d){ return myColor(d.name) })
+          .style("stroke-width", 4)
+          .style("fill", "none")
+    
     }
 
     render(){

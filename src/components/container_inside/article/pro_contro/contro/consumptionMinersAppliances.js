@@ -1,4 +1,6 @@
 import React from "react"
+import * as d3 from "d3"
+import * as d3ScaleChromatic from 'd3-scale-chromatic'
 
 class ConsumptionMinersAppliances extends React.Component {
     constructor(){
@@ -40,6 +42,19 @@ class ConsumptionMinersAppliances extends React.Component {
 
     draw(data) {
         console.log(data)
+
+        var allGroup = d3.map(data, function(d){return(d.Type)}).keys();
+        console.log(allGroup)
+
+        var dataReady = allGroup.map( function(grpName) { 
+            return {
+                name: grpName,
+                values: data.filter(({Type}) => Type === grpName).map(function(d) {
+                    return { value: d.AnnualEnergy};
+                    })
+              };
+            });
+        console.log(dataReady)                
     }
     
     render(){

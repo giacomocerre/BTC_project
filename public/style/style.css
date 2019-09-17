@@ -27,6 +27,27 @@ body,
 /* div#measure {
     display: none;
 } */
+div#nav {
+    position: absolute;
+    z-index: 999;
+    background: #333;
+    width: 100%;
+    padding: 5px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+#nav a {
+    color: #f6f6f6;
+    text-decoration: none;
+    margin-right: 40px;
+    width: 100%;
+}
+#nav a p {
+    margin: 0;
+    margin-right: 30px;
+}
 #open{
     height: 100%;
     background-image: url("../img/homeback.jpg");
@@ -1259,4 +1280,130 @@ div#pro{
 }
 div#contro{
     background-image: linear-gradient(to right, #D8B982, #D9946C,#A6524B,#A6524B)
+}
+/* relation html */
+div#root_relation {
+    width: 100%;
+    height: 100%;
+}
+div#rel_open {
+    background: url(../img/behind.jpg);
+    height: 100%;
+    background-image: url(../img/behind.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 10;
+    position: relative;
+}
+h1#rel_title {
+    font-size: 4em;
+    text-transform: uppercase;
+    background: rgb(258,258,258,0.4);
+    padding: 50px;
+}
+div.sect {
+    width: 80%;
+    margin: auto;
+    line-height: 30px;
+    
+}
+h2.rel_main_title {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+h3.rel_sub_title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+p.rel_par {
+    margin-left: 5%;
+}
+ul.question {
+    font-size: 1.8em;
+    list-style: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-left: 0;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    margin-bottom:80px 
+}
+li.q {
+    line-height: 40px;
+}
+p.rel_par.rel_par_center {
+    text-align: center;
+    font-size: 1.2em;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    padding-top: 30px;
+    margin-top:50px 
+}
+p.rel_par.fist_question {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    margin: auto;
+    margin-top: 80px;
+}
+p.rel_par.the_question {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+    padding-bottom: 30px;
+    margin: auto;
+    margin-bottom: 80px;
+}
+p.rel_par.par_question {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-style: italic;
+    border-left: 5px solid #333;
+    padding-left:20px;
+    width:90%;
+}
+.team ul{
+    list-style: none;
+    overflow: hidden;
+}
+li.team_comp {
+    width: 40%;
+    float: left;
+    border: 1px solid;
+    box-sizing: border-box;
+    margin: 50px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    text-align: center;
+}
+span.team_name {
+    margin: 0;
+    font-size: 1.3em;
+    width: 100%;
+    text-transform: uppercase;
+}
+span.role {
+    font-size: 0.5em;
+    color: red;
+    text-transform: capitalize;
+}
+img.team_role {
+    width: 70px;
+    padding: 20px;
 }

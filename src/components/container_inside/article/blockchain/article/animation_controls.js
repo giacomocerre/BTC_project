@@ -354,6 +354,7 @@ class Animation extends React.Component {
                   <img className="arrow" src="img/arrow_b.svg" alt="back"/>
                 </div>
                 <div id="animation">
+
                     <AnimationStep 
                         step    = {this.state.step}
                         ledge   = {this.state.ledge}

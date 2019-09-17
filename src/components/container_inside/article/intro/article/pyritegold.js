@@ -5,8 +5,8 @@ function PyriteGold(props) {
     return (
         <article id="pyrite_gold" class={props.class} style={{ justifyContent: props.justify }}>
             <div id="pg_text" class="article_text">
-                <h2 class="article_title">Il paradosso dell'oro e della pirite</h2>
-                <p class="par">Esiste una lega metallica fatta da stagno e zolfo che ha il colore dell’oro. Il suo nome è pirite ed era nota in passato come l’oro degli stolti.
+                <h2 className="article_title">Il paradosso dell'oro e della pirite</h2>
+                <p className="par">Esiste una lega metallica fatta da stagno e zolfo che ha il colore dell’oro. Il suo nome è pirite ed era nota in passato come l’oro degli stolti.
                 L’oro, quello vero, è da millenni utilizzato come valore, e poi come controvalore, per le emissioni valutarie degli Stati, un sistema che per molti secoli ha in qualche modo garantito la stabilità degli scambi monetari. Con l’avvento del sistema fluttuante del 1971 ad opera degli Stati Uniti lo scenario è cambiato.
                 <br /><br />
                 Nel 2008, il fallimento di Lehman Brothers, i suoi passivi di titoli tossici, o salciccia, che ammontava a $613 miliardi  diede inizio al crollo finanziario di carattere globale che ha messo in crisi il modello economico vigente generando la peggiore recessione dal 1929, conosciuta come la grande recessione. Finì soltanto nel 2009 grazie alle erogazioni di ingenti prestiti da parte di FMI, BCE e Commissione europea.

@@ -1,28 +1,60 @@
 import React from "react"
+import * as d3 from 'd3'
 
 class Evolution extends React.Component {
-    state = {
-        data: null
-    };
+    constructor(){
+        super();
+        this.state = {
+            data: []
+        }
+    }
     
     componentDidMount() {
         this.callAPI()
     };
 
+    componentDidUpdate() {
+        this.draw(this.state.data.data)
+        this.drawBar(this.state.data.data)
+    }
+
     callAPI() {
         fetch("http://localhost:3030/marketCap")
             .then(res => res.json())
             .then((d) => {
-                this.setState({
-                    data: d.map(crypto => ({
+                this.setState(state => ({
+                    ...state,
+                    data : {
+                        ...state.data,
+                    data: d.map(crypto => ({                        
                         Name: crypto.Name,
                         AvgCAP: crypto.AvgCAP,
-                        Year: crypto.Year
+                        Year: crypto.Year,                       
                     }))
-                });
-                console.log(this.state.data[0].Name);
-            })
+                }
+            }))
+        })
     };
+
+    draw(data) {
+        console.log(data)
+}
+    
+    drawBar(data) {
+        console.log(data)
+        var allCrypto = ["Bitcoin", "Ethereum", "XRP", "Litecoin", "Monero"]
+
+        var dataReady = allCrypto.map( function(ssName) { // .map allows to do something for each element of the list
+            return {
+                name: ssName,
+                values: data.filter(({Name}) => Name === ssName).map(function(d) {
+                    return {Year: d.Year, value: d.AvgCAP};
+                    })
+            };
+        });
+        // I strongly advise to have a look to dataReady with
+        console.log(dataReady)
+    }
     
     render() {
         return( 
@@ -43,7 +75,9 @@ class Evolution extends React.Component {
                             vitae egestas ornare. Ut nibh urna, lacinia non urna eget, condimentum fringilla purus. Nulla
                             nec fermentum sapien.</p>
                     </div>
-                    <div id="BTCm_Graph"></div>
+                    <div id="BubbleGraph"></div>
+                    <select id="selectButton"></select>
+                    <div id="CryptoGraph"></div>
                 </article>
 			</section>
         )};

@@ -9,6 +9,16 @@
     <link rel="stylesheet" type="text/css" href="style/animation.css">
     <link rel="stylesheet" type="text/css" href="style/font.css">
     <title>React App</title>
+    <script>
+    function showDiv(el) {
+
+        if(el.nextElementSibling.style.display === "block"){
+          el.nextElementSibling.style.display = "none";
+        }else{
+          el.nextElementSibling.style.display = "block";
+        }
+    }
+    </script>
   </head>
   <body>
     <div id="nav">
@@ -51,70 +61,99 @@
         </p>
         <h3 class="rel_sub_title">Il team è composto da:</h3>
         <div class="team">
-          <ul >
-            <li class="team_comp"><span class="team_name">Graziella Geralda Apa Guidigli </br></span>
-              <img class="team_role" src="./img/journalist.svg"/>
-                <ul>
-                  <span id="GGAP" class="task">Task di sviluppo</span>
+          <!-- Graziella -->
+          <div class="identikit">
+            <div id="GGAG"class="id_name margin_float">
+              <h4 class="team_comp">Graziella Geralda Apa Guidigli</h4>
+            </div>
+            <div class="task margin_float">
+              <p class="role">Gionalista e cura dei testi</p>
+              <p onclick="showDiv(this)">Obiettivi</p>
+              <ul class="obb">
                   <li>Ricerca informazioni, scrittura e correzione testi.</li>
-                  <li>Tipologia delle domande.</li>
-                  <li>Focus articolo.</li>
-                </ul>
-                <ul>
-                <span id="GGAP_p" class="problem">Problematiche e sviluppo</span>
-                <li>Cercare storie accativanti per la stesura dell'articolo</li>
-                <li>Studiare a fondo il tema per ricavare delle domande</li>
-                <li>Uso di drive per lo share di gruppo del codice del progetto.</li>
+                  <li>Tipologia delle domande e focus completo su impostazione intervista.</li>
+                  <li>Focus articolo, impostazione sintattica a livello editoriale</li>
               </ul>
-            </li>
-            <li class="team_comp"><span class="team_name">Andrea Nardi </br></span>
-              <img class="team_role" src="./img/devlop.svg"/>
-                <ul>
-                  <span id="AN" class="task">Task di sviluppo</span>
+            </div>
+            <div class="problem margin_float">
+                <p onclick="showDiv(this)">Problematiche</p>
+                <ul class="prob">
+                  <li>Cercare storie accativanti per la stesura dell'articolo</li>
+                  <li>Studiare a fondo il tema per ricavare delle domande</li>
+                  <li>Uso di drive per lo share di gruppo del codice del progetto.</li>
+                </ul>
+            </div>
+          </div>
+          <!-- Andrea -->
+          <div class="identikit">
+              <div id="AN" class="id_name margin_float">
+                <h4 class="team_comp">Andrea Nardi</h4>
+              </div>
+              <div class="task margin_float">
+                <p class="role">Svilippatare e cura dei dati</p>
+                <p onclick="showDiv(this)">Obiettivi</p>
+                <ul class="obb">
                   <li>Raccolta dati con SELENIUM, pulizia e creazione dei datasets in JSON per interfaccia con libreria D3</li>
                   <li>Scrittura della parte tecnica.</li>
                   <li>Focus completo sulla blockchian e sul suo funzionamento.</li>
                 </ul>
-                <ul>
-                  <span id="AN_p" class="problem">Problematiche e sviluppo</span>
-                  <li>Pulizia dei dati comlessa per via dei problemi di ScrapingWeb e di dati sporchi.</li>
-                  <li>Trovare i dati, molti dati non sono reperibili.</li>
-                  <li>Uso di git per lo share di gruppo del codice del progetto.</li>
+              </div>
+              <div class="problem margin_float">
+                <p onclick="showDiv(this)">Problematiche</p>
+                <ul class="prob">
+                    <li>Pulizia dei dati comlessa per via dei problemi di ScrapingWeb e di dati sporchi.</li>
+                    <li>Trovare i dati, molti dati non sono reperibili.</li>
+                    <li>Uso di git per lo share di gruppo del codice del progetto.</li>
                 </ul>
-            </li>
-            <li class="team_comp"><span class="team_name">Michele Abbrescia</br></span>
-              <img class="team_role" src="./img/devlop.svg"/>
-              <ul>
-                <span id="MA" class="task">Task di sviluppo</span>
-                <li>Uso della libreria D3</li>
-                <li>Studio sull'efficienza dei grafici</li>
-                <li>Creazione dei grafici in D3 interfacciato a REACT</li>
-              </ul>
-              <ul>
-                <span id="MA_p" class="problem">Problematiche e sviluppo</span>
-                <li>Studirare dei grafici che possano risultare comprensivi al primo impatto o con una breve lettura.</li>
-                <li>Interfacciare il framework REACT con la libreria D3.</li>
-                <li>Uso di git per lo share di gruppo del codice del progetto.</li>
-              </ul>
-            </li>
-            <li class="team_comp"><span class="team_name">Giacomo Cerretini</br></span>
-              <img class="team_role" src="./img/design.svg"/>
-              <ul>
-                <span id="GC" class="task">Task di sviluppo</span>
-                <li>Implementazione REACT structure e GITHUB stucture</li>
-                <li>Studio della UI e UX</li>
-                <li>Creazione icone</li>
-              </ul>
-              <ul>
-                  <span id="GC_p" class="problem">Problematiche e sviluppo</span>
-                  <li>Cercare una rappresentazione grafica che sia coerente con le specifiche del progetto.</li>
-                  <li>Implementare REACT per la creazione dell'animazione "The Blockchain".</li>
-                  <li>Capire bene di cosa trattassero i punti focali del progetto per renderizzarli al meglio.</li>
-              </ul>
-            </li>
-          </ul> 
-          </div>
-      </div> 
+              </div>
+            </div>
+            <!-- Michele -->
+            <div class="identikit">
+                <div id="MA" class="id_name margin_float">
+                  <h4 class="team_comp">Michele Abbrescia</h4>
+                </div>
+                <div class="task margin_float">
+                  <p class="role">Svilippatare e cura dei grafici</p>
+                  <p onclick="showDiv(this)">Obiettivi</p>
+                  <ul class="obb">
+                      <li>Uso della libreria D3</li>
+                      <li>Studio sull'efficienza dei grafici</li>
+                      <li>Creazione dei grafici in D3 interfacciato a REACT</li>
+                  </ul>
+                </div>
+                <div class="problem margin_float">
+                  <p onclick="showDiv(this)">Problematiche</p>
+                  <ul class="prob">
+                      <li>Studirare dei grafici che possano risultare comprensivi al primo impatto o con una breve lettura.</li>
+                      <li>Interfacciare il framework REACT con la libreria D3.</li>
+                      <li>Uso di git per lo share di gruppo del codice del progetto.</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Giacomo -->
+              <div class="identikit">
+                  <div id="GC" class="id_name margin_float">
+                    <h4 class="team_comp">Giacomo Cerretini</h4>
+                  </div>
+                  <div class="task margin_float">
+                    <p class="role">Designer e cura della ReactStructure</p>
+                    <p onclick="showDiv(this)">Obiettivi</p>
+                    <ul class="obb">
+                        <li>Implementazione REACT structure e GITHUB stucture</li>
+                        <li>Studio della UI e UX</li>
+                        <li>Creazione icone</li>
+                    </ul>
+                  </div>
+                  <div class="problem margin_float">
+                    <p onclick="showDiv(this)">Problematiche</p>
+                    <ul class="prob">
+                        <li>Cercare una rappresentazione grafica che sia coerente con le specifiche del progetto.</li>
+                        <li>Implementare REACT per la creazione dell'animazione "The Blockchain".</li>
+                        <li>Capire bene di cosa trattassero i punti focali del progetto per renderizzarli al meglio.</li>
+                    </ul>
+                  </div>
+                </div>
+          </div> 
       <div id="work" class="sect">
         <h2 class="rel_main_title">Lo sviluppo del porgetto.</h2>
         <p class="rel_par">
@@ -126,35 +165,35 @@
           <ul>
             <li>component
               <ul>
-                <li>contaniner_inside <span>contenitore redice</span>
+                <li>contaniner_inside <span class="compo_ex">contenitore redice</span>
                 <ul>
-                  <li>article <span>sezioni con gli articoli</span>
+                  <li>article <span class="compo_ex">sezioni con gli articoli</span>
                     <ul>
-                      <li>intro <span>sezione introduzione</span>
+                      <li>intro <span class="compo_ex">sezione introduzione</span>
                         <ul>
-                            <li>artilce <span>artiolo dell'intro</span>
-                              <li>svg <span>svg file per intro article</span></li>
+                            <li>artilce <span class="compo_ex">artiolo dell'intro</span>
+                              <li>svg <span class="compo_ex">svg file per intro article</span></li>
                             </li>
                         </ul>
                       </li>
-                      <li>evolution <span>sezione evoluzione</span>
+                      <li>evolution <span class="compo_ex">sezione evoluzione</span>
                       </li>
-                      <li>blokchain <span>sezione blockchain</span>
+                      <li>blokchain <span class="compo_ex">sezione blockchain</span>
                         <ul>
-                            <li>article <span>articlo della blockchain</span>
+                            <li>article <span class="compo_ex">articlo della blockchain</span>
                             <ul>
-                              <li>animation <span>componente animazione</span>
+                              <li>animation <span class="compo_ex">componente animazione</span>
                                 <ul>
-                                  <li>steps <span>steps dell animazione</span>
+                                  <li>steps <span class="compo_ex">steps dell animazione</span>
                                   <ul>
-                                    <li>animation_component <span>componenti per l'animazione</span></li>
-                                    <li>step1 <span>primo step animazione</span></li>
-                                    <li>step2n3 <span>secondo e terzo step animazione</span></li>
-                                    <li>step4 <span>quarto step animazione</span></li>
-                                    <li>step5 <span>quinto step animazione</span></li>
-                                    <li>step6 <span>sesto step animazione</span></li>
-                                    <li>step7 <span>settimo step animazione</span></li>
-                                    <li>step8 <span>ottavo step animazione</span></li>
+                                    <li>animation_component <span class="compo_ex">componenti per l'animazione</span></li>
+                                    <li>step1 <span class="compo_ex">primo step animazione</span></li>
+                                    <li>step2n3 <span class="compo_ex">secondo e terzo step animazione</span></li>
+                                    <li>step4 <span class="compo_ex">quarto step animazione</span></li>
+                                    <li>step5 <span class="compo_ex">quinto step animazione</span></li>
+                                    <li>step6 <span class="compo_ex">sesto step animazione</span></li>
+                                    <li>step7 <span class="compo_ex">settimo step animazione</span></li>
+                                    <li>step8 <span class="compo_ex">ottavo step animazione</span></li>
                                   </ul>
                                   </li>
                                 </ul>
@@ -163,20 +202,20 @@
                             </li>
                         </ul>
                       </li>
-                      <li>pro_contro <span>sezione pro e contr</span>
+                      <li>pro_contro <span class="compo_ex">sezione pro e contr</span>
                         <ul>
-                            <li>contro <span>sezione contro</span></li>
-                            <li>pro <span>sezione pro</span></li>
+                            <li>contro <span class="compo_ex">sezione contro</span></li>
+                            <li>pro <span class="compo_ex">sezione pro</span></li>
                         </ul>
                       </li>
-                      <li>conclusion <span>sezione conclusioni</span></li>
+                      <li>conclusion <span class="compo_ex">sezione conclusioni</span></li>
                     </ul>
                   </li>
                 </ul>
                 </li>
               </ul>
             </li>
-            <li>data <span>file json</span></li>
+            <li>data <span class="compo_ex">file json</span></li>
           </ul>
           <p class="rel_par">Questa struttura, sulla base dei punti che volevamo analizzare, ci ha permesso di svolgere un lavoro pulito e di gruppo curando in maniera minuziosa ogni aspetto trattato.</p>
         </div>

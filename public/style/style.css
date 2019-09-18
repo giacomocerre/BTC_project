@@ -1559,6 +1559,8 @@ p#showPro {
     cursor: pointer;
     -webkit-transition: .9s;
     transition: .9s;
+    position: relative;
+    right: 100px;
 }
 p#showPro:hover{
     color: #f6f6f6;

@@ -1,6 +1,5 @@
 import React from "react"
 import * as d3 from "d3"
-// import RaeeGraph from "./graphRaee"
 
 class Raee extends React.Component {
     constructor(){
@@ -39,7 +38,7 @@ class Raee extends React.Component {
         console.log(data)
         // set the dimensions and margins of the graph
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
-                    width = 460 - margin.left - margin.right,
+                    width = 1000 - margin.left - margin.right,
                     height = 400 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
@@ -62,10 +61,11 @@ class Raee extends React.Component {
 
         // Add Y axis
         var y = d3.scaleLinear()
-            .domain([0, d3.max(data, function(d) { return +d.ElectronicWaste; })])
+            .domain([0 ,d3.max(data, function(d) { return +d.ElectronicWaste; })])
             .range([ height, 0 ]);
         
-            svg.append("g")
+        svg.append("g")
+            .attr("text-anchor", "middle")
             .call(d3.axisLeft(y));
 
         // Add the line

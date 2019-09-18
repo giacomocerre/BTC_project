@@ -50,11 +50,18 @@ class ConsumptionMinersAppliances extends React.Component {
             return {
                 name: grpName,
                 values: data.filter(({Type}) => Type === grpName).map(function(d) {
-                    return { value: d.AnnualEnergy};
+                    return { value: +d.AnnualEnergy};
                     })
               };
             });
-        console.log(dataReady)                
+        console.log(dataReady)
+        const reducer = (accumulator, currentValue) => accumulator.value + currentValue.value;
+        var AvgData = dataReady.map( function (d) {
+            return {
+                avgEnergy : d.values.reduce(reducer)
+            }
+        })
+        console.log(AvgData)
     }
     
     render(){

@@ -40,7 +40,7 @@ class Emission extends React.Component {
 
 
         var margin = {top: 10, right: 30, bottom: 90, left: 40},
-        width = 460 - margin.left - margin.right,
+        width = 1000 - margin.left - margin.right,
         height = 450 - margin.top - margin.bottom;
     
     // append the svg object to the body of the page

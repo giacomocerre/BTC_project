@@ -39,7 +39,7 @@ class ConsumptionMiners extends React.Component {
     draw(data){
         console.log(data)
         // set the dimensions and margins of the graph
-        var margin = {top: 10, right: 100, bottom: 30, left: 30},
+        var margin = {top: 10, right: 100, bottom: 30, left: 60},
         width = 1000 - margin.left - margin.right,
         height = 450 - margin.top - margin.bottom;
 
@@ -100,6 +100,20 @@ class ConsumptionMiners extends React.Component {
           .attr("stroke", function(d){ return myColor(d.name) })
           .style("stroke-width", 4)
           .style("fill", "none")
+
+
+          
+          svg
+          .selectAll("myLabels")
+          .data(dataReady)
+          .enter()
+          .append('g')
+          .append("text")
+          .attr('x', 30)
+          .attr('y', function(d,i){ return 30 + i*20})
+          .text(function(d) { return d.name; })
+              .style("fill", function(d){ return myColor(d.name) })
+              .style("font-size", 15)
     
     }
 

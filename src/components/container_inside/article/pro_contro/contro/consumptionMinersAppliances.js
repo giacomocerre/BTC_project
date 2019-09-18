@@ -125,6 +125,24 @@ simulation
         .attr("cy", function(d){ return d.y; })
   });
 
+  // select the svg area
+//svg.selectAll("MyLegend")
+   //         .data(AvgData)
+   //         .enter()
+   //         .append("circle")
+   //         .attr("cx",function(d,i){ return 30 + i*20})
+   //         .attr("cy", 30)
+   //         .attr("r", 6)
+    //        .style("fill", function(d){ return color(d.Name) })
+            
+     //       svg.append("text")
+     //       .attr('x', function(d,i){ return 30 + i*20})
+     //       .attr('y', 30)
+     //       .text(function (d) {
+     //         return d.Name
+      //      })
+          
+
 
 }
     

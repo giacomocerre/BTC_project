@@ -1,7 +1,13 @@
 import React from "react"
 import * as d3 from "d3"
 import * as d3ScaleChromatic from 'd3-scale-chromatic'
-
+var tv = 0;
+var dish = 0;
+var wash = 0;
+var oven = 0;
+var micro = 0;
+var fridge = 0;
+var ASIC = 0;
 class ConsumptionMinersAppliances extends React.Component {
     constructor(){
         super();
@@ -70,7 +76,39 @@ class ConsumptionMinersAppliances extends React.Component {
                 avgEnergy : avg
             }
         })
-        console.log(AvgData)
+        var tmp = AvgData.map(function(d){
+             if(d.Name ===  "ASIC"){
+                ASIC = d.avgEnergy
+             }
+             if(d.Name == "Fridge"){
+                 fridge = d.avgEnergy
+             }
+            if(d.Name == "Dishwasher"){
+                dish = d.avgEnergy
+            }
+            if(d.Name == "Microwave"){
+                micro = d.avgEnergy
+            }
+            if(d.Name == "Tv"){
+                tv = d.avgEnergy
+            }
+            if(d.Name == "WashingMachine"){
+                wash = d.avgEnergy
+            }
+            if(d.Name == "Oven"){
+                oven = d.avgEnergy
+            }
+            
+        
+            
+         })
+        console.log(ASIC/tv);
+        console.log(ASIC/dish);
+        console.log(ASIC/wash);
+        console.log(ASIC/oven);
+        console.log(ASIC/micro);
+        console.log(ASIC/fridge);
+
 
 
   
@@ -151,7 +189,34 @@ simulation
             <div className="miner_appl contro_cont">
                 <h3 className="sub_article_title">Miner VS Casa</h3>
                 <p>Ma quanto consuma una singola macchina per il mining nel dettaglio? Storicamente le prime macchine dedicate al mining erano dei semplici pc, si utilizzava infatti la potenza di calcolo offerta dai normali processori o dalle schede video dei PC di casa, di conseguenza il consumo dei primi miner era assimilabile a quello di un pc che lavorava a pieno carico per qualche ora. A partire dal 2013, però, con l’aumentare della complessità delle operazioni e del valore della moneta, si è iniziato a utilizzare hardware più specifico che utilizzasse nella maniera più efficiente possibile tutte le risorse a disposizione della macchina. Più efficienza però non vuol dire necessariamente consumi minori, anzi. Nel grafico proposto sotto si è deciso di mostrare la differenza di consumi tra un miner, un semplice computer che genera numeri casuali 24/7, e dei normali elettrodomestici presenti in ogni casa.</p>
-            <div id="ApplGraph"></div>
+            {/* <div id="ApplGraph"></div> */}
+            <h2 class="app_title">Ci vogliono, per arrivare al consumo di una ASIC:</h2>
+            <div id="appl_legend">
+                <div class="app_icon">
+                    <img src="./img/home_icon/tv.svg"/>
+                    <p>106</p>
+                </div>
+                <div class="app_icon">
+                    <img id="fridge" src="./img/home_icon/fridge.svg" alt="icon"/>
+                    <p>37</p>
+                </div>
+                <div class="app_icon">
+                    <img id="oven" src="./img/home_icon/oven.svg" alt="icon"/>
+                    <p>75</p>
+                </div>
+                <div class="app_icon">
+                    <img id="micro" src="./img/home_icon/micro.svg" alt="icon"/>
+                    <p>16</p>
+                </div>
+                <div class="app_icon">
+                    <img id="wash" src="./img/home_icon/wash.svg" alt="icon"/>
+                    <p>42</p>
+                </div>
+                <div class="app_icon">
+                    <img id="dish" src="./img/home_icon/dish.svg" alt="icon"/>
+                    <p>41</p>
+                </div>
+            </div>
             </div>
         )}
 }

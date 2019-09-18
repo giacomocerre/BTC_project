@@ -78,6 +78,7 @@ class Raee extends React.Component {
             .x(function(d) { return x(new Date(d.date)) })
             .y(function(d) { return y(+d.ElectronicWaste) })
         )
+
     }    
     
     render(){

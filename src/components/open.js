@@ -34,7 +34,7 @@ class Open extends React.Component {
             <div id="open_content">
                 
                 <h1 id="main_title">Blockchain: <br/>Il prezzo del consenso</h1>
-                <p className="subtitle">Dolor sit amet der mit losel numn sit amet der fun cus mein.</p>
+                <p className="subtitle">Può una realtà di oggi essere sostenibile domani?</p>
                 <img id="logo" src="img/logo.png" alt="logo" />
             </div>
             <div id="start_block">

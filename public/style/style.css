@@ -1613,3 +1613,14 @@ div#appl_legend {
 h2.app_title {
     margin-bottom: 60px;
 }
+#button p {
+    float: left;
+    margin: 20px;
+    padding: 5px;
+    background: #f6f6f6;
+    border-radius: 20px;
+    cursor: pointer;
+}
+p#par_BTCm {
+    width: 80%;
+}

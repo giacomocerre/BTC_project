@@ -14,7 +14,7 @@ class Evolution extends React.Component {
     };
 
     componentDidUpdate() {
-    //    this.draw(this.state.data.data)
+    this.draw(this.state.data.data)
     //    this.draw1(this.state.data.data)
     this.drawBar(this.state.data.data)
     }
@@ -312,24 +312,26 @@ svg
                 <article id="BTC_market" className="article">
                     <div className="article_width">
                         <h3 id="BTCm_main_title" className="article_title">BTC Market Cap Evolution</h3>
-                        <p id="par_BTCm" className="par">Etiam pretium odio sed dapibus volutpat. Proin erat justo, maximus sit amet egestas et,
-                            condimentum ac quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                            ac turpis egestas. Ut efficitur quam at tincidunt porta. Curabitur lorem orci, gravida a porta
-                            a, consequat vitae justo. Nunc id egestas nunc, nec fringilla libero. Phasellus egestas dui
-                            vitae egestas ornare. Ut nibh urna, lacinia non urna eget, condimentum fringilla purus. Nulla
-                            nec fermentum sapien.
-                            Etiam pretium odio sed dapibus volutpat. Proin erat justo, maximus sit amet egestas et,
-                            condimentum ac quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                            ac turpis egestas. Ut efficitur quam at tincidunt porta. Curabitur lorem orci, gravida a porta
-                            a, consequat vitae justo. Nunc id egestas nunc, nec fringilla libero. Phasellus egestas dui
-                            vitae egestas ornare. Ut nibh urna, lacinia non urna eget, condimentum fringilla purus. Nulla
-                            nec fermentum sapien.</p>
+                        <p id="par_BTCm" className="par">Il grafico seguente mostra la capitalizzazione del mercato, delle 5 cryptovalue più importanti in milioni di dollari per anno. Il grafico a bolle mostra la situazione della capitalizzione del mercato di tutte le crypto al 2019. Si evince che tutte le altre valute orbitano attorno a bitcoin, il quale ha un CAP talmente elevato da elissare tutte le altre, tranne quelle del grafico linea. </p>
                     </div>
-                    <div id="BubbleGraph"></div>
-                    <div id="CryptoGraph"></div>
+                    <div id="button">
+                        <p onClick={showB}>Grafico a Bolle</p>
+                        <p onClick={showL}>Grafico a Linea</p>
+                    </div>
+                    <div id="BubbleGraph" style={{display:"none"}}></div>
+                    <div id="CryptoGraph" style={{display:"block"}}></div>
                 </article>
 			</section>
         )};
 }
 
+function showB(){
+    document.getElementById("CryptoGraph").style.display="none";
+    document.getElementById("BubbleGraph").style.display="block";
+}
+function showL(){
+    document.getElementById("BubbleGraph").style.display="none";
+    document.getElementById("CryptoGraph").style.display="block";
+    
+}
 export default Evolution

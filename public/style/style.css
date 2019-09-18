@@ -1484,3 +1484,118 @@ div#react_stucture ul li::before {
     top: 8px;
     right: 4px;
 }
+div#decentralization {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.cen_dec {
+    width: 50%;
+    float: left;
+}
+div#icon_dec img {
+    width: 50%;
+    padding: 20px 25%;
+}
+#dec_text h2.article_title {
+    width: 150%;
+}
+.sub_article_title {
+    font-size: 1.3em;
+    padding-left: 10px;
+    border-left: 5px solid #333;
+}
+div#beyond_the_coin {
+    overflow: hidden;
+}
+div#gov,
+div#id_dig,
+div#not,
+div#san {
+    overflow: hidden;
+    line-height: 22px;
+}
+.by_text {
+    width: 50%;
+    float: left;
+}
+div.By_icon {
+    width: 50%;
+    float: left;
+}
+.By_icon img {
+    width: 30%;
+    padding: 20% 25%;
+}
+div#sanity img {
+    width: 70%;
+    padding: 10% 10%;
+}
+#beyond_the_coin p {
+    width: 80%;
+    line-height: 22px;
+}
+article#pro_task_form_contro {
+    width: 100%;
+}
+p#showPro {
+    text-align: center;
+    height: 80px;
+    width: 20%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #333;
+    border-bottom: 5px solid #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    font-weight: 900;
+    cursor: pointer;
+    -webkit-transition: .9s;
+    transition: .9s;
+    position: relative;
+    right: 100px;
+}
+p#showPro:hover{
+    color: #f6f6f6;
+    background: #333;
+}
+.contro_cont {
+    width: 80%;
+    line-height: 22px;
+}
+div#division_pro_contro,
+div#division_contro_pro {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+article.article.conclusion > p {
+    width: 80%;
+}
+article.article.conclusion > p {
+    width: 80%;
+}
+div.concl_cont {
+    width: 60%;
+    line-height: 22px;
+}
+.concl_icon {
+    width: 50%;
+    margin: auto;
+}
+img#casper {
+    width: 500px;
+    position: relative;
+    right: 35%;
+    margin: 30px 0px;
+}

@@ -94,9 +94,9 @@ svg.selectAll("rect")
     
     render(){
         return(
-            <div className="miner_industrial">
-                <h3 className="article_title">Miner VS Industria</h3>
-                <p>Per mettere a fuoco l’entità dei consumi della rete, è interessante confrontarla con quella delle produzioni industriali dei vari paesi del mondo. I risultati che la rete bitcoin consuma più della rete industriale [del paese X], ma, considerando che I consumi sono destinati a crescere, secondo le stime di Alex De Vries, fondatore di digiconomist, di almeno un altro 60%, è ipotizzabile che per il 2020 arrivi ai livelli del [paese Y].</p>
+            <div className="miner_industrial contro_cont">
+                <h3 className="sub_article_title">Miner VS Industria</h3>
+                <p>Per mettere a fuoco l’entità dei consumi della rete, è interessante confrontarla con quella delle produzioni industriali dei vari paesi del mondo. I risultati che la rete bitcoin consuma più della rete industriale dell'Austria, ma, considerando che I consumi sono destinati a crescere, secondo le stime di Alex De Vries, fondatore di digiconomist, di almeno un altro 60%, è ipotizzabile che per il 2020 arrivi ai livelli dell'Egitto o dell'Argentina.</p>
             <div id="MinComGraph"></div>
             </div>
         )}

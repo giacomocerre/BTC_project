@@ -43,7 +43,9 @@ class ConsumptionMinersAppliances extends React.Component {
     draw(data) {
         console.log(data)
 
-        var allGroup = d3.map(data, function(d){return(d.Type)}).keys();
+        var allGroup = d3.map(data, function(d){
+            if (d.Type !== "Rig") {
+            return(d.Type)}}).keys();
         console.log(allGroup)
 
         var dataReady = allGroup.map( function(grpName) { 
@@ -57,12 +59,74 @@ class ConsumptionMinersAppliances extends React.Component {
         console.log(dataReady)
         const reducer = (accumulator, currentValue) => accumulator.value + currentValue.value;
         var AvgData = dataReady.map( function (d) {
+            // console.log(d.values)
+            var sum = 0;
+            for(var i = 0; i < d.values.length; i++) {
+                sum += d.values[i].value;
+            }
+            var avg = sum/d.values.length
             return {
-                avgEnergy : d.values.reduce(reducer)
+                Name : d.name,
+                avgEnergy : avg
             }
         })
         console.log(AvgData)
-    }
+
+
+  
+        // set the dimensions and margins of the graph
+var width = 460
+var height = 460
+
+// append the svg object to the body of the page
+var svg = d3.select("#ApplGraph")
+  .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    
+
+    var color = d3.scaleOrdinal()
+    .domain([allGroup])
+    .range(d3.schemeSet1);
+
+    // Size scale for countries
+  var size = d3.scaleLinear()
+  .domain([0,d3.max(AvgData, d => d.avgEnergy)])
+  .range([0,105])  // circle will be between 7 and 55 px wide
+
+   // Initialize the circle: all located at the center of the svg area
+   var node = svg.append("g")
+   .selectAll("circle")
+   .data(AvgData)
+   .enter()
+   .append("circle")
+     .attr("class", "node")
+     .attr("r", function(d){ return size(d.avgEnergy+400)})
+     .attr("cx", width / 2)
+     .attr("cy", height / 2)
+     .style("fill", function(d){ return color(d.Name)})
+     .style("fill-opacity", 0.8)
+     .attr("stroke", "black")
+     .style("stroke-width", 1)
+
+     // Features of the forces applied to the nodes:
+  var simulation = d3.forceSimulation()
+  .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+  .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
+  .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.avgEnergy)+10) }).iterations(1)) // Force that avoids circle overlapping
+
+// Apply these forces to the nodes and update their positions.
+// Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+simulation
+  .nodes(AvgData)
+  .on("tick", function(d){
+    node
+        .attr("cx", function(d){ return d.x; })
+        .attr("cy", function(d){ return d.y; })
+  });
+
+
+}
     
     render(){
         return(

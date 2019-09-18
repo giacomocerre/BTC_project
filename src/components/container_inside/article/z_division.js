@@ -18,7 +18,7 @@ class Division extends React.Component {
             document.getElementById("concl").style.display = "block"
             document.getElementById("division_pro_contro").style.display="block"
             document.getElementById("division_contro_pro").style.display="none"
-            
+            document.getElementById("showPro").style.display="none"
             
         }else{
             document.getElementById("contro").style.width = "100%";

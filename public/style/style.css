@@ -1569,6 +1569,7 @@ p#showPro:hover{
 .contro_cont {
     width: 80%;
     line-height: 22px;
+    position: relative;
 }
 div#division_pro_contro,
 div#division_contro_pro {
@@ -1598,4 +1599,17 @@ img#casper {
     position: relative;
     right: 35%;
     margin: 30px 0px;
+}
+div#appl_legend {
+    overflow: hidden;
+}
+.app_icon {
+    width: 15%;
+    float: left;
+}
+.app_icon img {
+    width: 50px;
+}
+h2.app_title {
+    margin-bottom: 60px;
 }

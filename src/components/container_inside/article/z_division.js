@@ -9,24 +9,15 @@ class Division extends React.Component {
     }
     
     ChooseOP(event){
-        // const { pageYOffset } = window;
-        // const block4 = document.getElementById( "pc_div" ).offsetTop
         const id = event.target.id;
         if(id === "pro"){
             document.getElementById("pro").style.width = "100%";
             document.getElementById("contro").style.display = "none"
             document.getElementById("pro_task").style.display = "block"
-            document.getElementById("contro_task").style.display = "none"
+            document.getElementById("contro_task").style.display = "block"
             document.getElementById("concl").style.display = "block"
-            // var blockColor4 = document.getElementById("block4")
-            // var blockColor5 = document.getElementById("block5")
-            // var blockColor6 = document.getElementById("block6")
-            
-            // if(pageYOffset > block4){
-            //     blockColor4.src="img/block_g.svg"
-            //     blockColor5.src="img/block_g.svg"
-            //     blockColor6.src="img/block_g.svg"
-            // }
+            document.getElementById("division_pro_contro").style.display="block"
+            document.getElementById("division_contro_pro").style.display="none"
             
             
         }else{
@@ -34,6 +25,8 @@ class Division extends React.Component {
             document.getElementById("pro").style.display = "none"
             document.getElementById("contro_task").style.display = "block"
             document.getElementById("concl").style.display = "block"
+            document.getElementById("division_contro_pro").style.display="block"
+            document.getElementById("division_pro_contro").style.display="none"
         }
     }
 
@@ -50,7 +43,7 @@ class Division extends React.Component {
         }else{
             return(
                 <div id={this.props.id} className="pro_contro_content">
-                    <div id="pro" className="pro_contro" onClick={this.ChooseOP}>
+                    <a href="#pro_task"><div id="pro" className="pro_contro" onClick={this.ChooseOP}>
                         <h2 className="block_title">{this.props.text_1}</h2>
                         <svg version="1.1"
                             id="pro_icon"
@@ -70,7 +63,8 @@ class Division extends React.Component {
                             l-81.6-62.3 M172.9,67.2l-68.2,67.9 M124.7,223.2l108.6,136.3 M302.1,72.8l-129.2-5.6 M252.9,149.6l-80-82.4" style={{fill:"none", stroke:"#fff"}}/>
                         </svg>
                     </div>
-                    <div id="contro" className="pro_contro" onClick={this.ChooseOP}>
+                    </a>
+                    <a href="#contro_task"><div id="contro" className="pro_contro" onClick={this.ChooseOP}>
                         <h2 className="block_title">{this.props.text_2}</h2>
                         <svg version="1.1"
                             id="contro_icon"
@@ -89,6 +83,7 @@ class Division extends React.Component {
                                 M155.4,3.8L203,135.2 M203,135.2L164,328.9" style={{fill:"none", stroke:"#fff"}}/>
                         </svg>
                     </div>
+                    </a>
                 </div>
             )
         }

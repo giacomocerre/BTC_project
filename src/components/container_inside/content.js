@@ -19,7 +19,7 @@ function Content(props){
             <Division type="choose" id="pc_div" text_1="Oro" text_2="Pirite" n_block="4"/>
             <ProContro/>
             <div id="concl">
-                <Division type="no" id="final" text="Conclusioni" n_block="Five"/>
+                <Division type="no" id="final" text="Conclusioni" n_block="5"/>
                 <Conclusion/>
             </div>
         </div>

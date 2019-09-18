@@ -1378,32 +1378,224 @@ p.rel_par.par_question {
     padding-left:20px;
     width:90%;
 }
+.team {
+    overflow: hidden;
+    padding: 0 10%;
+}
+ul.obb, ul.prob {
+    margin: auto;
+    width: 100%;
+    padding: 0;
+}
 .team ul{
     list-style: none;
     overflow: hidden;
+    display: none;
 }
-li.team_comp {
-    width: 40%;
-    float: left;
-    border: 1px solid;
-    box-sizing: border-box;
-    margin: 50px;
-    margin-bottom: 0;
+.identikit {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
     border-radius: 10px;
-    text-align: center;
 }
-span.team_name {
-    margin: 0;
+div#GGAG {
+    background-image: url(../img/journalism.png);
+}
+div#AN {
+    background-image: url(../img/data.png);
+}
+div#MA {
+    background-image: url(../img/graphic.png);
+}
+div#GC {
+    background-image: url(../img/designer.png);
+}
+.id_name{
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.3em;
-    width: 100%;
-    text-transform: uppercase;
-}
-span.role {
-    font-size: 0.5em;
-    color: red;
+    color: #f6f6f6;
     text-transform: capitalize;
+    letter-spacing: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 0;
+    margin-left: 0;
 }
-img.team_role {
-    width: 70px;
+.margin_float{
+    margin-bottom: 20px;
+}
+.margin_float p {
+    width: 20%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f6f6;
+    border-radius: 8px;
+    text-transform: uppercase;
+    border-bottom: 5px solid #ccc;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+h4.team_comp {
+    font-size: 1.6em;
     padding: 20px;
+    background: rgb(258,258,258,0.2);
+}
+p.role {
+    border: none;
+    width: 100%;
+    height: 20px;
+    padding: 4px 0px;
+    margin-bottom: 20px;
+    background: #f6f6f6;
+    border-radius: 0;
+    color: #333;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.obb li,
+.prob li {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 10px 0px;
+}
+span.compo_ex {
+    font-size: 0.6em;
+    color: #333;
+}
+span.compo_ex::before{
+    content: "("
+}
+span.compo_ex::after{
+    content: ")"
+}
+div#react_stucture ul li::before {
+    content: url(../img/folder.png);
+    position: relative;
+    top: 8px;
+    right: 4px;
+}
+div#decentralization {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.cen_dec {
+    width: 50%;
+    float: left;
+}
+div#icon_dec img {
+    width: 50%;
+    padding: 20px 25%;
+}
+#dec_text h2.article_title {
+    width: 150%;
+}
+.sub_article_title {
+    font-size: 1.3em;
+    padding-left: 10px;
+    border-left: 5px solid #333;
+}
+div#beyond_the_coin {
+    overflow: hidden;
+}
+div#gov,
+div#id_dig,
+div#not,
+div#san {
+    overflow: hidden;
+    line-height: 22px;
+}
+.by_text {
+    width: 50%;
+    float: left;
+}
+div.By_icon {
+    width: 50%;
+    float: left;
+}
+.By_icon img {
+    width: 30%;
+    padding: 20% 25%;
+}
+div#sanity img {
+    width: 70%;
+    padding: 10% 10%;
+}
+#beyond_the_coin p {
+    width: 80%;
+    line-height: 22px;
+}
+article#pro_task_form_contro {
+    width: 100%;
+}
+p#showPro {
+    text-align: center;
+    height: 80px;
+    width: 20%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #333;
+    border-bottom: 5px solid #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    font-weight: 900;
+    cursor: pointer;
+    -webkit-transition: .9s;
+    transition: .9s;
+    position: relative;
+    right: 100px;
+}
+p#showPro:hover{
+    color: #f6f6f6;
+    background: #333;
+}
+.contro_cont {
+    width: 80%;
+    line-height: 22px;
+}
+div#division_pro_contro,
+div#division_contro_pro {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+article.article.conclusion > p {
+    width: 80%;
+}
+article.article.conclusion > p {
+    width: 80%;
+}
+div.concl_cont {
+    width: 60%;
+    line-height: 22px;
+}
+.concl_icon {
+    width: 50%;
+    margin: auto;
+}
+img#casper {
+    width: 500px;
+    position: relative;
+    right: 35%;
+    margin: 30px 0px;
 }

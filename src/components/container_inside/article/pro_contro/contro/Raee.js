@@ -76,8 +76,20 @@ class Raee extends React.Component {
             .attr("stroke-width", 1.5)
             .attr("d", d3.line()
             .x(function(d) { return x(new Date(d.date)) })
-            .y(function(d) { return y(+d.ElectronicWaste) })
-        )
+            .y(function(d) { return y(+d.ElectronicWaste) }))
+     
+            svg
+          .selectAll("myLabels")
+          .data(data)
+          .enter()
+          .append('g')
+          .append("text")
+          .attr('x', 30)
+          .attr('y', 30)
+          .text("Rifiuti Kt")
+              .style("fill","steelblue")
+              .style("font-size", 15)
+              .style("font", "montserrat")
 
     }    
     
